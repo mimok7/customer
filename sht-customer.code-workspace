@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.defaultLanguage": "typescript",
+		"typescript.tsserver.maxTsServerMemory": 8192,
+		"typescript.validate.enable": true,
+		"typescript.disableAutomaticTypeAcquisition": true,
+		"typescript.preferences.includePackageJsonAutoImports": "off",
+		"explorer.fileNesting.expand": false
+	}
+}

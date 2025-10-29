@@ -1,49 +1,57 @@
-'use client';
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import supabase from '@/lib/supabase';
-import Link from 'next/link';
+"use client";
 
-export function NavigationHeader() {
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import supabase from '@/lib/supabase';
+
+export default function NavigationHeader() {
+  const pathname = usePathname();
+  const router = useRouter();
   const [user, setUser] = useState<any>(null);
   const [userRole, setUserRole] = useState<string | null>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter();
-  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const checkUser = async () => {
-      const { data } = await supabase.auth.getUser();
-      if (data.user) {
-        setUser(data.user);
-        const { data: userData } = await supabase
+    const fetchUser = async () => {
+      const { data: { user: authUser } } = await supabase.auth.getUser();
+      if (authUser) {
+        setUser(authUser);
+        
+        // 사용자 역할 조회
+        const { data: profile } = await supabase
           .from('users')
           .select('role')
-          .eq('id', data.user.id)
+          .eq('id', authUser.id)
           .single();
-        setUserRole(userData?.role);
+        
+        setUserRole(profile?.role || 'guest');
+      } else {
+        setUser(null);
+        setUserRole(null);
       }
     };
-    checkUser();
 
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event: any, session: any) => {
-      if (event === 'SIGNED_OUT') {
+    fetchUser();
+
+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_IN' || event === 'USER_UPDATED') {
+        fetchUser();
+      } else if (event === 'SIGNED_OUT') {
         setUser(null);
         setUserRole(null);
       }
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      authListener.subscription.unsubscribe();
+    };
   }, []);
 
   const navItems = [
     { label: '홈', path: '/', icon: '🏠', public: true },
     { label: '견적 관리', path: '/mypage/quotes', icon: '📋', requireAuth: true },
     { label: '예약 관리', path: '/mypage/reservations', icon: '🎫', requireAuth: true },
-    { label: '관리자', path: '/admin/quotes', icon: '⚙️', requireAdmin: true },
   ];
 
   const handleLogout = async () => {
@@ -57,7 +65,6 @@ export function NavigationHeader() {
 
   const filteredNavItems = navItems.filter((item) => {
     if (item.requireAuth && !user) return false;
-    if (item.requireAdmin && userRole !== 'admin') return false;
     return true;
   });
 
@@ -97,108 +104,125 @@ export function NavigationHeader() {
               {user ? (
                 <span>
                   {user.email?.split('@')[0]}님
-                  {userRole === 'admin' && (
-                    <span className="ml-2 px-2 py-1 bg-red-100 text-red-800 text-xs rounded">
-                      관리자
-                    </span>
-                  )}
                 </span>
               ) : (
-                '로그인해주세요'
+                <span>환영합니다</span>
               )}
             </div>
 
-            {/* User Dropdown */}
             {user ? (
-              <div className="relative">
-                <button
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+              <div className="flex items-center space-x-2">
+                <Link
+                  href="/mypage"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
                 >
-                  <span>👤</span>
-                  <span className="hidden sm:inline">계정</span>
+                  마이페이지
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="px-4 py-2 text-sm font-medium text-white bg-red-300 hover:bg-red-400 rounded-md transition-colors"
+                >
+                  로그아웃
                 </button>
-
-                {isMenuOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                    <Link
-                      href="/mypage"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      🏠 마이페이지
-                    </Link>
-                    <button
-                      onClick={() => {
-                        handleLogout();
-                        setIsMenuOpen(false);
-                      }}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      🚪 로그아웃
-                    </button>
-                  </div>
-                )}
               </div>
             ) : (
-              <div className="flex space-x-2">
+              <div className="flex items-center space-x-2">
                 <Link
                   href="/login"
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
                 >
-                  🔐 로그인
+                  로그인
                 </Link>
                 <Link
                   href="/signup"
-                  className="px-3 py-2 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700"
+                  className="px-4 py-2 text-sm font-medium text-white bg-blue-300 hover:bg-blue-400 rounded-md transition-colors"
                 >
-                  📝 견적신청
+                  회원가입
                 </Link>
               </div>
             )}
 
-            {/* Mobile menu button */}
+            {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden flex items-center justify-center w-8 h-8 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
               </svg>
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="space-y-2">
-              {filteredNavItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    pathname === item.path
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span>{item.icon}</span>
-                  <span>{item.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <nav className="px-4 py-2 space-y-1">
+            {filteredNavItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  pathname === item.path
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                <span>{item.icon}</span>
+                <span>{item.label}</span>
+              </Link>
+            ))}
+
+            {user ? (
+              <>
+                <Link
+                  href="/mypage"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                >
+                  <span>👤</span>
+                  <span>마이페이지</span>
+                </Link>
+                <button
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    handleLogout();
+                  }}
+                  className="w-full flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-red-700 hover:text-red-900 hover:bg-red-50"
+                >
+                  <span>🚪</span>
+                  <span>로그아웃</span>
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                >
+                  <span>🔑</span>
+                  <span>로그인</span>
+                </Link>
+                <Link
+                  href="/signup"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-blue-700 hover:text-blue-900 hover:bg-blue-50"
+                >
+                  <span>✍️</span>
+                  <span>회원가입</span>
+                </Link>
+              </>
+            )}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
-
-export default NavigationHeader;
