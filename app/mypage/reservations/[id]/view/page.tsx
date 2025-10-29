@@ -70,110 +70,110 @@ const customerFriendlyFields: Record<string, string[]> = {
 };
 
 const labelMap: Record<string, Record<string, string>> = {
-  cruise: { 
-    checkin: '🗓️ 승선일', 
-    guest_count: '👥 탑승 인원', 
-    room_total_price: '💰 객실 요금', 
-    boarding_assist: '🤝 승선 지원', 
+  cruise: {
+    checkin: '🗓️ 승선일',
+    guest_count: '👥 탑승 인원',
+    room_total_price: '💰 객실 요금',
+    boarding_assist: '🤝 승선 지원',
     request_note: '📝 요청사항'
   },
-  airport: { 
-    ra_airport_location: '📍 공항', 
-    ra_flight_number: '✈️ 항공편', 
-    ra_datetime: '🕐 일시', 
-    ra_stopover_location: '🔄 경유지', 
-    ra_passenger_count: '👥 승객 수', 
-    ra_luggage_count: '🧳 수하물', 
+  airport: {
+    ra_airport_location: '📍 공항',
+    ra_flight_number: '✈️ 항공편',
+    ra_datetime: '🕐 일시',
+    ra_stopover_location: '🔄 경유지',
+    ra_passenger_count: '👥 승객 수',
+    ra_luggage_count: '🧳 수하물',
     request_note: '📝 요청사항'
   },
-  hotel: { 
-    checkin_date: '🗓️ 체크인', 
-    room_count: '🏠 객실 수', 
-    guest_count: '👥 투숙 인원', 
-    breakfast_service: '🍳 조식', 
-    hotel_category: '⭐ 호텔 등급', 
-    total_price: '💰 총 금액', 
+  hotel: {
+    checkin_date: '🗓️ 체크인',
+    room_count: '🏠 객실 수',
+    guest_count: '👥 투숙 인원',
+    breakfast_service: '🍳 조식',
+    hotel_category: '⭐ 호텔 등급',
+    total_price: '💰 총 금액',
     request_note: '📝 요청사항'
   },
-  rentcar: { 
-    pickup_datetime: '🕐 픽업 시간', 
-    pickup_location: '📍 픽업 장소', 
-    destination: '🎯 목적지', 
-    via_location: '🔄 경유지', 
-    passenger_count: '👥 승객 수', 
-    luggage_count: '🧳 수하물', 
-    total_price: '💰 총 금액', 
+  rentcar: {
+    pickup_datetime: '🕐 픽업 시간',
+    pickup_location: '📍 픽업 장소',
+    destination: '🎯 목적지',
+    via_location: '🔄 경유지',
+    passenger_count: '👥 승객 수',
+    luggage_count: '🧳 수하물',
+    total_price: '💰 총 금액',
     request_note: '📝 요청사항'
   },
-  tour: { 
-    tour_capacity: '👥 정원', 
-    pickup_location: '📍 픽업 장소', 
-    dropoff_location: '🎯 하차 장소', 
-    total_price: '💰 총 금액', 
+  tour: {
+    tour_capacity: '👥 정원',
+    pickup_location: '📍 픽업 장소',
+    dropoff_location: '🎯 하차 장소',
+    total_price: '💰 총 금액',
     request_note: '📝 요청사항'
   },
-  cruise_car: { 
-    pickup_datetime: '🕐 픽업 시간', 
-    pickup_location: '📍 픽업 장소', 
-    dropoff_location: '🎯 하차 장소', 
-    passenger_count: '👥 승객 수', 
-    car_total_price: '💰 차량 요금', 
+  cruise_car: {
+    pickup_datetime: '🕐 픽업 시간',
+    pickup_location: '📍 픽업 장소',
+    dropoff_location: '🎯 하차 장소',
+    passenger_count: '👥 승객 수',
+    car_total_price: '💰 차량 요금',
     request_note: '📝 요청사항'
   }
 };
 
 function formatValue(key: string, value: any): string {
   if (value === null || value === undefined) return '-';
-  
+
   // 날짜/시간 포맷
   if (typeof value === 'string' && /\d{4}-\d{2}-\d{2}/.test(value)) {
     const d = new Date(value);
     if (!isNaN(d.getTime())) {
       // 시간이 포함된 경우
       if (value.includes('T') || value.includes(':')) {
-        return d.toLocaleString('ko-KR', { 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric', 
-          hour: '2-digit', 
+        return d.toLocaleString('ko-KR', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
           minute: '2-digit',
           weekday: 'short'
         });
       }
       // 날짜만
-      return d.toLocaleDateString('ko-KR', { 
-        year: 'numeric', 
-        month: 'long', 
+      return d.toLocaleDateString('ko-KR', {
+        year: 'numeric',
+        month: 'long',
         day: 'numeric',
         weekday: 'short'
       });
     }
   }
-  
+
   // 금액 포맷
   if ((key.includes('price') || key.includes('total')) && typeof value === 'number') {
     return `${value.toLocaleString('ko-KR')}동`;
   }
-  
+
   // 숫자 포맷
   if (typeof value === 'number') {
     return value.toLocaleString('ko-KR');
   }
-  
+
   // 불린 포맷
   if (typeof value === 'boolean') {
     return value ? '✅ 예' : '❌ 아니오';
   }
-  
+
   return String(value);
 }
 
 function renderCustomerFriendlyInfo(obj: any, type: keyof typeof labelMap) {
   if (!obj) return null;
-  
+
   const allowedFields = customerFriendlyFields[type] || [];
   const labels = labelMap[type] || {};
-  
+
   const entries = allowedFields
     .map(key => ({ key, value: obj[key], label: labels[key] || key }))
     .filter(({ value }) => value !== null && value !== undefined && value !== '');
@@ -187,7 +187,7 @@ function renderCustomerFriendlyInfo(obj: any, type: keyof typeof labelMap) {
       {entries.map(({ key, value, label }) => {
         const isPrice = key.includes('price') || key.includes('total');
         const isNote = key.includes('note');
-        
+
         return (
           <div key={key} className={`${isNote ? 'col-span-full' : ''}`}>
             <div className="text-xs text-gray-500 mb-1">{label}</div>
@@ -210,6 +210,7 @@ function ReservationViewInner() {
   const [quote, setQuote] = useState<QuoteInfo | null>(null);
   const [serviceDetails, setServiceDetails] = useState<any[] | null>(null);
   const [serviceDetailsExtra, setServiceDetailsExtra] = useState<any[] | null>(null);
+  const [cruiseInfo, setCruiseInfo] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -259,6 +260,27 @@ function ReservationViewInner() {
             .eq('reservation_id', reservationId)
             .order('created_at', { ascending: false });
           setServiceDetails(Array.isArray(svc) ? svc : (svc ? [svc] : []));
+
+          // 크루즈인 경우 room_price 정보 조회
+          if (row.re_type === 'cruise' && svc && svc.length > 0) {
+            const roomPriceCode = svc[0].room_price_code;
+            if (roomPriceCode) {
+              const { data: roomPrice } = await supabase
+                .from('room_price')
+                .select('cruise, room_type, room_category, schedule')
+                .eq('room_code', roomPriceCode)
+                .maybeSingle();
+              
+              if (roomPrice) {
+                setCruiseInfo({
+                  cruise_name: roomPrice.cruise,
+                  room_type: roomPrice.room_type,
+                  room_category: roomPrice.room_category,
+                  schedule: roomPrice.schedule
+                });
+              }
+            }
+          }
         }
 
         // 크루즈 차량 추가 데이터
@@ -299,8 +321,8 @@ function ReservationViewInner() {
           <div className="text-6xl mb-4">⚠️</div>
           <h3 className="text-lg font-medium text-gray-800 mb-2">예약 정보를 불러올 수 없습니다</h3>
           <p className="text-sm text-gray-600 mb-4">{error}</p>
-          <button 
-            onClick={() => router.push('/mypage/reservations/list')} 
+          <button
+            onClick={() => router.push('/mypage/reservations/list')}
             className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             목록으로 돌아가기
@@ -317,8 +339,8 @@ function ReservationViewInner() {
           <div className="text-6xl mb-4">📭</div>
           <h3 className="text-lg font-medium text-gray-800 mb-2">예약 정보를 찾을 수 없습니다</h3>
           <p className="text-sm text-gray-600 mb-4">예약이 존재하지 않거나 접근 권한이 없습니다.</p>
-          <button 
-            onClick={() => router.push('/mypage/reservations/list')} 
+          <button
+            onClick={() => router.push('/mypage/reservations/list')}
             className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             목록으로 돌아가기
@@ -356,8 +378,8 @@ function ReservationViewInner() {
                 </span>
               </div>
             </div>
-            <button 
-              onClick={() => router.push('/mypage/reservations/list')} 
+            <button
+              onClick={() => router.push('/mypage/reservations/list')}
               className="px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-lg transition-all text-sm font-medium"
             >
               ← 목록으로
@@ -372,8 +394,8 @@ function ReservationViewInner() {
               <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
                 📋 연결된 견적
               </h2>
-              <button 
-                onClick={() => router.push(`/mypage/quotes/${reservation.re_quote_id}/view`)} 
+              <button
+                onClick={() => router.push(`/mypage/quotes/${reservation.re_quote_id}/view`)}
                 className="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium"
               >
                 견적서 보기 →
@@ -404,6 +426,33 @@ function ReservationViewInner() {
           <div className="p-6">
             {serviceDetails && serviceDetails.length > 0 ? (
               <div className="space-y-6">
+                {/* 크루즈인 경우 크루즈명/객실 정보 먼저 표시 */}
+                {reservation.re_type === 'cruise' && cruiseInfo && (
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-5 border border-blue-200 mb-6">
+                    <h3 className="text-md font-bold text-gray-800 mb-4 flex items-center gap-2">
+                      🚢 크루즈 정보
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <div className="text-xs text-gray-600 mb-1">크루즈명</div>
+                        <div className="text-lg font-bold text-blue-600">{cruiseInfo.cruise_name || '-'}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-gray-600 mb-1">객실명</div>
+                        <div className="text-lg font-bold text-indigo-600">{cruiseInfo.room_type || '-'}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-gray-600 mb-1">카테고리</div>
+                        <div className="text-base font-medium text-gray-800">{cruiseInfo.room_category || '-'}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-gray-600 mb-1">스케줄</div>
+                        <div className="text-base font-medium text-gray-800">{cruiseInfo.schedule || '-'}</div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {serviceDetails.map((it, idx) => (
                   <div key={idx} className={`${serviceDetails.length > 1 ? 'pb-6 border-b border-gray-200 last:border-0 last:pb-0' : ''}`}>
                     {serviceDetails.length > 1 && (
