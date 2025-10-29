@@ -1,0 +1,6012 @@
+{
+  "success": 0,
+  "failed": 1201,
+  "skipped": [],
+  "errors": [
+    {
+      "row": 2,
+      "orderId": "vhFWsQPa",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 3,
+      "orderId": "vhFWsQPa",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 4,
+      "orderId": "tHUAw5SO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 5,
+      "orderId": "tHUAw5SO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 6,
+      "orderId": "pEM1vfkN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 7,
+      "orderId": "pEM1vfkN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 8,
+      "orderId": "F5Qr4AnQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 9,
+      "orderId": "F5Qr4AnQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 10,
+      "orderId": "W03gVmtg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 11,
+      "orderId": "W03gVmtg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 12,
+      "orderId": "Y5ZW2Kue",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 13,
+      "orderId": "6h6earsL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 14,
+      "orderId": "Y5ZW2Kue",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 15,
+      "orderId": "6h6earsL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 16,
+      "orderId": "7088f8b0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 17,
+      "orderId": "7088f8b0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 18,
+      "orderId": "KUx2Aawr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 19,
+      "orderId": "l0cKKDq5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 20,
+      "orderId": "KUx2Aawr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 21,
+      "orderId": "l0cKKDq5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 22,
+      "orderId": "rpyvEhFO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 23,
+      "orderId": "rpyvEhFO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 24,
+      "orderId": "588eb59a",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 25,
+      "orderId": "588eb59a",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 26,
+      "orderId": "zLyrkvtK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 27,
+      "orderId": "zLyrkvtK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 28,
+      "orderId": "4a02fa38",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 29,
+      "orderId": "4a02fa38",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 30,
+      "orderId": "8OJ92Txb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 31,
+      "orderId": "8OJ92Txb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 32,
+      "orderId": "All4akv8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 33,
+      "orderId": "All4akv8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 34,
+      "orderId": "uD95ZTYy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 35,
+      "orderId": "uD95ZTYy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 36,
+      "orderId": "4B7Il7QX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 37,
+      "orderId": "4B7Il7QX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 38,
+      "orderId": "IaoYTFMh",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 39,
+      "orderId": "IaoYTFMh",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 40,
+      "orderId": "43724ca2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 41,
+      "orderId": "43724ca2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 42,
+      "orderId": "859cd310",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 43,
+      "orderId": "859cd310",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 44,
+      "orderId": "CQcoLE2Z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 45,
+      "orderId": "CQcoLE2Z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 46,
+      "orderId": "EOAB1gX2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 47,
+      "orderId": "EOAB1gX2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 48,
+      "orderId": "jiO4szVH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 49,
+      "orderId": "jiO4szVH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 50,
+      "orderId": "s5CdvEGt",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 51,
+      "orderId": "s5CdvEGt",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 52,
+      "orderId": "ZjlzTkzD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 53,
+      "orderId": "ZjlzTkzD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 54,
+      "orderId": "13085097",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 55,
+      "orderId": "13085097",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 56,
+      "orderId": "25940411",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 57,
+      "orderId": "25940411",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 58,
+      "orderId": "nXedTHqu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 59,
+      "orderId": "nXedTHqu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 60,
+      "orderId": "l3pWqZGu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 61,
+      "orderId": "l3pWqZGu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 62,
+      "orderId": "92f8214f",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 63,
+      "orderId": "92f8214f",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 64,
+      "orderId": "77bce938",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 65,
+      "orderId": "77bce938",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 66,
+      "orderId": "RrMR7r9V",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 67,
+      "orderId": "RrMR7r9V",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 68,
+      "orderId": "VN1AQEzz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 69,
+      "orderId": "VN1AQEzz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 70,
+      "orderId": "mGroQvNO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 71,
+      "orderId": "mGroQvNO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 72,
+      "orderId": "8HPLLj3w",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 73,
+      "orderId": "8HPLLj3w",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 74,
+      "orderId": "aQh9us5f",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 75,
+      "orderId": "aQh9us5f",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 76,
+      "orderId": "6HG4OVa6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 77,
+      "orderId": "6HG4OVa6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 78,
+      "orderId": "6WeAMhwY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 79,
+      "orderId": "6WeAMhwY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 80,
+      "orderId": "7SM1DGan",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 81,
+      "orderId": "7SM1DGan",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 82,
+      "orderId": "uihv37TH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 83,
+      "orderId": "uihv37TH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 84,
+      "orderId": "229ce74e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 85,
+      "orderId": "229ce74e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 86,
+      "orderId": "Luw5Ciqg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 87,
+      "orderId": "Luw5Ciqg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 88,
+      "orderId": "koptzk82",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 89,
+      "orderId": "koptzk82",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 90,
+      "orderId": "7Fxfx1kg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 91,
+      "orderId": "7Fxfx1kg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 92,
+      "orderId": "Wkn0eJsG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 93,
+      "orderId": "Wkn0eJsG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 94,
+      "orderId": "BY70yqJv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 95,
+      "orderId": "BY70yqJv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 96,
+      "orderId": "nDLMmImA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 97,
+      "orderId": "nDLMmImA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 98,
+      "orderId": "b220a086",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 99,
+      "orderId": "b220a086",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 100,
+      "orderId": "39s8ONRq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 101,
+      "orderId": "39s8ONRq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 102,
+      "orderId": "WCB3IadY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 103,
+      "orderId": "WCB3IadY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 104,
+      "orderId": "VCGCo6ZK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 105,
+      "orderId": "VCGCo6ZK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 106,
+      "orderId": "wmBTRyhi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 107,
+      "orderId": "wmBTRyhi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 108,
+      "orderId": "53JHjbya",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 109,
+      "orderId": "53JHjbya",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 110,
+      "orderId": "GQD83SK4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 111,
+      "orderId": "GQD83SK4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 112,
+      "orderId": "S4OEBEha",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 113,
+      "orderId": "S4OEBEha",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 114,
+      "orderId": "murdrJ2J",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 115,
+      "orderId": "murdrJ2J",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 116,
+      "orderId": "ZllkFyJO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 117,
+      "orderId": "ZllkFyJO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 118,
+      "orderId": "qnLm9bic",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 119,
+      "orderId": "qnLm9bic",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 120,
+      "orderId": "iWfSIsMw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 121,
+      "orderId": "iWfSIsMw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 122,
+      "orderId": "6xaWyuqK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 123,
+      "orderId": "6xaWyuqK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 124,
+      "orderId": "NCjDICEe",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 125,
+      "orderId": "NCjDICEe",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 126,
+      "orderId": "Avocxcs7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 127,
+      "orderId": "Avocxcs7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 128,
+      "orderId": "vYF0YHPS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 129,
+      "orderId": "vYF0YHPS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 130,
+      "orderId": "8y2M1GiC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 131,
+      "orderId": "8y2M1GiC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 132,
+      "orderId": "8XjY5f3n",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 133,
+      "orderId": "8XjY5f3n",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 134,
+      "orderId": "4q6Is7hn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 135,
+      "orderId": "4q6Is7hn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 136,
+      "orderId": "eiXFFjuE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 137,
+      "orderId": "eiXFFjuE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 138,
+      "orderId": "1UxOuBLo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 139,
+      "orderId": "1UxOuBLo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 140,
+      "orderId": "cOp14HoH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 141,
+      "orderId": "ob0SjIjY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 142,
+      "orderId": "ob0SjIjY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 143,
+      "orderId": "wmmnxI7F",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 144,
+      "orderId": "wmmnxI7F",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 145,
+      "orderId": "D47kBRzV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 146,
+      "orderId": "D47kBRzV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 147,
+      "orderId": "4BraefRT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 148,
+      "orderId": "4BraefRT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 149,
+      "orderId": "kehw1tre",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 150,
+      "orderId": "kehw1tre",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 151,
+      "orderId": "TxYp0Eko",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 152,
+      "orderId": "TxYp0Eko",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 153,
+      "orderId": "s3p6herJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 154,
+      "orderId": "s3p6herJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 155,
+      "orderId": "jpgfmZ6z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 156,
+      "orderId": "jpgfmZ6z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 157,
+      "orderId": "qexSb794",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 158,
+      "orderId": "qexSb794",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 159,
+      "orderId": "gpvWK3WJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 160,
+      "orderId": "gpvWK3WJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 161,
+      "orderId": "9DuuysAy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 162,
+      "orderId": "9DuuysAy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 163,
+      "orderId": "5gFEurcv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 164,
+      "orderId": "5gFEurcv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 165,
+      "orderId": "7EHE702J",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 166,
+      "orderId": "7EHE702J",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 167,
+      "orderId": "42Xbcj58",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 168,
+      "orderId": "42Xbcj58",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 169,
+      "orderId": "uo1ezddA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 170,
+      "orderId": "uo1ezddA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 171,
+      "orderId": "REKisCNL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 172,
+      "orderId": "REKisCNL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 173,
+      "orderId": "YdYG9TO9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 174,
+      "orderId": "YdYG9TO9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 175,
+      "orderId": "Wrmp1YML",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 176,
+      "orderId": "Wrmp1YML",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 177,
+      "orderId": "xtuJ3UFJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 178,
+      "orderId": "xtuJ3UFJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 179,
+      "orderId": "wKDcr8Mx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 180,
+      "orderId": "wKDcr8Mx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 181,
+      "orderId": "OY8q0csp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 182,
+      "orderId": "OY8q0csp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 183,
+      "orderId": "ddf2Qksv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 184,
+      "orderId": "ddf2Qksv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 185,
+      "orderId": "a89iIl4e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 186,
+      "orderId": "a89iIl4e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 187,
+      "orderId": "1sdAWEzw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 188,
+      "orderId": "1sdAWEzw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 189,
+      "orderId": "7GhGW7TN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 190,
+      "orderId": "7GhGW7TN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 191,
+      "orderId": "iRucd41U",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 192,
+      "orderId": "iRucd41U",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 193,
+      "orderId": "xtmwWIxK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 194,
+      "orderId": "xtmwWIxK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 195,
+      "orderId": "9kCA206U",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 196,
+      "orderId": "9kCA206U",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 197,
+      "orderId": "FZmTnBjJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 198,
+      "orderId": "FZmTnBjJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 199,
+      "orderId": "5NhqrSOj",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 200,
+      "orderId": "5NhqrSOj",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 201,
+      "orderId": "HrswJJky",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 202,
+      "orderId": "HrswJJky",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 203,
+      "orderId": "8NRbBi8u",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 204,
+      "orderId": "8NRbBi8u",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 205,
+      "orderId": "3Jbmb8AT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 206,
+      "orderId": "nH0Pn2kz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 207,
+      "orderId": "nH0Pn2kz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 208,
+      "orderId": "cVB3sfBQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 209,
+      "orderId": "cVB3sfBQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 210,
+      "orderId": "8L4jf6am",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 211,
+      "orderId": "8L4jf6am",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 212,
+      "orderId": "xNMw6fYT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 213,
+      "orderId": "xNMw6fYT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 214,
+      "orderId": "w9fYmxoY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 215,
+      "orderId": "w9fYmxoY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 216,
+      "orderId": "7ithJiTC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 217,
+      "orderId": "7ithJiTC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 218,
+      "orderId": "V1j2TvE9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 219,
+      "orderId": "V1j2TvE9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 220,
+      "orderId": "m6QXn2Bb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 221,
+      "orderId": "m6QXn2Bb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 222,
+      "orderId": "HwQA1y8E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 223,
+      "orderId": "HwQA1y8E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 224,
+      "orderId": "yOjx7x5L",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 225,
+      "orderId": "yOjx7x5L",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 226,
+      "orderId": "XdjOLOdg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 227,
+      "orderId": "XdjOLOdg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 228,
+      "orderId": "imsEzgl4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 229,
+      "orderId": "imsEzgl4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 230,
+      "orderId": "lDNTB8zZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 231,
+      "orderId": "lDNTB8zZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 232,
+      "orderId": "lPJprYvR",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 233,
+      "orderId": "lPJprYvR",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 234,
+      "orderId": "0pGgC1QA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 235,
+      "orderId": "0pGgC1QA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 236,
+      "orderId": "fEctacCf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 237,
+      "orderId": "fEctacCf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 238,
+      "orderId": "rFTWwa08",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 239,
+      "orderId": "rFTWwa08",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 240,
+      "orderId": "ONHakxOP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 241,
+      "orderId": "ONHakxOP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 242,
+      "orderId": "pqbnGCCE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 243,
+      "orderId": "pqbnGCCE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 244,
+      "orderId": "iz58bjil",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 245,
+      "orderId": "iz58bjil",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 246,
+      "orderId": "YlekEauy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 247,
+      "orderId": "YlekEauy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 248,
+      "orderId": "LdX3OZqK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 249,
+      "orderId": "LdX3OZqK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 250,
+      "orderId": "DYcNJRYf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 251,
+      "orderId": "DYcNJRYf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 252,
+      "orderId": "K71QJqzE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 253,
+      "orderId": "K71QJqzE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 254,
+      "orderId": "VFXNm26p",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 255,
+      "orderId": "VFXNm26p",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 256,
+      "orderId": "cfMvYFVn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 257,
+      "orderId": "cfMvYFVn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 258,
+      "orderId": "2TWrhIjN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 259,
+      "orderId": "2TWrhIjN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 260,
+      "orderId": "Yfs4oOty",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 261,
+      "orderId": "Yfs4oOty",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 262,
+      "orderId": "KgRD2FIx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 263,
+      "orderId": "KgRD2FIx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 264,
+      "orderId": "yYTbTsak",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 265,
+      "orderId": "yYTbTsak",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 266,
+      "orderId": "k2G7Ukob",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 267,
+      "orderId": "k2G7Ukob",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 268,
+      "orderId": "UIypiYAT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 269,
+      "orderId": "UIypiYAT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 270,
+      "orderId": "tJk4yw2M",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 271,
+      "orderId": "tJk4yw2M",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 272,
+      "orderId": "iOVGHXX1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 273,
+      "orderId": "iOVGHXX1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 274,
+      "orderId": "rZuxgSZN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 275,
+      "orderId": "rZuxgSZN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 276,
+      "orderId": "oZI3G4Xd",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 277,
+      "orderId": "oZI3G4Xd",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 278,
+      "orderId": "YrZXprrA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 279,
+      "orderId": "YrZXprrA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 280,
+      "orderId": "15bxSkDi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 281,
+      "orderId": "15bxSkDi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 282,
+      "orderId": "0uTj2bnE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 283,
+      "orderId": "0uTj2bnE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 284,
+      "orderId": "3uzo6kot",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 285,
+      "orderId": "3uzo6kot",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 286,
+      "orderId": "b34a0cbe",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 287,
+      "orderId": "b34a0cbe",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 288,
+      "orderId": "kJjajIer",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 289,
+      "orderId": "kJjajIer",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 290,
+      "orderId": "BQBrJV0u",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 291,
+      "orderId": "BQBrJV0u",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 292,
+      "orderId": "12HaiCub",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 293,
+      "orderId": "12HaiCub",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 294,
+      "orderId": "pRzobATb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 295,
+      "orderId": "pRzobATb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 296,
+      "orderId": "6hJXpmJ5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 297,
+      "orderId": "6hJXpmJ5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 298,
+      "orderId": "QHn3JiM2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 299,
+      "orderId": "QHn3JiM2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 300,
+      "orderId": "VJ5TK4iB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 301,
+      "orderId": "VJ5TK4iB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 302,
+      "orderId": "Cz1FUXuq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 303,
+      "orderId": "Cz1FUXuq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 304,
+      "orderId": "FNRQLKsk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 305,
+      "orderId": "FNRQLKsk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 306,
+      "orderId": "5jOeL4UW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 307,
+      "orderId": "5jOeL4UW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 308,
+      "orderId": "asBOL7a7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 309,
+      "orderId": "asBOL7a7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 310,
+      "orderId": "cKTdWQQK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 311,
+      "orderId": "cKTdWQQK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 312,
+      "orderId": "Yfs4oOty",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 313,
+      "orderId": "Yfs4oOty",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 314,
+      "orderId": "f6T1cqND",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 315,
+      "orderId": "f6T1cqND",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 316,
+      "orderId": "toiw8eXr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 317,
+      "orderId": "Vab45HrB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 318,
+      "orderId": "Vab45HrB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 319,
+      "orderId": "Bvox6OeL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 320,
+      "orderId": "Bvox6OeL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 321,
+      "orderId": "Aa5zczp8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 322,
+      "orderId": "Aa5zczp8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 323,
+      "orderId": "HY1xnsJn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 324,
+      "orderId": "O2LJY9h0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 325,
+      "orderId": "O2LJY9h0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 326,
+      "orderId": "GfgpNRoC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 327,
+      "orderId": "GfgpNRoC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 328,
+      "orderId": "ePe4GDf3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 329,
+      "orderId": "ePe4GDf3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 330,
+      "orderId": "pOkqxFQL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 331,
+      "orderId": "pOkqxFQL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 332,
+      "orderId": "Obdiw1dv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 333,
+      "orderId": "Obdiw1dv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 334,
+      "orderId": "mDIn0kE8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 335,
+      "orderId": "mDIn0kE8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 336,
+      "orderId": "iY30g20l",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 337,
+      "orderId": "iY30g20l",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 338,
+      "orderId": "9GJRkVkR",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 339,
+      "orderId": "9GJRkVkR",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 340,
+      "orderId": "SvBsk3KP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 341,
+      "orderId": "SvBsk3KP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 342,
+      "orderId": "2mcQMlj3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 343,
+      "orderId": "2mcQMlj3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 344,
+      "orderId": "8wTXQ7D4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 345,
+      "orderId": "8wTXQ7D4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 346,
+      "orderId": "bkIZWszc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 347,
+      "orderId": "bkIZWszc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 348,
+      "orderId": "KJfgNCws",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 349,
+      "orderId": "KJfgNCws",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 350,
+      "orderId": "tOT7wWfc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 351,
+      "orderId": "tOT7wWfc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 352,
+      "orderId": "Ro6sTPLZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 353,
+      "orderId": "Ro6sTPLZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 354,
+      "orderId": "ojtDLvNZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 355,
+      "orderId": "ojtDLvNZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 356,
+      "orderId": "dpgEfxU7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 357,
+      "orderId": "dpgEfxU7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 358,
+      "orderId": "mxAGyWzk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 359,
+      "orderId": "mxAGyWzk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 360,
+      "orderId": "0fW8oiMM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 361,
+      "orderId": "0fW8oiMM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 362,
+      "orderId": "sNzUUBoX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 363,
+      "orderId": "sNzUUBoX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 364,
+      "orderId": "HEQUFG5N",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 365,
+      "orderId": "tRNm8ZDh",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 366,
+      "orderId": "tRNm8ZDh",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 367,
+      "orderId": "USW6RIO5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 368,
+      "orderId": "USW6RIO5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 369,
+      "orderId": "U7KTELqe",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 370,
+      "orderId": "MKcZ0WFu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 371,
+      "orderId": "MKcZ0WFu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 372,
+      "orderId": "k3JU0EXl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 373,
+      "orderId": "k3JU0EXl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 374,
+      "orderId": "TH6wqhmN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 375,
+      "orderId": "HxhixWzo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 376,
+      "orderId": "HxhixWzo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 377,
+      "orderId": "Y0VBe4Gv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 378,
+      "orderId": "Y0VBe4Gv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 379,
+      "orderId": "PxjsvA63",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 380,
+      "orderId": "PxjsvA63",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 381,
+      "orderId": "RZIz7GB8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 382,
+      "orderId": "TU0jEHr1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 383,
+      "orderId": "TU0jEHr1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 384,
+      "orderId": "1SD6Jyll",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 385,
+      "orderId": "1SD6Jyll",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 386,
+      "orderId": "RFqlo6oG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 387,
+      "orderId": "RFqlo6oG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 388,
+      "orderId": "3OoVi2Wv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 389,
+      "orderId": "3OoVi2Wv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 390,
+      "orderId": "b127cb38",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 391,
+      "orderId": "b127cb38",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 392,
+      "orderId": "D7TgCy5c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 393,
+      "orderId": "D7TgCy5c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 394,
+      "orderId": "c2BkLNXZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 395,
+      "orderId": "c2BkLNXZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 396,
+      "orderId": "0Mfm6MdN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 397,
+      "orderId": "0Mfm6MdN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 398,
+      "orderId": "UqP5AyWN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 399,
+      "orderId": "UqP5AyWN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 400,
+      "orderId": "UvVSBp4e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 401,
+      "orderId": "UvVSBp4e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 402,
+      "orderId": "LJwVkqJu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 403,
+      "orderId": "LJwVkqJu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 404,
+      "orderId": "5nHMpJgT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 405,
+      "orderId": "5nHMpJgT",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 406,
+      "orderId": "DlTeY1Ae",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 407,
+      "orderId": "DlTeY1Ae",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 408,
+      "orderId": "3S1mY7dr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 409,
+      "orderId": "3S1mY7dr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 410,
+      "orderId": "r2t3beQP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 411,
+      "orderId": "r2t3beQP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 412,
+      "orderId": "OPqotgHk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 413,
+      "orderId": "OPqotgHk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 414,
+      "orderId": "WBQMKm4k",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 415,
+      "orderId": "WBQMKm4k",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 416,
+      "orderId": "KQohkQbz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 417,
+      "orderId": "KQohkQbz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 418,
+      "orderId": "ZoYufwhq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 419,
+      "orderId": "ZoYufwhq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 420,
+      "orderId": "WAQpSJyg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 421,
+      "orderId": "WAQpSJyg",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 422,
+      "orderId": "ooL0xOOI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 423,
+      "orderId": "ooL0xOOI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 424,
+      "orderId": "qzePUZ2l",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 425,
+      "orderId": "qzePUZ2l",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 426,
+      "orderId": "B8aYzkpB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 427,
+      "orderId": "B8aYzkpB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 428,
+      "orderId": "YDjdS41v",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 429,
+      "orderId": "YDjdS41v",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 430,
+      "orderId": "X2ZkBD8L",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 431,
+      "orderId": "X2ZkBD8L",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 432,
+      "orderId": "Qv3lnXX6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 433,
+      "orderId": "Qv3lnXX6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 434,
+      "orderId": "kXP38QcK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 435,
+      "orderId": "kXP38QcK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 436,
+      "orderId": "JHjQVh68",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 437,
+      "orderId": "JHjQVh68",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 438,
+      "orderId": "J0nc2NC3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 439,
+      "orderId": "J0nc2NC3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 440,
+      "orderId": "SRMC8HjY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 441,
+      "orderId": "SRMC8HjY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 442,
+      "orderId": "qeFEXJac",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 443,
+      "orderId": "qeFEXJac",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 444,
+      "orderId": "yCl4HUUF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 445,
+      "orderId": "yCl4HUUF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 446,
+      "orderId": "0QbQc3a0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 447,
+      "orderId": "0QbQc3a0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 448,
+      "orderId": "LELaG8jJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 449,
+      "orderId": "LELaG8jJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 450,
+      "orderId": "Z5ALcpu5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 451,
+      "orderId": "Z5ALcpu5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 452,
+      "orderId": "JU13f936",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 453,
+      "orderId": "JU13f936",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 454,
+      "orderId": "W00j4MvQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 455,
+      "orderId": "W00j4MvQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 456,
+      "orderId": "2gt6mb8G",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 457,
+      "orderId": "2gt6mb8G",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 458,
+      "orderId": "mtrvPctz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 459,
+      "orderId": "mtrvPctz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 460,
+      "orderId": "qNsVkJth",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 461,
+      "orderId": "qNsVkJth",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 462,
+      "orderId": "VfQpgoUC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 463,
+      "orderId": "VfQpgoUC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 464,
+      "orderId": "EANDJkzi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 465,
+      "orderId": "EANDJkzi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 466,
+      "orderId": "InyJMP9Z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 467,
+      "orderId": "InyJMP9Z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 468,
+      "orderId": "0UYrLyRL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 469,
+      "orderId": "0UYrLyRL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 470,
+      "orderId": "itcqo09u",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 471,
+      "orderId": "itcqo09u",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 472,
+      "orderId": "HOalUgBK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 473,
+      "orderId": "HOalUgBK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 474,
+      "orderId": "pwtZDoAG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 475,
+      "orderId": "pwtZDoAG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 476,
+      "orderId": "kF4IjIiE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 477,
+      "orderId": "kF4IjIiE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 478,
+      "orderId": "3VYQ8EGm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 479,
+      "orderId": "3VYQ8EGm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 480,
+      "orderId": "gcwDtis1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 481,
+      "orderId": "gcwDtis1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 482,
+      "orderId": "oZ5FUkLn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 483,
+      "orderId": "oZ5FUkLn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 484,
+      "orderId": "CNfG7Mlp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 485,
+      "orderId": "CNfG7Mlp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 486,
+      "orderId": "ekKLf97E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 487,
+      "orderId": "ekKLf97E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 488,
+      "orderId": "T5GaQuFp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 489,
+      "orderId": "T5GaQuFp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 490,
+      "orderId": "lp00bDAC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 491,
+      "orderId": "lp00bDAC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 492,
+      "orderId": "KVBW8gA2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 493,
+      "orderId": "KVBW8gA2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 494,
+      "orderId": "mID4bwdJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 495,
+      "orderId": "mID4bwdJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 496,
+      "orderId": "HEQUFG5N",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 497,
+      "orderId": "pt5DKBE0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 498,
+      "orderId": "pt5DKBE0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 499,
+      "orderId": "HbrqMxri",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 500,
+      "orderId": "HbrqMxri",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 501,
+      "orderId": "XztbCxvc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 502,
+      "orderId": "XztbCxvc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 503,
+      "orderId": "E9d1FQXs",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 504,
+      "orderId": "E9d1FQXs",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 505,
+      "orderId": "y7VM06rl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 506,
+      "orderId": "y7VM06rl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 507,
+      "orderId": "t8p3PlUr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 508,
+      "orderId": "t8p3PlUr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 509,
+      "orderId": "0scpJclz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 510,
+      "orderId": "0scpJclz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 511,
+      "orderId": "pruqeoxF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 512,
+      "orderId": "pruqeoxF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 513,
+      "orderId": "vE2Wd1z6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 514,
+      "orderId": "vE2Wd1z6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 515,
+      "orderId": "ffqkK2Bt",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 516,
+      "orderId": "ffqkK2Bt",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 517,
+      "orderId": "SLojtATq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 518,
+      "orderId": "SLojtATq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 519,
+      "orderId": "smVMlq7h",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 520,
+      "orderId": "smVMlq7h",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 521,
+      "orderId": "9KyitCXS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 522,
+      "orderId": "9KyitCXS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 523,
+      "orderId": "wzlSBF40",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 524,
+      "orderId": "wzlSBF40",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 525,
+      "orderId": "6OqMEUYV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 526,
+      "orderId": "6OqMEUYV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 527,
+      "orderId": "Zz3eRgHi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 528,
+      "orderId": "Zz3eRgHi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 529,
+      "orderId": "mgiTGddr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 530,
+      "orderId": "mgiTGddr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 531,
+      "orderId": "umdDUN3A",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 532,
+      "orderId": "umdDUN3A",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 533,
+      "orderId": "pNWWgt5N",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 534,
+      "orderId": "pNWWgt5N",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 535,
+      "orderId": "3pZPTLbL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 536,
+      "orderId": "PYeIyHFf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 537,
+      "orderId": "PYeIyHFf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 538,
+      "orderId": "QT9WTzgp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 539,
+      "orderId": "QT9WTzgp",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 540,
+      "orderId": "JaPwdHVK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 541,
+      "orderId": "JaPwdHVK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 542,
+      "orderId": "xfnrBLaN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 543,
+      "orderId": "xfnrBLaN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 544,
+      "orderId": "JTAylCgc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 545,
+      "orderId": "JTAylCgc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 546,
+      "orderId": "GlIcSlkC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 547,
+      "orderId": "dRRTZktW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 548,
+      "orderId": "dRRTZktW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 549,
+      "orderId": "Ps52ylP9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 550,
+      "orderId": "Ps52ylP9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 551,
+      "orderId": "lbo7ENFY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 552,
+      "orderId": "lbo7ENFY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 553,
+      "orderId": "DDqeUsmR",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 554,
+      "orderId": "DDqeUsmR",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 555,
+      "orderId": "6EEl5gIw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 556,
+      "orderId": "DDNG5w6K",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 557,
+      "orderId": "oou6qYvu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 558,
+      "orderId": "oou6qYvu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 559,
+      "orderId": "OervRn1a",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 560,
+      "orderId": "OervRn1a",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 561,
+      "orderId": "LmuxNf7Q",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 562,
+      "orderId": "LmuxNf7Q",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 563,
+      "orderId": "Xya4TfVX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 564,
+      "orderId": "Xya4TfVX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 565,
+      "orderId": "W2aJO7Fk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 566,
+      "orderId": "W2aJO7Fk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 567,
+      "orderId": "i1ZNjWJ8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 568,
+      "orderId": "i1ZNjWJ8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 569,
+      "orderId": "9LrbY2ro",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 570,
+      "orderId": "9LrbY2ro",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 571,
+      "orderId": "LhIabvQu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 572,
+      "orderId": "LhIabvQu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 573,
+      "orderId": "nzYtnTU6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 574,
+      "orderId": "nzYtnTU6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 575,
+      "orderId": "VMbVfzTB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 576,
+      "orderId": "VMbVfzTB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 577,
+      "orderId": "vfgnxikY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 578,
+      "orderId": "vfgnxikY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 579,
+      "orderId": "Q5iZme9w",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 580,
+      "orderId": "Q5iZme9w",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 581,
+      "orderId": "P5Zss7fB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 582,
+      "orderId": "P5Zss7fB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 583,
+      "orderId": "NODNUZQD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 584,
+      "orderId": "NODNUZQD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 585,
+      "orderId": "oHkjLHi9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 586,
+      "orderId": "oHkjLHi9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 587,
+      "orderId": "dIkufvhb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 588,
+      "orderId": "dIkufvhb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 589,
+      "orderId": "aLns6YqZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 590,
+      "orderId": "aLns6YqZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 591,
+      "orderId": "unRFO0bo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 592,
+      "orderId": "unRFO0bo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 593,
+      "orderId": "GvXG7ELF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 594,
+      "orderId": "GvXG7ELF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 595,
+      "orderId": "g0Yl2G57",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 596,
+      "orderId": "g0Yl2G57",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 597,
+      "orderId": "9gnb8sNl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 598,
+      "orderId": "9gnb8sNl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 599,
+      "orderId": "X3QCqbQw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 600,
+      "orderId": "X3QCqbQw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 601,
+      "orderId": "JABossrx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 602,
+      "orderId": "JABossrx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 603,
+      "orderId": "QFHQpW0N",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 604,
+      "orderId": "QFHQpW0N",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 605,
+      "orderId": "5fq7xr7n",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 606,
+      "orderId": "5fq7xr7n",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 607,
+      "orderId": "hRUJRMQF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 608,
+      "orderId": "hRUJRMQF",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 609,
+      "orderId": "J1w79MiN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 610,
+      "orderId": "J1w79MiN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 611,
+      "orderId": "aFM35J4E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 612,
+      "orderId": "aFM35J4E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 613,
+      "orderId": "A6kIeGvx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 614,
+      "orderId": "A6kIeGvx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 615,
+      "orderId": "GlIcSlkC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 616,
+      "orderId": "GGi6QIOB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 617,
+      "orderId": "GGi6QIOB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 618,
+      "orderId": "x8QjIECG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 619,
+      "orderId": "x8QjIECG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 620,
+      "orderId": "ixIemFeb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 621,
+      "orderId": "ixIemFeb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 622,
+      "orderId": "4ufcze2g",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 623,
+      "orderId": "4ufcze2g",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 624,
+      "orderId": "OVK57bIO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 625,
+      "orderId": "OVK57bIO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 626,
+      "orderId": "q2A111uV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 627,
+      "orderId": "q2A111uV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 628,
+      "orderId": "TG0RDCeO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 629,
+      "orderId": "TG0RDCeO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 630,
+      "orderId": "PRt8ReLS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 631,
+      "orderId": "PRt8ReLS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 632,
+      "orderId": "ikZOWxSx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 633,
+      "orderId": "ikZOWxSx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 634,
+      "orderId": "AOJCgpoa",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 635,
+      "orderId": "AOJCgpoa",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 636,
+      "orderId": "YELARoUt",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 637,
+      "orderId": "LgiDdCMM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 638,
+      "orderId": "LgiDdCMM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 639,
+      "orderId": "NfQg57a9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 640,
+      "orderId": "NfQg57a9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 641,
+      "orderId": "rsiOeCOq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 642,
+      "orderId": "rsiOeCOq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 643,
+      "orderId": "CwWXD5pv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 644,
+      "orderId": "CwWXD5pv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 645,
+      "orderId": "jHJTm4f5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 646,
+      "orderId": "jHJTm4f5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 647,
+      "orderId": "mTdAgwl3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 648,
+      "orderId": "mTdAgwl3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 649,
+      "orderId": "KPJ8CRue",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 650,
+      "orderId": "KPJ8CRue",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 651,
+      "orderId": "24fpO6LH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 652,
+      "orderId": "24fpO6LH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 653,
+      "orderId": "g1ytkqa1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 654,
+      "orderId": "g1ytkqa1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 655,
+      "orderId": "BDB1K6Ya",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 656,
+      "orderId": "BDB1K6Ya",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 657,
+      "orderId": "HJTJKSCK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 658,
+      "orderId": "HJTJKSCK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 659,
+      "orderId": "AbPg75tk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 660,
+      "orderId": "AbPg75tk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 661,
+      "orderId": "L9IDq1uE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 662,
+      "orderId": "L9IDq1uE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 663,
+      "orderId": "vhcxTSfl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 664,
+      "orderId": "vhcxTSfl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 665,
+      "orderId": "WaL1tDIw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 666,
+      "orderId": "WaL1tDIw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 667,
+      "orderId": "Mf19epJ7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 668,
+      "orderId": "Mf19epJ7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 669,
+      "orderId": "WFGRNezI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 670,
+      "orderId": "WFGRNezI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 671,
+      "orderId": "ek50qtb6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 672,
+      "orderId": "ek50qtb6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 673,
+      "orderId": "jhKm2v6J",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 674,
+      "orderId": "jhKm2v6J",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 675,
+      "orderId": "VKkejfmq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 676,
+      "orderId": "VKkejfmq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 677,
+      "orderId": "hrWgWgu3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 678,
+      "orderId": "hrWgWgu3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 679,
+      "orderId": "JWLVgGrd",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 680,
+      "orderId": "JWLVgGrd",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 681,
+      "orderId": "hA8VHE5m",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 682,
+      "orderId": "hA8VHE5m",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 683,
+      "orderId": "iNMvWzOj",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 684,
+      "orderId": "iNMvWzOj",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 685,
+      "orderId": "kXjVC9Bf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 686,
+      "orderId": "kXjVC9Bf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 687,
+      "orderId": "t14ejeh1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 688,
+      "orderId": "t14ejeh1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 689,
+      "orderId": "4nW0HeCm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 690,
+      "orderId": "4nW0HeCm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 691,
+      "orderId": "6eSOXKpM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 692,
+      "orderId": "6eSOXKpM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 693,
+      "orderId": "Tt5a9bmP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 694,
+      "orderId": "Tt5a9bmP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 695,
+      "orderId": "YHmPZ2a2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 696,
+      "orderId": "YHmPZ2a2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 697,
+      "orderId": "9kTZhPUl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 698,
+      "orderId": "9kTZhPUl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 699,
+      "orderId": "7qZg2vZi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 700,
+      "orderId": "7qZg2vZi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 701,
+      "orderId": "MggY8ogP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 702,
+      "orderId": "MggY8ogP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 703,
+      "orderId": "PEUqDqTN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 704,
+      "orderId": "PEUqDqTN",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 705,
+      "orderId": "74y1nQga",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 706,
+      "orderId": "74y1nQga",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 707,
+      "orderId": "pRkoEHOb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 708,
+      "orderId": "pRkoEHOb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 709,
+      "orderId": "W3J3ZEQ3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 710,
+      "orderId": "W3J3ZEQ3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 711,
+      "orderId": "6EEl5gIw",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 712,
+      "orderId": "0DywCobl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 713,
+      "orderId": "0DywCobl",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 714,
+      "orderId": "YwWTo5ya",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 715,
+      "orderId": "YwWTo5ya",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 716,
+      "orderId": "OVV7bC5l",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 717,
+      "orderId": "OVV7bC5l",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 718,
+      "orderId": "76d828aa",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 719,
+      "orderId": "76d828aa",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 720,
+      "orderId": "eeIn7vAV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 721,
+      "orderId": "eeIn7vAV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 722,
+      "orderId": "9oM2RQIx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 723,
+      "orderId": "9oM2RQIx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 724,
+      "orderId": "GQlXLU05",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 725,
+      "orderId": "GQlXLU05",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 726,
+      "orderId": "dF2bdNWL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 727,
+      "orderId": "dF2bdNWL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 728,
+      "orderId": "pObVAUrJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 729,
+      "orderId": "pObVAUrJ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 730,
+      "orderId": "Y9onELtb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 731,
+      "orderId": "Y9onELtb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 732,
+      "orderId": "fv9YIbgS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 733,
+      "orderId": "fv9YIbgS",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 734,
+      "orderId": "CdPwuGto",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 735,
+      "orderId": "CdPwuGto",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 736,
+      "orderId": "i7QPOJ81",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 737,
+      "orderId": "i7QPOJ81",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 738,
+      "orderId": "uT3rDrtk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 739,
+      "orderId": "uT3rDrtk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 740,
+      "orderId": "JfJAPkqj",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 741,
+      "orderId": "JfJAPkqj",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 742,
+      "orderId": "lLj1fw5V",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 743,
+      "orderId": "lLj1fw5V",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 744,
+      "orderId": "JEEYxxyV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 745,
+      "orderId": "JEEYxxyV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 746,
+      "orderId": "UsRke4Lv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 747,
+      "orderId": "UsRke4Lv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 748,
+      "orderId": "GQlXLU05",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 749,
+      "orderId": "GQlXLU05",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 750,
+      "orderId": "zyjC7c6F",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 751,
+      "orderId": "zyjC7c6F",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 752,
+      "orderId": "5IF2Ubif",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 753,
+      "orderId": "5IF2Ubif",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 754,
+      "orderId": "At6aYqxH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 755,
+      "orderId": "At6aYqxH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 756,
+      "orderId": "LPMYpNav",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 757,
+      "orderId": "LPMYpNav",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 758,
+      "orderId": "oVJAXzyY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 759,
+      "orderId": "oVJAXzyY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 760,
+      "orderId": "iDXO810Z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 761,
+      "orderId": "iDXO810Z",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 762,
+      "orderId": "D8MF7mXZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 763,
+      "orderId": "D8MF7mXZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 764,
+      "orderId": "w7w2bm3A",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 765,
+      "orderId": "w7w2bm3A",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 766,
+      "orderId": "0JxsMvXH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 767,
+      "orderId": "0JxsMvXH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 768,
+      "orderId": "XQokjuq1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 769,
+      "orderId": "XQokjuq1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 770,
+      "orderId": "UvTMuSVO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 771,
+      "orderId": "UvTMuSVO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 772,
+      "orderId": "7ZJCvZXW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 773,
+      "orderId": "7ZJCvZXW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 774,
+      "orderId": "ek5Y3BtZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 775,
+      "orderId": "ek5Y3BtZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 776,
+      "orderId": "mopi4w3q",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 777,
+      "orderId": "mopi4w3q",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 778,
+      "orderId": "dEhdR5xz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 779,
+      "orderId": "dEhdR5xz",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 780,
+      "orderId": "LEfGMwuA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 781,
+      "orderId": "LEfGMwuA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 782,
+      "orderId": "862dafaf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 783,
+      "orderId": "862dafaf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 784,
+      "orderId": "n8JRKuua",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 785,
+      "orderId": "n8JRKuua",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 786,
+      "orderId": "fLSDNEWm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 787,
+      "orderId": "fLSDNEWm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 788,
+      "orderId": "3q5UbjRq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 789,
+      "orderId": "3q5UbjRq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 790,
+      "orderId": "X1N9dMXC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 791,
+      "orderId": "X1N9dMXC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 792,
+      "orderId": "rgiCWQB3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 793,
+      "orderId": "rgiCWQB3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 794,
+      "orderId": "nBQ0XxoO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 795,
+      "orderId": "nBQ0XxoO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 796,
+      "orderId": "mlqj0vKE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 797,
+      "orderId": "mlqj0vKE",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 798,
+      "orderId": "4Q4wSk6E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 799,
+      "orderId": "4Q4wSk6E",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 800,
+      "orderId": "GV3Rpo5K",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 801,
+      "orderId": "GV3Rpo5K",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 802,
+      "orderId": "s0pkzbMi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 803,
+      "orderId": "s0pkzbMi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 804,
+      "orderId": "NEo0fMe4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 805,
+      "orderId": "NEo0fMe4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 806,
+      "orderId": "TsVpYE7H",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 807,
+      "orderId": "TsVpYE7H",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 808,
+      "orderId": "nAn9kMsX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 809,
+      "orderId": "nAn9kMsX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 810,
+      "orderId": "jhr6zOqC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 811,
+      "orderId": "jhr6zOqC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 812,
+      "orderId": "iIcsAjrL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 813,
+      "orderId": "iIcsAjrL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 814,
+      "orderId": "J1JtdOBb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 815,
+      "orderId": "J1JtdOBb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 816,
+      "orderId": "12b6eq09",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 817,
+      "orderId": "12b6eq09",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 818,
+      "orderId": "6dtL5MJr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 819,
+      "orderId": "6dtL5MJr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 820,
+      "orderId": "TXM1GQof",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 821,
+      "orderId": "TXM1GQof",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 822,
+      "orderId": "sHI8StX9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 823,
+      "orderId": "sHI8StX9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 824,
+      "orderId": "TUZHVMwD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 825,
+      "orderId": "TUZHVMwD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 826,
+      "orderId": "B2u4l5i7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 827,
+      "orderId": "B2u4l5i7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 828,
+      "orderId": "LfSFjwyZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 829,
+      "orderId": "LfSFjwyZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 830,
+      "orderId": "SNjf2d0B",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 831,
+      "orderId": "SNjf2d0B",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 832,
+      "orderId": "GMfrYoxv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 833,
+      "orderId": "GMfrYoxv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 834,
+      "orderId": "VH4uMgkk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 835,
+      "orderId": "VH4uMgkk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 836,
+      "orderId": "2cFCOXGD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 837,
+      "orderId": "2cFCOXGD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 838,
+      "orderId": "7bJ4VTJ2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 839,
+      "orderId": "7bJ4VTJ2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 840,
+      "orderId": "5pK3oU7A",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 841,
+      "orderId": "5pK3oU7A",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 842,
+      "orderId": "XZ2uMbYI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 843,
+      "orderId": "XZ2uMbYI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 844,
+      "orderId": "ZbWYLOdu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 845,
+      "orderId": "ZbWYLOdu",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 846,
+      "orderId": "0HMN6feD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 847,
+      "orderId": "0HMN6feD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 848,
+      "orderId": "TvEteKD3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 849,
+      "orderId": "TvEteKD3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 850,
+      "orderId": "Qfe3eJrf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 851,
+      "orderId": "Qfe3eJrf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 852,
+      "orderId": "gdYdW5cn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 853,
+      "orderId": "gdYdW5cn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 854,
+      "orderId": "jHA9G7mm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 855,
+      "orderId": "jHA9G7mm",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 856,
+      "orderId": "iom9tc9m",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 857,
+      "orderId": "iom9tc9m",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 858,
+      "orderId": "0hYsAmK5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 859,
+      "orderId": "0hYsAmK5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 860,
+      "orderId": "Qfe3eJrf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 861,
+      "orderId": "Qfe3eJrf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 862,
+      "orderId": "2dcFKLtU",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 863,
+      "orderId": "2dcFKLtU",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 864,
+      "orderId": "loh6mcLi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 865,
+      "orderId": "loh6mcLi",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 866,
+      "orderId": "vuaDlZEK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 867,
+      "orderId": "vuaDlZEK",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 868,
+      "orderId": "2O3bd9oq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 869,
+      "orderId": "2O3bd9oq",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 870,
+      "orderId": "lwIfCK2b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 871,
+      "orderId": "lwIfCK2b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 872,
+      "orderId": "dfdVFOEA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 873,
+      "orderId": "dfdVFOEA",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 874,
+      "orderId": "2ClqWQeI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 875,
+      "orderId": "2ClqWQeI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 876,
+      "orderId": "m4B2qJJ4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 877,
+      "orderId": "m4B2qJJ4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 878,
+      "orderId": "Q63RJ2li",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 879,
+      "orderId": "Q63RJ2li",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 880,
+      "orderId": "9Vf0Kxb2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 881,
+      "orderId": "9Vf0Kxb2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 882,
+      "orderId": "AltyCg7B",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 883,
+      "orderId": "AltyCg7B",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 884,
+      "orderId": "jDkJOWU9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 885,
+      "orderId": "jDkJOWU9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 886,
+      "orderId": "x5KfXMic",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 887,
+      "orderId": "x5KfXMic",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 888,
+      "orderId": "nmJrySD3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 889,
+      "orderId": "nmJrySD3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 890,
+      "orderId": "0Y9lPyUV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 891,
+      "orderId": "0Y9lPyUV",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 892,
+      "orderId": "Fef62W52",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 893,
+      "orderId": "Fef62W52",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 894,
+      "orderId": "mm8un8Q4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 895,
+      "orderId": "mm8un8Q4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 896,
+      "orderId": "HbHB2fTD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 897,
+      "orderId": "HbHB2fTD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 898,
+      "orderId": "Pl8DinHI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 899,
+      "orderId": "Pl8DinHI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 900,
+      "orderId": "b9763900",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 901,
+      "orderId": "b9763900",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 902,
+      "orderId": "SZcjw1NO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 903,
+      "orderId": "SZcjw1NO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 904,
+      "orderId": "8090d1c1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 905,
+      "orderId": "8090d1c1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 906,
+      "orderId": "M5kESFVC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 907,
+      "orderId": "M5kESFVC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 908,
+      "orderId": "2DgXJu2O",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 909,
+      "orderId": "2DgXJu2O",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 910,
+      "orderId": "0Sh5fCKO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 911,
+      "orderId": "0Sh5fCKO",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 912,
+      "orderId": "bPPT0j75",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 913,
+      "orderId": "bPPT0j75",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 914,
+      "orderId": "TtmVibWs",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 915,
+      "orderId": "TtmVibWs",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 916,
+      "orderId": "cc47600d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 917,
+      "orderId": "cc47600d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 918,
+      "orderId": "1e02a382",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 919,
+      "orderId": "1e02a382",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 920,
+      "orderId": "udBWbLef",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 921,
+      "orderId": "udBWbLef",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 922,
+      "orderId": "pkVXQ6VQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 923,
+      "orderId": "pkVXQ6VQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 924,
+      "orderId": "xhjyxyHf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 925,
+      "orderId": "xhjyxyHf",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 926,
+      "orderId": "RiDZuyKx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 927,
+      "orderId": "RiDZuyKx",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 928,
+      "orderId": "xizne3iQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 929,
+      "orderId": "xizne3iQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 930,
+      "orderId": "eWSqzbZy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 931,
+      "orderId": "eWSqzbZy",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 932,
+      "orderId": "90bec4e9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 933,
+      "orderId": "90bec4e9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 934,
+      "orderId": "022c1040",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 935,
+      "orderId": "022c1040",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 936,
+      "orderId": "dCpWyBK5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 937,
+      "orderId": "dCpWyBK5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 938,
+      "orderId": "a6688045",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 939,
+      "orderId": "a6688045",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 940,
+      "orderId": "qSz6gScM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 941,
+      "orderId": "qSz6gScM",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 942,
+      "orderId": "nrpSaMes",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 943,
+      "orderId": "nrpSaMes",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 944,
+      "orderId": "Htf4jSjC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 945,
+      "orderId": "Htf4jSjC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 946,
+      "orderId": "4tcy1ne8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 947,
+      "orderId": "4tcy1ne8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 948,
+      "orderId": "f0d7f676",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 949,
+      "orderId": "f0d7f676",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 950,
+      "orderId": "3c234cd0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 951,
+      "orderId": "3c234cd0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 952,
+      "orderId": "a591c547",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 953,
+      "orderId": "a591c547",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 954,
+      "orderId": "d9e5939f",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 955,
+      "orderId": "d9e5939f",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 956,
+      "orderId": "gFojGpEG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 957,
+      "orderId": "gFojGpEG",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 958,
+      "orderId": "kHbmMv57",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 959,
+      "orderId": "kHbmMv57",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 960,
+      "orderId": "58f3293d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 961,
+      "orderId": "58f3293d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 962,
+      "orderId": "0fe22ced",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 963,
+      "orderId": "0fe22ced",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 964,
+      "orderId": "89c7c76a",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 965,
+      "orderId": "682b6597",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 966,
+      "orderId": "682b6597",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 967,
+      "orderId": "dF2bdNWL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 968,
+      "orderId": "dF2bdNWL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 969,
+      "orderId": "6cf3a059",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 970,
+      "orderId": "6cf3a059",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 971,
+      "orderId": "9d61daa1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 972,
+      "orderId": "9d61daa1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 973,
+      "orderId": "E0jcStwo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 974,
+      "orderId": "E0jcStwo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 975,
+      "orderId": "IRNiuUGo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 976,
+      "orderId": "IRNiuUGo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 977,
+      "orderId": "HqxaNbze",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 978,
+      "orderId": "HqxaNbze",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 979,
+      "orderId": "0VkzieGX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 980,
+      "orderId": "0VkzieGX",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 981,
+      "orderId": "offKqTJB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 982,
+      "orderId": "offKqTJB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 983,
+      "orderId": "fdf8e2f8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 984,
+      "orderId": "fdf8e2f8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 985,
+      "orderId": "1b31d889",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 986,
+      "orderId": "1b31d889",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 987,
+      "orderId": "222a911e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 988,
+      "orderId": "222a911e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 989,
+      "orderId": "c0efc87b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 990,
+      "orderId": "c0efc87b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 991,
+      "orderId": "4e239e27",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 992,
+      "orderId": "4e239e27",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 993,
+      "orderId": "19cd0881",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 994,
+      "orderId": "19cd0881",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 995,
+      "orderId": "3a9a6ffb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 996,
+      "orderId": "3a9a6ffb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 997,
+      "orderId": "dd06f0b0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 998,
+      "orderId": "dd06f0b0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 999,
+      "orderId": "b9fbb5cb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1000,
+      "orderId": "b9fbb5cb",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1001,
+      "orderId": "938d42b2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1002,
+      "orderId": "938d42b2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1003,
+      "orderId": "ba3cd3a2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1004,
+      "orderId": "ba3cd3a2",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1005,
+      "orderId": "85093a69",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1006,
+      "orderId": "85093a69",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1007,
+      "orderId": "53691b8a",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1008,
+      "orderId": "53691b8a",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1009,
+      "orderId": "18f4fe6c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1010,
+      "orderId": "18f4fe6c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1011,
+      "orderId": "de91d385",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1012,
+      "orderId": "de91d385",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1013,
+      "orderId": "ff738adc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1014,
+      "orderId": "ff738adc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1015,
+      "orderId": "acfc101d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1016,
+      "orderId": "acfc101d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1017,
+      "orderId": "Mn7xZWxc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1018,
+      "orderId": "Mn7xZWxc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1019,
+      "orderId": "ObSwbxok",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1020,
+      "orderId": "ObSwbxok",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1021,
+      "orderId": "QGfLaAfC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1022,
+      "orderId": "QGfLaAfC",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1023,
+      "orderId": "xLXUKTZo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1024,
+      "orderId": "xLXUKTZo",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1025,
+      "orderId": "RE2xnSnD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1026,
+      "orderId": "RE2xnSnD",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1027,
+      "orderId": "ahZhl4nk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1028,
+      "orderId": "ahZhl4nk",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1029,
+      "orderId": "017c6ed3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1030,
+      "orderId": "017c6ed3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1031,
+      "orderId": "f1289647",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1032,
+      "orderId": "f1289647",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1033,
+      "orderId": "c8d2a250",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1034,
+      "orderId": "c8d2a250",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1035,
+      "orderId": "nMwaHOGv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1036,
+      "orderId": "nMwaHOGv",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1037,
+      "orderId": "yUuTVIKU",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1038,
+      "orderId": "yUuTVIKU",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1039,
+      "orderId": "c3a4w5W1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1040,
+      "orderId": "c3a4w5W1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1041,
+      "orderId": "cbccd571",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1042,
+      "orderId": "cbccd571",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1043,
+      "orderId": "89fbf362",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1044,
+      "orderId": "89fbf362",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1045,
+      "orderId": "Lowmwylr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1046,
+      "orderId": "Lowmwylr",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1047,
+      "orderId": "6572c2ec",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1048,
+      "orderId": "6572c2ec",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1049,
+      "orderId": "dfb9a674",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1050,
+      "orderId": "dfb9a674",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1051,
+      "orderId": "dcc48916",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1052,
+      "orderId": "dcc48916",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1053,
+      "orderId": "Fprh98DL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1054,
+      "orderId": "Fprh98DL",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1055,
+      "orderId": "aBYimbfZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1056,
+      "orderId": "aBYimbfZ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1057,
+      "orderId": "MgBEc7XP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1058,
+      "orderId": "MgBEc7XP",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1059,
+      "orderId": "TILnaqyB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1060,
+      "orderId": "TILnaqyB",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1061,
+      "orderId": "5ibOv80h",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1062,
+      "orderId": "5ibOv80h",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1063,
+      "orderId": "50c72ac1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1064,
+      "orderId": "50c72ac1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1065,
+      "orderId": "63f51b07",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1066,
+      "orderId": "63f51b07",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1067,
+      "orderId": "f3ab7072",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1068,
+      "orderId": "f3ab7072",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1069,
+      "orderId": "7982413b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1070,
+      "orderId": "7982413b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1071,
+      "orderId": "00bd16ca",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1072,
+      "orderId": "00bd16ca",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1073,
+      "orderId": "297047da",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1074,
+      "orderId": "297047da",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1075,
+      "orderId": "5c0963c0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1076,
+      "orderId": "5c0963c0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1077,
+      "orderId": "50af3ebc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1078,
+      "orderId": "50af3ebc",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1079,
+      "orderId": "d42e4e66",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1080,
+      "orderId": "d42e4e66",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1081,
+      "orderId": "d26a6b75",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1082,
+      "orderId": "d26a6b75",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1083,
+      "orderId": "36bd0d49",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1084,
+      "orderId": "36bd0d49",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1085,
+      "orderId": "d659cda0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1086,
+      "orderId": "d659cda0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1087,
+      "orderId": "4ba80d04",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1088,
+      "orderId": "4ba80d04",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1089,
+      "orderId": "f9e04845",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1090,
+      "orderId": "f9e04845",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1091,
+      "orderId": "2aeba7f5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1092,
+      "orderId": "2aeba7f5",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1093,
+      "orderId": "c6c9a344",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1094,
+      "orderId": "c6c9a344",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1095,
+      "orderId": "78271e4d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1096,
+      "orderId": "78271e4d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1097,
+      "orderId": "af8572b8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1098,
+      "orderId": "af8572b8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1099,
+      "orderId": "oZ6p47WY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1100,
+      "orderId": "oZ6p47WY",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1101,
+      "orderId": "99b450f8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1102,
+      "orderId": "99b450f8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1103,
+      "orderId": "4zuEjYrW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1104,
+      "orderId": "4zuEjYrW",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1105,
+      "orderId": "9d00d7a9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1106,
+      "orderId": "9d00d7a9",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1107,
+      "orderId": "687cdaa0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1108,
+      "orderId": "687cdaa0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1109,
+      "orderId": "e82c5ac7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1110,
+      "orderId": "e82c5ac7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1111,
+      "orderId": "Z0DWGGoH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1112,
+      "orderId": "Z0DWGGoH",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1113,
+      "orderId": "KJpsCsSI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1114,
+      "orderId": "KJpsCsSI",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1115,
+      "orderId": "032701bd",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1116,
+      "orderId": "032701bd",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1117,
+      "orderId": "85c2f613",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1118,
+      "orderId": "85c2f613",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1119,
+      "orderId": "0fd4d3ab",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1120,
+      "orderId": "0fd4d3ab",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1121,
+      "orderId": "d66f6c78",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1122,
+      "orderId": "d66f6c78",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1123,
+      "orderId": "cdc435ae",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1124,
+      "orderId": "cdc435ae",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1125,
+      "orderId": "9893f29e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1126,
+      "orderId": "9893f29e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1127,
+      "orderId": "ef03a60b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1128,
+      "orderId": "ef03a60b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1129,
+      "orderId": "bb2b968c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1130,
+      "orderId": "bb2b968c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1131,
+      "orderId": "720d3e59",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1132,
+      "orderId": "720d3e59",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1133,
+      "orderId": "d50788be",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1134,
+      "orderId": "d50788be",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1135,
+      "orderId": "84654d04",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1136,
+      "orderId": "84654d04",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1137,
+      "orderId": "f9f383b3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1138,
+      "orderId": "f9f383b3",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1139,
+      "orderId": "296b4423",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1140,
+      "orderId": "296b4423",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1141,
+      "orderId": "e42dcd86",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1142,
+      "orderId": "e42dcd86",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1143,
+      "orderId": "e1366623",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1144,
+      "orderId": "e1366623",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1145,
+      "orderId": "4df297e7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1146,
+      "orderId": "4df297e7",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1147,
+      "orderId": "80cf27a1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1148,
+      "orderId": "80cf27a1",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1149,
+      "orderId": "61f36748",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1150,
+      "orderId": "61f36748",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1151,
+      "orderId": "7fe1d76c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1152,
+      "orderId": "7fe1d76c",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1153,
+      "orderId": "7a7c3146",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1154,
+      "orderId": "7a7c3146",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1155,
+      "orderId": "e771eb24",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1156,
+      "orderId": "e771eb24",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1157,
+      "orderId": "cfbdb894",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1158,
+      "orderId": "cfbdb894",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1159,
+      "orderId": "3245c85e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1160,
+      "orderId": "3245c85e",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1161,
+      "orderId": "1c814704",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1162,
+      "orderId": "1c814704",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1163,
+      "orderId": "0272c2c8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1164,
+      "orderId": "0272c2c8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1165,
+      "orderId": "0b3ea764",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1166,
+      "orderId": "0b3ea764",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1167,
+      "orderId": "68a737e6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1168,
+      "orderId": "68a737e6",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1169,
+      "orderId": "nPKOhj4Y",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1170,
+      "orderId": "nPKOhj4Y",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1171,
+      "orderId": "HQzBtewn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1172,
+      "orderId": "HQzBtewn",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1173,
+      "orderId": "YcEZUYj0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1174,
+      "orderId": "YcEZUYj0",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1175,
+      "orderId": "RqIw89nQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1176,
+      "orderId": "RqIw89nQ",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1177,
+      "orderId": "ulGaXfur",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1178,
+      "orderId": "ulGaXfur",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1179,
+      "orderId": "2fcb6800",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1180,
+      "orderId": "2fcb6800",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1181,
+      "orderId": "4d9d4f06",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1182,
+      "orderId": "4d9d4f06",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1183,
+      "orderId": "ed8d39ec",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1184,
+      "orderId": "ed8d39ec",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1185,
+      "orderId": "aaabd108",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1186,
+      "orderId": "aaabd108",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1187,
+      "orderId": "aa0337f4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1188,
+      "orderId": "aa0337f4",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1189,
+      "orderId": "5ce15583",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1190,
+      "orderId": "5ce15583",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1191,
+      "orderId": "d01b4e5b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1192,
+      "orderId": "d01b4e5b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1193,
+      "orderId": "8c821d6d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1194,
+      "orderId": "8c821d6d",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1195,
+      "orderId": "1e757e40",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1196,
+      "orderId": "1e757e40",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1197,
+      "orderId": "96095d9b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1198,
+      "orderId": "96095d9b",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1199,
+      "orderId": "4b123b00",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1200,
+      "orderId": "4b123b00",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1201,
+      "orderId": "2c1f5aa8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    },
+    {
+      "row": 1202,
+      "orderId": "2c1f5aa8",
+      "error": "Quote 조회 실패: column quote.quote_id does not exist"
+    }
+  ]
+}

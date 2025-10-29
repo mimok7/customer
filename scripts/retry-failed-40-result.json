@@ -1,0 +1,214 @@
+{
+  "retriedAt": "2025-10-14T06:48:44.262Z",
+  "totalRetried": 40,
+  "successCount": 0,
+  "failedCount": 1,
+  "skippedCount": 39,
+  "results": {
+    "success": [],
+    "failed": [
+      {
+        "rowNum": 1065,
+        "orderId": "DwuMuwTF",
+        "error": "insert or update on table \"reservation\" violates foreign key constraint \"reservation_re_user_id_fkey\""
+      }
+    ],
+    "skipped": [
+      {
+        "rowNum": 6,
+        "orderId": "d01b4e5b",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 7,
+        "orderId": "2562db04",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 31,
+        "orderId": "Mf19epJ7",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 284,
+        "orderId": "gdYdW5cn",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 438,
+        "orderId": "8e3b0161",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 462,
+        "orderId": "yCl4HUUF",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 546,
+        "orderId": "iYy7Dosi",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 704,
+        "orderId": "u4wYzSjX",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 783,
+        "orderId": "HoqzCUma",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 937,
+        "orderId": "BC6dYz0B",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1005,
+        "orderId": "qRMZAiX4",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1009,
+        "orderId": "P5bxI08z",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1126,
+        "orderId": "Mai5A6fa",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1148,
+        "orderId": "6823f13d",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 1222,
+        "orderId": "Eo0rxGRJ",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1236,
+        "orderId": "bsJqhztf",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1274,
+        "orderId": "637eecb9",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 1332,
+        "orderId": "NjvE7iqc",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1836,
+        "orderId": "f4cad636",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 1859,
+        "orderId": "MgvM7nk4",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 1929,
+        "orderId": "7a7e2457",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 1994,
+        "orderId": "b8OzNgbx",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 2002,
+        "orderId": "b8OzNgbx",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 2009,
+        "orderId": "yy5Ou1K4",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 2047,
+        "orderId": "txWqadVF",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 2084,
+        "orderId": "RYHV1c4q",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 2184,
+        "orderId": "dbb5c6a5",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 2214,
+        "orderId": "oPoEyam9",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 2253,
+        "orderId": "735cc9c1",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 2380,
+        "orderId": "dLqumwKy",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 2406,
+        "orderId": "AaYR9xrZ",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 2417,
+        "orderId": "4d0938b4",
+        "reason": "주문ID 매핑 실패"
+      },
+      {
+        "rowNum": 2538,
+        "orderId": "lQDZajyH",
+        "reason": "날짜 파싱 실패"
+      },
+      {
+        "rowNum": 2548,
+        "orderId": "8928f666",
+        "reason": "날짜 파싱 실패"
+      },
+      {
+        "rowNum": 2597,
+        "orderId": "btcoNzNa",
+        "reason": "날짜 파싱 실패"
+      },
+      {
+        "rowNum": 2609,
+        "orderId": "b9763900",
+        "reason": "날짜 파싱 실패"
+      },
+      {
+        "rowNum": 2680,
+        "orderId": "1b31d889",
+        "reason": "날짜 파싱 실패"
+      },
+      {
+        "rowNum": 2686,
+        "orderId": "c0efc87b",
+        "reason": "날짜 파싱 실패"
+      },
+      {
+        "rowNum": 2710,
+        "orderId": "18f4fe6c",
+        "reason": "날짜 파싱 실패"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "totalRecords": 6307,
+  "uniqueCruises": 22,
+  "cruises": [
+    {
+      "cruise": "그랜드 파이어니스",
+      "count": 1536
+    },
+    {
+      "cruise": "엠바사더 시그니처",
+      "count": 768
+    },
+    {
+      "cruise": "헤르메스 크루즈",
+      "count": 672
+    },
+    {
+      "cruise": "캐서린 크루즈",
+      "count": 624
+    },
+    {
+      "cruise": "칼리스타 크루즈",
+      "count": 553
+    },
+    {
+      "cruise": "카펠라 크루즈",
+      "count": 500
+    },
+    {
+      "cruise": "엠바사더 오버나이트",
+      "count": 384
+    },
+    {
+      "cruise": "인도차이나 프리미엄 크루즈",
+      "count": 384
+    },
+    {
+      "cruise": "씨스타 크루즈",
+      "count": 280
+    },
+    {
+      "cruise": "라이라 그랜져 크루즈",
+      "count": 270
+    },
+    {
+      "cruise": "엘리트 오브 더 씨",
+      "count": 140
+    },
+    {
+      "cruise": "엠바사더 크루즈",
+      "count": 42
+    },
+    {
+      "cruise": "파라다이스 엘레강스",
+      "count": 32
+    },
+    {
+      "cruise": "사퀼라 요트",
+      "count": 24
+    },
+    {
+      "cruise": "아이리스 크루즈",
+      "count": 24
+    },
+    {
+      "cruise": "아메티스트 크루즈",
+      "count": 16
+    },
+    {
+      "cruise": "제이드 세일즈 크루즈",
+      "count": 16
+    },
+    {
+      "cruise": "씨옥토퍼스 크루즈",
+      "count": 16
+    },
+    {
+      "cruise": "인도차이나 그랜드",
+      "count": 16
+    },
+    {
+      "cruise": "라카스타 크루즈",
+      "count": 4
+    },
+    {
+      "cruise": "씨라이언 크루즈",
+      "count": 4
+    },
+    {
+      "cruise": "카타마란 크루즈",
+      "count": 2
+    }
+  ],
+  "uniqueRoomTypes": 89,
+  "generatedAt": "2025-10-14T03:08:17.620Z"
+}

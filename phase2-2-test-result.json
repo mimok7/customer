@@ -1,0 +1,915 @@
+{
+  "migratedAt": "2025-10-14T05:54:01.496Z",
+  "totalRecords": 100,
+  "successCount": 57,
+  "failedCount": 3,
+  "skippedCount": 40,
+  "successRate": "57.0%",
+  "results": {
+    "success": [
+      {
+        "rowNum": 2,
+        "orderId": "650ae28b",
+        "reservationId": "15403f9b-e156-49a2-b826-6379c1eea051",
+        "userId": "1b2e88f9-52a5-455c-8d2a-f81025e63fb3",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "checkinDate": "2025-09-22",
+        "guestCount": 3,
+        "price": 1600000
+      },
+      {
+        "rowNum": 3,
+        "orderId": "d9379458",
+        "reservationId": "81570334-5b76-464f-a1c1-ee77530242e4",
+        "userId": "a5425f00-504d-4c5e-9dce-1d790235e88c",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (2층)",
+        "roomCode": "R2741",
+        "checkinDate": "2025-10-07",
+        "guestCount": 2,
+        "price": 5600000
+      },
+      {
+        "rowNum": 4,
+        "orderId": "494b65ca",
+        "reservationId": "60731d7c-a3c1-4c3c-8574-cbf7e0621ffb",
+        "userId": "8b86c089-d531-4630-827d-3247d9855913",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "checkinDate": "2025-07-30",
+        "guestCount": 9,
+        "price": 1600000
+      },
+      {
+        "rowNum": 8,
+        "orderId": "a591c547",
+        "reservationId": "b9673f14-bc79-4b89-91de-55f5a8dd9de2",
+        "userId": "59368f60-b101-43c9-bb47-6d453f7e11b7",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0339",
+        "checkinDate": "2025-10-02",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 12,
+        "orderId": "ffqkK2Bt",
+        "reservationId": "94c67015-af3c-4cc5-91c8-1de8a2261c8e",
+        "userId": "02f23e6e-6663-46c7-b41a-8b12cd5a66a9",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (3층)",
+        "roomCode": "R2743",
+        "checkinDate": "2025-03-02",
+        "guestCount": 6,
+        "price": 5800000
+      },
+      {
+        "rowNum": 15,
+        "orderId": "GfgpNRoC",
+        "reservationId": "9ca2367d-040d-40b5-8d7c-923b9b6fa74e",
+        "userId": "4472d2b5-95ca-4192-848d-8f7d05d1b98b",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-02-26",
+        "guestCount": 4,
+        "price": 5700000
+      },
+      {
+        "rowNum": 16,
+        "orderId": "d9GhbRHR",
+        "reservationId": "939dd559-5d3f-4eba-b403-8c8e571a58f4",
+        "userId": "f8d77202-21c3-4acd-81b2-dcbfab692570",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0339",
+        "checkinDate": "2025-10-08",
+        "guestCount": 4,
+        "price": 5500000
+      },
+      {
+        "rowNum": 17,
+        "orderId": "c72887aa",
+        "reservationId": "29ea1197-f7fa-4ad2-b7e5-43a43e8bb53b",
+        "userId": "5af5360f-de04-46e8-b24d-8883fdaa2434",
+        "cruise": "엠바사더 오버나이트",
+        "roomType": "디럭스룸",
+        "roomCode": "R1416",
+        "checkinDate": "2025-10-07",
+        "guestCount": 4,
+        "price": 3750000
+      },
+      {
+        "rowNum": 21,
+        "orderId": "haaOIYZe",
+        "reservationId": "255334c4-7daf-49f4-a666-9962e4389ffd",
+        "userId": "eba5fc97-aeb8-4851-9166-8abdb2a19d4a",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "호라이즌 스위트",
+        "roomCode": "R2455",
+        "checkinDate": "2025-07-05",
+        "guestCount": 2,
+        "price": 7900000
+      },
+      {
+        "rowNum": 22,
+        "orderId": "7ithJiTC",
+        "reservationId": "f31b08bb-2978-41c2-8ab2-74f4b257c7d1",
+        "userId": "0e88fe15-3693-4f9c-ba0f-2c43a21845a6",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (2층)",
+        "roomCode": "R2741",
+        "checkinDate": "2024-11-29",
+        "guestCount": 4,
+        "price": 5500000
+      },
+      {
+        "rowNum": 24,
+        "orderId": "BXIN5F1g",
+        "reservationId": "1efaac2e-2cd5-4768-a523-87ab348353e6",
+        "userId": "9b01a66d-186e-4c81-889d-fbd5364e6c9e",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "checkinDate": "2025-08-25",
+        "guestCount": 4,
+        "price": 1520000
+      },
+      {
+        "rowNum": 25,
+        "orderId": "1d5fb56d",
+        "reservationId": "32ec42e3-5712-473e-b7d6-1101b06c11ba",
+        "userId": "c7fc3b51-cd64-4bb7-b72a-5c2667c22626",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "checkinDate": "2025-10-04",
+        "guestCount": 4,
+        "price": 1600000
+      },
+      {
+        "rowNum": 27,
+        "orderId": "HwQA1y8E",
+        "reservationId": "3a7d123b-698a-443d-ab3e-8048c46514a1",
+        "userId": "2016ec8e-146e-460d-87bc-1f86ba5a7519",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-01-24",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 28,
+        "orderId": "DgqCVQCw",
+        "reservationId": "3ceed696-ab1f-4398-ba4a-3f750c9f1586",
+        "userId": "178e884a-c343-4a9c-8f14-5bcc14c251f3",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "오션스위트",
+        "roomCode": "R0077",
+        "checkinDate": "2024-10-07",
+        "guestCount": 4,
+        "price": 0
+      },
+      {
+        "rowNum": 29,
+        "orderId": "X6isdCmU",
+        "reservationId": "2c50159a-33e8-4b73-81d5-ac98966458f4",
+        "userId": "9117151b-7158-4d6d-87c5-be152a5158b4",
+        "cruise": "씨옥토퍼스 크루즈",
+        "roomType": "리무진 패키지",
+        "roomCode": "R3489",
+        "checkinDate": "2025-08-03",
+        "guestCount": 4,
+        "price": 1900000
+      },
+      {
+        "rowNum": 30,
+        "orderId": "jqhmt2Xs",
+        "reservationId": "d9e2bfaa-3340-4924-8424-bad0dbd941f3",
+        "userId": "7e36c758-446c-4a29-8bc8-6ded1b1dff4e",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0339",
+        "checkinDate": "2025-10-05",
+        "guestCount": 4,
+        "price": 13200000
+      },
+      {
+        "rowNum": 32,
+        "orderId": "9GJRkVkR",
+        "reservationId": "02c8a52b-1ed2-44f0-90ee-edc02e04d513",
+        "userId": "63b8e68b-b80b-4281-95aa-28d4b8c2db94",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (2층)",
+        "roomCode": "R2741",
+        "checkinDate": "2025-02-28",
+        "guestCount": 6,
+        "price": 5500000
+      },
+      {
+        "rowNum": 33,
+        "orderId": "YsUGOroN",
+        "reservationId": "17150620-d131-4bc5-9137-4a559d8b370c",
+        "userId": "0bf20e09-ad0c-4467-9684-c11b002516e2",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (2층)",
+        "roomCode": "R2741",
+        "checkinDate": "2024-12-29",
+        "guestCount": 2,
+        "price": 0
+      },
+      {
+        "rowNum": 40,
+        "orderId": "x8QjIECG",
+        "reservationId": "53396b06-272a-4fea-b719-62ae93773e7a",
+        "userId": "d1988d55-d5e6-48f3-85fc-aa6bc4308b4e",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-05-03",
+        "guestCount": 4,
+        "price": 5700000
+      },
+      {
+        "rowNum": 41,
+        "orderId": "WgopVYZv",
+        "reservationId": "7e159bd7-5d13-4775-8ae8-da15bd40ef8a",
+        "userId": "89113c52-a740-4ad2-aa3c-3c95bf3c09bc",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "마제스티 스위트",
+        "roomCode": "R2457",
+        "checkinDate": "2025-07-10",
+        "guestCount": 2,
+        "price": 8400000
+      },
+      {
+        "rowNum": 42,
+        "orderId": "JgnT2IoV",
+        "reservationId": "0e42ca81-2fab-4fba-b9fe-8a37cc780e98",
+        "userId": "a37829cd-6e4f-4f3f-9455-0f2e65d3b15a",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2024-09-27",
+        "guestCount": 2,
+        "price": 0
+      },
+      {
+        "rowNum": 43,
+        "orderId": "778689cd",
+        "reservationId": "034feaed-e0af-4234-815d-e4f768095559",
+        "userId": "a8dd253d-62fa-4618-adc2-6903858d5f31",
+        "cruise": "사퀼라 요트",
+        "roomType": "STANDARD 코스",
+        "roomCode": "R3459",
+        "checkinDate": "2025-08-11",
+        "guestCount": 3,
+        "price": 1700000
+      },
+      {
+        "rowNum": 45,
+        "orderId": "PYeIyHFf",
+        "reservationId": "faf83144-c95a-4062-b515-32db5e79e510",
+        "userId": "db1b35ca-1565-4bd1-bb81-55ba85a6e2eb",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "이그제큐티브 스위트",
+        "roomCode": "R0009",
+        "checkinDate": "2025-03-16",
+        "guestCount": 2,
+        "price": 6550000
+      },
+      {
+        "rowNum": 46,
+        "orderId": "xx9SRW9v",
+        "reservationId": "0c640b95-4321-4b19-ad06-e92b6a6f4375",
+        "userId": "f271d616-5d36-464e-a4a9-079979a3f6a8",
+        "cruise": "엠바사더 시그니처",
+        "roomType": "이그제큐티브",
+        "roomCode": "R1548",
+        "checkinDate": "2025-07-30",
+        "guestCount": 2,
+        "price": 4000000
+      },
+      {
+        "rowNum": 48,
+        "orderId": "073f3681",
+        "reservationId": "0ee203a1-ad16-4bbe-99f1-0f05a33d0433",
+        "userId": "4d58420d-169c-4523-b8a5-82612298300d",
+        "cruise": "카타마란 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R7133",
+        "checkinDate": "2025-08-22",
+        "guestCount": 2,
+        "price": 1650000
+      },
+      {
+        "rowNum": 49,
+        "orderId": "ATnxEGSD",
+        "reservationId": "a0778eea-7254-42cb-a9b1-791acbc8ffe8",
+        "userId": "3e64b8ad-57b5-4270-b5c2-6210bfb170c5",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2024-10-01",
+        "guestCount": 2,
+        "price": 0
+      },
+      {
+        "rowNum": 50,
+        "orderId": "6OqMEUYV",
+        "reservationId": "e97b08f5-bc1c-48af-9e83-cd490589b3e3",
+        "userId": "44af9ffe-d7a3-45f7-9c48-b34ece7fbea7",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "오션발코니 스위트",
+        "roomCode": "R0001",
+        "checkinDate": "2025-04-05",
+        "guestCount": 2,
+        "price": 4900000
+      },
+      {
+        "rowNum": 51,
+        "orderId": "qpsO8tOm",
+        "reservationId": "bcd2a64b-d377-4cf2-ace6-16008132056a",
+        "userId": "c6ceb1ae-8569-4f07-ba1b-a62e2279a198",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "checkinDate": "2025-09-25",
+        "guestCount": 5,
+        "price": 1600000
+      },
+      {
+        "rowNum": 57,
+        "orderId": "dF2bdNWL",
+        "reservationId": "1fcf132c-694a-4451-9cd8-ab0326ef68b3",
+        "userId": "ed77714b-6761-4caa-8858-aeda745d05c2",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "칼리스타 레거시",
+        "roomCode": "R2453",
+        "checkinDate": "2025-08-02",
+        "guestCount": 4,
+        "price": 4700000
+      },
+      {
+        "rowNum": 61,
+        "orderId": "r6wg8Ekb",
+        "reservationId": "3ab9f90b-74da-4cc6-aaf0-058aafe7b7d7",
+        "userId": "d13ce1a8-3147-46e7-a094-0c5f24046ef4",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "칼리스타 레거시",
+        "roomCode": "R2453",
+        "checkinDate": "2025-07-29",
+        "guestCount": 4,
+        "price": 4700000
+      },
+      {
+        "rowNum": 62,
+        "orderId": "1oRO1eLK",
+        "reservationId": "bab9a703-d81b-4540-8a7d-8eede68801cc",
+        "userId": "18de5cce-fe80-49f1-9db7-4c28ad73a7e3",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-01-16",
+        "guestCount": 8,
+        "price": 5700000
+      },
+      {
+        "rowNum": 66,
+        "orderId": "4Ob4P7fM",
+        "reservationId": "5029afc1-1810-4ba0-add4-d9d30fe19859",
+        "userId": "ec48e91a-da3e-493c-a17f-97cc0cb5cc77",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "오션스위트 트리플",
+        "roomCode": "R0411",
+        "checkinDate": "2025-10-05",
+        "guestCount": 3,
+        "price": 4700000
+      },
+      {
+        "rowNum": 68,
+        "orderId": "lp00bDAC",
+        "reservationId": "90c72205-4146-438c-ae92-4af09e5b1009",
+        "userId": "20c39bae-669d-4321-bb7b-60c317cfe33b",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (1층)",
+        "roomCode": "R2737",
+        "checkinDate": "2025-02-27",
+        "guestCount": 2,
+        "price": 5300000
+      },
+      {
+        "rowNum": 69,
+        "orderId": "cDHWR1nR",
+        "reservationId": "a841fd52-20b1-4b64-b8c0-422822968a84",
+        "userId": "03f57143-bc32-4a98-8bd4-9165d3423592",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "이그제큐티브 스위트",
+        "roomCode": "R0341",
+        "checkinDate": "2025-10-05",
+        "guestCount": 4,
+        "price": 6600000
+      },
+      {
+        "rowNum": 72,
+        "orderId": "KVBW8gA2",
+        "reservationId": "06b508b5-695a-4431-88f9-64dcddb84f4a",
+        "userId": "3f8d94ca-6979-47c1-b409-770e8798e73d",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (1층)",
+        "roomCode": "R2737",
+        "checkinDate": "2025-03-16",
+        "guestCount": 6,
+        "price": 5300000
+      },
+      {
+        "rowNum": 73,
+        "orderId": "sZXwLRtN",
+        "reservationId": "0ca65ae7-d453-4baa-ae87-ae8f81345e75",
+        "userId": "dedc4cd6-a23c-439c-a490-a372a1a44f39",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-04-01",
+        "guestCount": 4,
+        "price": 13200000
+      },
+      {
+        "rowNum": 74,
+        "orderId": "YwWTo5ya",
+        "reservationId": "0948b2ef-0f00-40b5-93b3-d5871cae53ce",
+        "userId": "c02b31a7-1b5f-4b60-985d-e5ff15af1f38",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-05-22",
+        "guestCount": 4,
+        "price": 5700000
+      },
+      {
+        "rowNum": 77,
+        "orderId": "KgRD2FIx",
+        "reservationId": "211e5362-96dc-4170-872f-c18961c7b1d3",
+        "userId": "ea97aa3f-da2d-4687-9d63-5f682ab2ec6d",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (2층)",
+        "roomCode": "R2741",
+        "checkinDate": "2024-12-26",
+        "guestCount": 4,
+        "price": 5500000
+      },
+      {
+        "rowNum": 78,
+        "orderId": "qnLm9bic",
+        "reservationId": "c4946d2c-6858-40a9-84c5-6219422ad699",
+        "userId": "93d98fd1-056f-46e9-8d7e-e6186c1b25a0",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "이그제큐티브 스위트",
+        "roomCode": "R0009",
+        "checkinDate": "2024-12-27",
+        "guestCount": 2,
+        "price": 6550000
+      },
+      {
+        "rowNum": 79,
+        "orderId": "JU13f936",
+        "reservationId": "95b455c7-8469-4e4f-995c-fdea1929665f",
+        "userId": "a4dfaf6a-6419-405b-981c-b6d25f4f86c8",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-02-18",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 80,
+        "orderId": "NNVT3n0Y",
+        "reservationId": "e6e056e6-6916-4254-968a-ddaa0c42382d",
+        "userId": "72573dcf-366f-4474-b6ee-8828d2c76d62",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2024-10-07",
+        "guestCount": 2,
+        "price": 0
+      },
+      {
+        "rowNum": 81,
+        "orderId": "c0658496",
+        "reservationId": "242b4db4-598b-4203-a730-a1c49ebcfe00",
+        "userId": "5c51cc52-d198-4888-aee4-2a638a6afa3f",
+        "cruise": "씨옥토퍼스 크루즈",
+        "roomType": "리무진 패키지",
+        "roomCode": "R3489",
+        "checkinDate": "2025-08-13",
+        "guestCount": 2,
+        "price": 1900000
+      },
+      {
+        "rowNum": 83,
+        "orderId": "5NhqrSOj",
+        "reservationId": "83243f2d-11c4-4d9a-9386-f6ed60b62c45",
+        "userId": "76e019bc-7e28-4c8e-9f4a-527c7066224b",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (3층)",
+        "roomCode": "R2743",
+        "checkinDate": "2024-12-17",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 84,
+        "orderId": "uO7UyUkI",
+        "reservationId": "ddcc69ad-b1ed-4dc2-bb88-afd71946be3b",
+        "userId": "d80a991d-2e53-4df0-bd05-f3638db914e4",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (1층)",
+        "roomCode": "R2737",
+        "checkinDate": "2024-11-26",
+        "guestCount": 4,
+        "price": 0
+      },
+      {
+        "rowNum": 85,
+        "orderId": "jv8PEQJF",
+        "reservationId": "4929ec3b-0fb5-4712-9e77-abbecfc4b11f",
+        "userId": "fd577975-50e8-448d-be0b-5a890d9be5e3",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "칼리스타 오션",
+        "roomCode": "R2449",
+        "checkinDate": "2025-08-31",
+        "guestCount": 4,
+        "price": 3900000
+      },
+      {
+        "rowNum": 87,
+        "orderId": "4MioNiVz",
+        "reservationId": "8178daec-d9a4-42b2-a850-fa294aece096",
+        "userId": "72b72e8d-7c5a-47f1-86ec-768bc60e2ea3",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-07-21",
+        "guestCount": 4,
+        "price": 5700000
+      },
+      {
+        "rowNum": 88,
+        "orderId": "dd06f0b0",
+        "reservationId": "4b4a8312-bae8-4bb8-a8a7-ce670002f870",
+        "userId": "79c61cd1-51c4-45f1-a653-2f240b389857",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0339",
+        "checkinDate": "2025-10-10",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 89,
+        "orderId": "14b537b8",
+        "reservationId": "e36ba314-8528-4a30-adf5-45fa91f2858c",
+        "userId": "aa552b9e-c493-4f58-9461-15f693808935",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0339",
+        "checkinDate": "2025-10-05",
+        "guestCount": 4,
+        "price": 5700000
+      },
+      {
+        "rowNum": 90,
+        "orderId": "b3abb884",
+        "reservationId": "6e423bcd-20d0-49d6-90e1-72d7b100d128",
+        "userId": "7dd7840a-b42f-4422-9847-bdb10947a9a9",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "칼리스타 레거시",
+        "roomCode": "R2525",
+        "checkinDate": "2025-10-06",
+        "guestCount": 2,
+        "price": 6050000
+      },
+      {
+        "rowNum": 91,
+        "orderId": "Yeuj4DOu",
+        "reservationId": "5ef5b038-db39-4907-9495-e4a08160f39f",
+        "userId": "7b16d191-bfcd-4528-90ab-2e586417b67c",
+        "cruise": "라카스타 크루즈",
+        "roomType": "크루즈 셔틀 버스 왕복 포함",
+        "roomCode": "R3493",
+        "checkinDate": "2025-10-07",
+        "guestCount": 6,
+        "price": 1650000
+      },
+      {
+        "rowNum": 92,
+        "orderId": "jhr6zOqC",
+        "reservationId": "07f73034-59bd-427e-8f1e-5bc5bb627538",
+        "userId": "8c1abf7e-e3fc-4301-bf3f-33f82402c242",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0339",
+        "checkinDate": "2025-09-03",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 94,
+        "orderId": "uzoGIzbO",
+        "reservationId": "b4562f39-c840-4837-a4d1-ae1173bd3bba",
+        "userId": "ec161deb-8536-4d01-8ad8-7b27f87937be",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "호라이즌 스위트",
+        "roomCode": "R2455",
+        "checkinDate": "2025-08-08",
+        "guestCount": 2,
+        "price": 7900000
+      },
+      {
+        "rowNum": 97,
+        "orderId": "ONHakxOP",
+        "reservationId": "22a51e6d-1ea7-4cd3-ae14-9d8d2f955acf",
+        "userId": "95792ded-08e8-4aa9-9fd7-5d693dd02e8f",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2024-12-21",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 98,
+        "orderId": "4ba246af",
+        "reservationId": "fe594f8f-5d2e-4528-a3b8-4d2e1452dd12",
+        "userId": "2ebf415b-3d36-4c76-b631-818431b67ff2",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "checkinDate": "2025-09-13",
+        "guestCount": 5,
+        "price": 1520000
+      },
+      {
+        "rowNum": 99,
+        "orderId": "GvXG7ELF",
+        "reservationId": "29e75263-2b1b-477a-ac7c-085a5b4a85f9",
+        "userId": "bc1a7509-642e-4844-b3d9-4aa55dd15f92",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0007",
+        "checkinDate": "2025-06-04",
+        "guestCount": 2,
+        "price": 5700000
+      },
+      {
+        "rowNum": 100,
+        "orderId": "5b9a170c",
+        "reservationId": "1777d931-ac6f-42ed-8ff1-9848fa0dd153",
+        "userId": "f5bed0b2-7e46-48ad-aa59-f552249e4670",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "칼리스타 레거시",
+        "roomCode": "R2453",
+        "checkinDate": "2025-09-26",
+        "guestCount": 2,
+        "price": 4700000
+      },
+      {
+        "rowNum": 101,
+        "orderId": "96605239",
+        "reservationId": "953ae184-938d-43dd-8ee6-e293ae015267",
+        "userId": "8f8acdaa-aab5-4cac-93d0-4a80c30b5a47",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "이그제큐티브 스위트",
+        "roomCode": "R0341",
+        "checkinDate": "2025-10-05",
+        "guestCount": 2,
+        "price": 6600000
+      }
+    ],
+    "failed": [
+      {
+        "rowNum": 6,
+        "orderId": "0scpJclz",
+        "error": "reservation 저장 실패: insert or update on table \"reservation\" violates foreign key constraint \"reservation_re_user_id_fkey\""
+      },
+      {
+        "rowNum": 7,
+        "orderId": "Wkn0eJsG",
+        "error": "reservation 저장 실패: insert or update on table \"reservation\" violates foreign key constraint \"reservation_re_user_id_fkey\""
+      },
+      {
+        "rowNum": 31,
+        "orderId": "1sdAWEzw",
+        "error": "reservation 저장 실패: insert or update on table \"reservation\" violates foreign key constraint \"reservation_re_user_id_fkey\""
+      }
+    ],
+    "skipped": [
+      {
+        "rowNum": 5,
+        "orderId": "DhJLOJry",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 9,
+        "orderId": "SNjf2d0B",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 10,
+        "orderId": "EANDJkzi",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 11,
+        "orderId": "7ZJCvZXW",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 13,
+        "orderId": "mlqj0vKE",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 14,
+        "orderId": "txWqadVF",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 18,
+        "orderId": "esPd5YFW",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 19,
+        "orderId": "iIcX7kWu",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 20,
+        "orderId": "vB6x2sGk",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 23,
+        "orderId": "uNalVftq",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 26,
+        "orderId": "e2N4jxsF",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 34,
+        "orderId": "jhKm2v6J",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 35,
+        "orderId": "b8OzNgbx",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 36,
+        "orderId": "PZ2RFEWz",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 37,
+        "orderId": "GP0LWQV0",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 38,
+        "orderId": "xVNZ0eZ8",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 39,
+        "orderId": "RHKLLf9h",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 44,
+        "orderId": "DZyyoJuQ",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 47,
+        "orderId": "h6BHf5kK",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 52,
+        "orderId": "HRdeUJqV",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 53,
+        "orderId": "LmuxNf7Q",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 54,
+        "orderId": "3gC35uV0",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 55,
+        "orderId": "6em7GoDV",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 56,
+        "orderId": "CaDMePpD",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 58,
+        "orderId": "u4wYzSjX",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 59,
+        "orderId": "bfdUGVZA",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 60,
+        "orderId": "QZPtE959",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 63,
+        "orderId": "3VYQ8EGm",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 64,
+        "orderId": "wmBTRyhi",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 65,
+        "orderId": "IHV0IODe",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 67,
+        "orderId": "bHptlrWP",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 70,
+        "orderId": "SfV2yZUq",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 71,
+        "orderId": "teyySZct",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 75,
+        "orderId": "t8p3PlUr",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 76,
+        "orderId": "tpp5ED5m",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 82,
+        "orderId": "JfJAPkqj",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 86,
+        "orderId": "735lw8ZY",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 93,
+        "orderId": "g2vwft8I",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 95,
+        "orderId": "r2t3beQP",
+        "reason": "room_price_code 찾기 실패"
+      },
+      {
+        "rowNum": 96,
+        "orderId": "yMbdBdaV",
+        "reason": "room_price_code 찾기 실패"
+      }
+    ]
+  }
+}

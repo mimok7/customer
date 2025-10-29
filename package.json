@@ -1,0 +1,63 @@
+{
+  "name": "sht-customer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stay Halong - Customer Reservation System",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "import:sheets": "node ./utils/import-from-sheets.js",
+    "prepare": "husky install",
+    "apply-sql": "node scripts/apply-sql.js",
+    "resize-logo": "node scripts/resize-logo.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.52.1",
+    "csv-parse": "^6.1.0",
+    "csv-parser": "^3.2.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.1",
+    "googleapis": "^144.0.0",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.3",
+    "jspdf": "^3.0.1",
+    "lucide-react": "^0.525.0",
+    "next": "15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/react": "19.1.8",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.31.0",
+    "eslint-config-next": "^15.3.5",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.3",
+    "eslint-plugin-react": "^7.37.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "pg": "^8.16.3",
+    "png-to-ico": "^3.0.1",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "sharp": "^0.34.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}

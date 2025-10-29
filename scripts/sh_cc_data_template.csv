@@ -1,0 +1,4 @@
+﻿user_email,reservation_date,vehicle_number,seat_number,sht_category,pickup_location,dropoff_location,pickup_datetime,passenger_count,request_note,car_price_code,unit_price,total_price
+user1@example.com,2025-01-15,서울12가3456,A1,크루즈,서울역,인천항,2025-01-15,4,조용한 곳 희망,SHT_CRUISE_01,50000,200000
+user2@example.com,2025-01-16,서울23나4567,B2,공항,김포공항,강남역,2025-01-16,2,,SHT_AIRPORT_01,30000,60000
+user1@example.com,2025-01-20,서울34다5678,C3,렌터카,호텔,공항,2025-01-20,3,같은 사람의 두 번째 예약,SHT_AIRPORT_02,40000,120000

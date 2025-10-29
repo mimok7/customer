@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2025-10-14T03:15:00.565Z",
+  "totalRecords": 2928,
+  "totalMatched": 2917,
+  "totalUnmatched": 11,
+  "matchRate": "99.6%",
+  "matchedCruises": 25,
+  "unmatchedCruises": 4,
+  "unmatchedList": [
+    {
+      "cruise": "루나 하롱 크루즈",
+      "count": 7
+    },
+    {
+      "cruise": "단독 크루즈",
+      "count": 2
+    },
+    {
+      "cruise": "신용카드 결제 (카드 수수료 당사부담 / 일시불만 가능)",
+      "count": 1
+    },
+    {
+      "cruise": "LACASTA CRUISE",
+      "count": 1
+    }
+  ]
+}

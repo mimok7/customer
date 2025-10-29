@@ -1,0 +1,265 @@
+{
+  "testedAt": "2025-10-14T04:51:33.779Z",
+  "totalRecords": 11,
+  "successCount": 11,
+  "failedCount": 0,
+  "successRate": "100.0%",
+  "results": {
+    "success": [
+      {
+        "rowNum": 2,
+        "orderId": "650ae28b",
+        "userId": "1b2e88f9-52a5-455c-8d2a-f81025e63fb3",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "reservationData": {
+          "re_user_id": "1b2e88f9-52a5-455c-8d2a-f81025e63fb3",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": "R3425",
+          "checkin": "2025-09-22",
+          "guest_count": 3,
+          "unit_price": 1600000,
+          "room_total_price": 1600000,
+          "boarding_assist": null,
+          "request_note": "신용카드"
+        }
+      },
+      {
+        "rowNum": 3,
+        "orderId": "d9379458",
+        "userId": "a5425f00-504d-4c5e-9dce-1d790235e88c",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (2층)",
+        "roomCode": "R2741",
+        "reservationData": {
+          "re_user_id": "a5425f00-504d-4c5e-9dce-1d790235e88c",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": "R2741",
+          "checkin": "2025-10-07",
+          "guest_count": 2,
+          "unit_price": 5600000,
+          "room_total_price": 5600000,
+          "boarding_assist": "FALSE",
+          "request_note": "신용카드"
+        }
+      },
+      {
+        "rowNum": 4,
+        "orderId": "494b65ca",
+        "userId": "8b86c089-d531-4630-827d-3247d9855913",
+        "cruise": "엠바사더 크루즈",
+        "roomType": "일반요금",
+        "roomCode": "R3425",
+        "reservationData": {
+          "re_user_id": "8b86c089-d531-4630-827d-3247d9855913",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": "R3425",
+          "checkin": "2025-07-30",
+          "guest_count": 9,
+          "unit_price": 1600000,
+          "room_total_price": 1600000,
+          "boarding_assist": null,
+          "request_note": "신용카드"
+        }
+      },
+      {
+        "rowNum": 5,
+        "orderId": "DhJLOJry",
+        "userId": "bea24943-9b6d-4b3f-8c71-94e2bff8fa02",
+        "cruise": "캐서린 크루즈",
+        "roomType": "스위트룸",
+        "roomCode": null,
+        "reservationData": {
+          "re_user_id": "bea24943-9b6d-4b3f-8c71-94e2bff8fa02",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": null,
+          "checkin": "2024-12-02",
+          "guest_count": 3,
+          "unit_price": 5200000,
+          "room_total_price": 5200000,
+          "boarding_assist": "FALSE",
+          "request_note": "일반요금"
+        }
+      },
+      {
+        "rowNum": 6,
+        "orderId": "0scpJclz",
+        "userId": "bab42fdc-a57a-4391-85f7-0e6831ab03ec",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": null,
+        "reservationData": {
+          "re_user_id": "bab42fdc-a57a-4391-85f7-0e6831ab03ec",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": null,
+          "checkin": "2025-03-20",
+          "guest_count": 4,
+          "unit_price": 5700000,
+          "room_total_price": 5700000,
+          "boarding_assist": null,
+          "request_note": "일반요금"
+        }
+      },
+      {
+        "rowNum": 7,
+        "orderId": "Wkn0eJsG",
+        "userId": "0b9525b1-6926-46cf-ba66-88b702e5c1e7",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (1층)",
+        "roomCode": null,
+        "reservationData": {
+          "re_user_id": "0b9525b1-6926-46cf-ba66-88b702e5c1e7",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": null,
+          "checkin": "2024-11-23",
+          "guest_count": 4,
+          "unit_price": 5200000,
+          "room_total_price": 5200000,
+          "boarding_assist": "FALSE",
+          "request_note": "일반요금"
+        }
+      },
+      {
+        "rowNum": 8,
+        "orderId": "a591c547",
+        "userId": "59368f60-b101-43c9-bb47-6d453f7e11b7",
+        "cruise": "그랜드 파이어니스",
+        "roomType": "베란다 스위트",
+        "roomCode": "R0339",
+        "reservationData": {
+          "re_user_id": "59368f60-b101-43c9-bb47-6d453f7e11b7",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": "R0339",
+          "checkin": "2025-10-02",
+          "guest_count": 2,
+          "unit_price": 5700000,
+          "room_total_price": 5700000,
+          "boarding_assist": "FALSE",
+          "request_note": "신용카드"
+        }
+      },
+      {
+        "rowNum": 9,
+        "orderId": "SNjf2d0B",
+        "userId": "2582df49-900b-4843-beb8-bea68fbd113e",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "스위트룸",
+        "roomCode": null,
+        "reservationData": {
+          "re_user_id": "2582df49-900b-4843-beb8-bea68fbd113e",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": null,
+          "checkin": "2025-08-21",
+          "guest_count": 6,
+          "unit_price": 4500000,
+          "room_total_price": 4500000,
+          "boarding_assist": "미정",
+          "request_note": "일반요금"
+        }
+      },
+      {
+        "rowNum": 10,
+        "orderId": "EANDJkzi",
+        "userId": "796e1063-1c95-4961-8776-696cb8770ad9",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "스위트룸",
+        "roomCode": null,
+        "reservationData": {
+          "re_user_id": "796e1063-1c95-4961-8776-696cb8770ad9",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": null,
+          "checkin": "2025-05-05",
+          "guest_count": 4,
+          "unit_price": 4750000,
+          "room_total_price": 4750000,
+          "boarding_assist": null,
+          "request_note": "일반요금"
+        }
+      },
+      {
+        "rowNum": 11,
+        "orderId": "7ZJCvZXW",
+        "userId": "c7e460cf-172d-4e31-a60b-4e7431125391",
+        "cruise": "칼리스타 크루즈",
+        "roomType": "스위트룸",
+        "roomCode": null,
+        "reservationData": {
+          "re_user_id": "c7e460cf-172d-4e31-a60b-4e7431125391",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": null,
+          "checkin": "2025-06-06",
+          "guest_count": 4,
+          "unit_price": 4950000,
+          "room_total_price": 4950000,
+          "boarding_assist": null,
+          "request_note": "일반요금"
+        }
+      },
+      {
+        "rowNum": 12,
+        "orderId": "ffqkK2Bt",
+        "userId": "02f23e6e-6663-46c7-b41a-8b12cd5a66a9",
+        "cruise": "캐서린 크루즈",
+        "roomType": "프리미어 스위트 (3층)",
+        "roomCode": null,
+        "reservationData": {
+          "re_user_id": "02f23e6e-6663-46c7-b41a-8b12cd5a66a9",
+          "re_quote_id": null,
+          "re_type": "cruise",
+          "re_status": "pending"
+        },
+        "cruiseReservationData": {
+          "room_price_code": null,
+          "checkin": "2025-03-02",
+          "guest_count": 6,
+          "unit_price": 5800000,
+          "room_total_price": 5800000,
+          "boarding_assist": null,
+          "request_note": "일반요금"
+        }
+      }
+    ],
+    "failed": []
+  }
+}
