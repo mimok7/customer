@@ -61,7 +61,7 @@ function getTypeName(type: string) {
 
 // 고객에게 표시할 필드만 선택
 const customerFriendlyFields: Record<string, string[]> = {
-  cruise: ['checkin', 'guest_count', 'room_total_price', 'boarding_assist', 'request_note'],
+  cruise: ['guest_count', 'room_total_price', 'boarding_assist', 'request_note'],
   airport: ['ra_airport_location', 'ra_flight_number', 'ra_datetime', 'ra_stopover_location', 'ra_passenger_count', 'ra_luggage_count', 'request_note'],
   hotel: ['checkin_date', 'room_count', 'guest_count', 'breakfast_service', 'hotel_category', 'total_price', 'request_note'],
   rentcar: ['pickup_datetime', 'pickup_location', 'destination', 'via_location', 'passenger_count', 'luggage_count', 'total_price', 'request_note'],
@@ -71,7 +71,6 @@ const customerFriendlyFields: Record<string, string[]> = {
 
 const labelMap: Record<string, Record<string, string>> = {
   cruise: {
-    checkin: '🗓️ 승선일',
     guest_count: '👥 탑승 인원',
     room_total_price: '💰 객실 요금',
     boarding_assist: '🤝 승선 지원',
@@ -264,19 +263,23 @@ function ReservationViewInner() {
           // 크루즈인 경우 room_price 정보 조회
           if (row.re_type === 'cruise' && svc && svc.length > 0) {
             const roomPriceCode = svc[0].room_price_code;
+            const checkinDate = svc[0].checkin;
+            const guestCount = svc[0].guest_count;
+            
             if (roomPriceCode) {
               const { data: roomPrice } = await supabase
                 .from('room_price')
-                .select('cruise, room_type, room_category, schedule')
+                .select('cruise, room_type, schedule')
                 .eq('room_code', roomPriceCode)
                 .maybeSingle();
-              
+
               if (roomPrice) {
                 setCruiseInfo({
                   cruise_name: roomPrice.cruise,
                   room_type: roomPrice.room_type,
-                  room_category: roomPrice.room_category,
-                  schedule: roomPrice.schedule
+                  schedule: roomPrice.schedule,
+                  checkin: checkinDate,
+                  guest_count: guestCount
                 });
               }
             }
@@ -442,12 +445,12 @@ function ReservationViewInner() {
                         <div className="text-lg font-bold text-indigo-600">{cruiseInfo.room_type || '-'}</div>
                       </div>
                       <div>
-                        <div className="text-xs text-gray-600 mb-1">카테고리</div>
-                        <div className="text-base font-medium text-gray-800">{cruiseInfo.room_category || '-'}</div>
+                        <div className="text-xs text-gray-600 mb-1">🗓️ 승선일</div>
+                        <div className="text-base font-medium text-gray-800">{cruiseInfo.checkin ? formatValue('checkin', cruiseInfo.checkin) : '-'}</div>
                       </div>
                       <div>
-                        <div className="text-xs text-gray-600 mb-1">스케줄</div>
-                        <div className="text-base font-medium text-gray-800">{cruiseInfo.schedule || '-'}</div>
+                        <div className="text-xs text-gray-600 mb-1">👥 총 탑승 인원</div>
+                        <div className="text-base font-medium text-gray-800">{cruiseInfo.guest_count ? `${cruiseInfo.guest_count}명` : '-'}</div>
                       </div>
                     </div>
                   </div>
@@ -460,7 +463,7 @@ function ReservationViewInner() {
                         <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs">
                           {idx + 1}
                         </span>
-                        {idx + 1}번 항목
+                        {reservation.re_type === 'cruise' ? `카테고리 ${idx + 1}` : `${idx + 1}번 항목`}
                       </div>
                     )}
                     {renderCustomerFriendlyInfo(it, reservation.re_type)}
