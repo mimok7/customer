@@ -42,6 +42,10 @@ export default function MyReservationsListPage() {
   const [quotesById, setQuotesById] = useState<Record<string, { title: string; status?: string }>>({});
   // 결제 상태 매핑
   const [paymentStatusByReservation, setPaymentStatusByReservation] = useState<Record<string, { hasCompleted: boolean; payments: any[] }>>({});
+  // 크루즈 정보 맵 (room_price 테이블에서 조회)
+  const [cruiseInfoByReservation, setCruiseInfoByReservation] = useState<Record<string, any>>({});
+  // 확장된 예약 ID 추적
+  const [expandedReservations, setExpandedReservations] = useState<Set<string>>(new Set());
 
   // payment modal state
   const [showPay, setShowPay] = useState(false);
@@ -231,10 +235,38 @@ export default function MyReservationsListPage() {
           if (r.re_status === 'confirmed' && (amounts[r.re_id] || 0) > 0) defaults[r.re_id] = true;
         }
         setBulkSelections(defaults);
+
+        // 크루즈 예약의 room_price 정보 조회
+        const cruiseReservations = rows.filter(r => r.re_type === 'cruise');
+        if (cruiseReservations.length > 0) {
+          const cruiseInfoMap: Record<string, any> = {};
+          for (const cr of cruiseReservations) {
+            const cruiseData = cruiseDetails.find(c => c.reservation_id === cr.re_id);
+            if (cruiseData?.room_price_code) {
+              const { data: roomPrice } = await supabase
+                .from('room_price')
+                .select('cruise, room_type, schedule')
+                .eq('room_code', cruiseData.room_price_code)
+                .maybeSingle();
+              
+              if (roomPrice) {
+                cruiseInfoMap[cr.re_id] = {
+                  cruise_name: roomPrice.cruise,
+                  room_type: roomPrice.room_type,
+                  schedule: roomPrice.schedule,
+                  checkin: cruiseData.checkin,
+                  guest_count: cruiseData.guest_count
+                };
+              }
+            }
+          }
+          setCruiseInfoByReservation(cruiseInfoMap);
+        }
       } else {
         setCruiseDetails([]); setCruiseCarDetails([]); setAirportDetails([]); setHotelDetails([]); setRentcarDetails([]); setTourDetails([]);
         setAmountsByReservation({}); setBulkSelections({});
         setRoomPricesByCode({}); setCarPricesByCode({}); setAirportPricesByCode({}); setHotelPricesByCode({}); setRentPricesByCode({}); setTourPricesByCode({});
+        setCruiseInfoByReservation({});
       }
     } catch (error) {
       console.error('예약 목록 조회 오류:', error);
@@ -586,37 +618,186 @@ export default function MyReservationsListPage() {
                           const amount = Number(amountsByReservation[r.re_id] || 0);
                           const paymentInfo = paymentStatusByReservation[r.re_id];
                           const hasCompletedPayment = paymentInfo?.hasCompleted || false;
+                          const isExpanded = expandedReservations.has(r.re_id);
+                          const cruiseInfo = cruiseInfoByReservation[r.re_id];
+                          
                           return (
-                            <div key={r.re_id} className="flex items-center justify-between p-3 border rounded">
-                              <div>
+                            <div key={r.re_id} className="border rounded">
+                              {/* 예약 요약 */}
+                              <div className="flex items-center justify-between p-3 cursor-pointer hover:bg-gray-50" onClick={() => {
+                                const newSet = new Set(expandedReservations);
+                                if (newSet.has(r.re_id)) {
+                                  newSet.delete(r.re_id);
+                                } else {
+                                  newSet.add(r.re_id);
+                                }
+                                setExpandedReservations(newSet);
+                              }}>
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2">
+                                    <span className="font-medium text-gray-900">{getTypeName(r.re_type)}</span>
+                                    <span className={`px-2 py-0.5 rounded text-xs ${getStatusColor(r.re_status)}`}>{getStatusText(r.re_status)}</span>
+                                    {hasCompletedPayment && (
+                                      <span className="px-2 py-0.5 rounded text-xs bg-green-100 text-green-700">결제완료</span>
+                                    )}
+                                  </div>
+                                  <div className="text-xs text-gray-600 mt-0.5 flex gap-3">
+                                    <span>{dateMain}</span>
+                                    {hasCompletedPayment && paymentInfo.payments.length > 0 && (
+                                      <span className="text-green-600">
+                                        결제: {paymentInfo.payments.filter(p => p.payment_status === 'completed').length}건
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
                                 <div className="flex items-center gap-2">
-                                  <span className="font-medium text-gray-900">{getTypeName(r.re_type)}</span>
-                                  <span className={`px-2 py-0.5 rounded text-xs ${getStatusColor(r.re_status)}`}>{getStatusText(r.re_status)}</span>
-                                  {hasCompletedPayment && (
-                                    <span className="px-2 py-0.5 rounded text-xs bg-green-100 text-green-700">결제완료</span>
-                                  )}
-                                </div>
-                                <div className="text-xs text-gray-600 mt-0.5 flex gap-3">
-                                  <span>{dateMain}</span>
-                                  {hasCompletedPayment && paymentInfo.payments.length > 0 && (
-                                    <span className="text-green-600">
-                                      결제: {paymentInfo.payments.filter(p => p.payment_status === 'completed').length}건
-                                    </span>
-                                  )}
-                                </div>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                {amount > 0 && <span className="text-sm font-semibold text-orange-600">{amount.toLocaleString()}동</span>}
-                                <button onClick={() => router.push(`/mypage/reservations/${r.re_id}/view`)} className="px-3 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600">상세</button>
-                                {hasCompletedPayment && (
-                                  <button
-                                    onClick={() => router.push(`/customer/confirmation?quote_id=${r.re_quote_id}&token=customer`)}
-                                    className="px-3 py-1 bg-green-500 text-white rounded text-xs hover:bg-green-600"
+                                  {amount > 0 && <span className="text-sm font-semibold text-orange-600">{amount.toLocaleString()}동</span>}
+                                  <button 
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      router.push(`/mypage/reservations/${r.re_id}/view`);
+                                    }} 
+                                    className="px-3 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600"
                                   >
-                                    예약확인서
+                                    상세
                                   </button>
-                                )}
+                                  {hasCompletedPayment && (
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        router.push(`/customer/confirmation?quote_id=${r.re_quote_id}&token=customer`);
+                                      }}
+                                      className="px-3 py-1 bg-green-500 text-white rounded text-xs hover:bg-green-600"
+                                    >
+                                      예약확인서
+                                    </button>
+                                  )}
+                                  <span className="text-gray-400">{isExpanded ? '▲' : '▼'}</span>
+                                </div>
                               </div>
+
+                              {/* 확장된 상세 정보 */}
+                              {isExpanded && (
+                                <div className="border-t bg-gray-50 p-4">
+                                  {/* 크루즈 정보 */}
+                                  {r.re_type === 'cruise' && cruiseInfo && (
+                                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 mb-4 border border-blue-200">
+                                      <h4 className="text-sm font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                        🚢 크루즈 정보
+                                      </h4>
+                                      <div className="grid grid-cols-2 gap-3 text-sm">
+                                        <div>
+                                          <div className="text-xs text-gray-600 mb-1">크루즈명</div>
+                                          <div className="font-bold text-blue-600">{cruiseInfo.cruise_name || '-'}</div>
+                                        </div>
+                                        <div>
+                                          <div className="text-xs text-gray-600 mb-1">객실명</div>
+                                          <div className="font-bold text-indigo-600">{cruiseInfo.room_type || '-'}</div>
+                                        </div>
+                                        <div>
+                                          <div className="text-xs text-gray-600 mb-1">🗓️ 승선일</div>
+                                          <div className="font-medium text-gray-800">
+                                            {cruiseInfo.checkin ? new Date(cruiseInfo.checkin).toLocaleDateString('ko-KR', {
+                                              year: 'numeric', month: 'long', day: 'numeric', weekday: 'short'
+                                            }) : '-'}
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <div className="text-xs text-gray-600 mb-1">👥 총 탑승 인원</div>
+                                          <div className="font-medium text-gray-800">{cruiseInfo.guest_count ? `${cruiseInfo.guest_count}명` : '-'}</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  )}
+
+                                  {/* 서비스 상세 정보 */}
+                                  <div className="space-y-3">
+                                    {r.re_type === 'cruise' && cruiseDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                      <div className="bg-white rounded-lg p-3 border">
+                                        <div className="text-sm font-semibold text-gray-700 mb-2">객실 정보</div>
+                                        {cruiseDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
+                                          <div key={idx} className="text-xs space-y-1">
+                                            <div className="flex justify-between"><span className="text-gray-600">탑승 인원:</span><span>{item.guest_count}명</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">객실 요금:</span><span className="font-semibold text-blue-600">{Number(item.room_total_price || 0).toLocaleString()}동</span></div>
+                                            {item.request_note && <div className="text-gray-600 mt-2 pt-2 border-t">요청사항: {item.request_note}</div>}
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+
+                                    {r.re_type === 'cruise' && cruiseCarDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                      <div className="bg-white rounded-lg p-3 border">
+                                        <div className="text-sm font-semibold text-gray-700 mb-2">🚗 연결 차량 정보</div>
+                                        {cruiseCarDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
+                                          <div key={idx} className="text-xs space-y-1">
+                                            <div className="flex justify-between"><span className="text-gray-600">픽업:</span><span>{item.pickup_location || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">하차:</span><span>{item.dropoff_location || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">승객:</span><span>{item.passenger_count}명</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">차량 요금:</span><span className="font-semibold text-green-600">{Number(item.car_total_price || 0).toLocaleString()}동</span></div>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+
+                                    {r.re_type === 'airport' && airportDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                      <div className="bg-white rounded-lg p-3 border">
+                                        <div className="text-sm font-semibold text-gray-700 mb-2">✈️ 공항 서비스 정보</div>
+                                        {airportDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
+                                          <div key={idx} className="text-xs space-y-1">
+                                            <div className="flex justify-between"><span className="text-gray-600">공항:</span><span>{item.ra_airport_location || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">항공편:</span><span>{item.ra_flight_number || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">일시:</span><span>{item.ra_datetime ? new Date(item.ra_datetime).toLocaleString('ko-KR') : '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">승객:</span><span>{item.ra_passenger_count}명</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-blue-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+
+                                    {r.re_type === 'hotel' && hotelDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                      <div className="bg-white rounded-lg p-3 border">
+                                        <div className="text-sm font-semibold text-gray-700 mb-2">🏨 호텔 정보</div>
+                                        {hotelDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
+                                          <div key={idx} className="text-xs space-y-1">
+                                            <div className="flex justify-between"><span className="text-gray-600">체크인:</span><span>{item.checkin_date ? new Date(item.checkin_date).toLocaleDateString('ko-KR') : '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">객실 수:</span><span>{item.room_count}개</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">투숙 인원:</span><span>{item.guest_count}명</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-purple-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+
+                                    {r.re_type === 'rentcar' && rentcarDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                      <div className="bg-white rounded-lg p-3 border">
+                                        <div className="text-sm font-semibold text-gray-700 mb-2">🚗 렌터카 정보</div>
+                                        {rentcarDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
+                                          <div key={idx} className="text-xs space-y-1">
+                                            <div className="flex justify-between"><span className="text-gray-600">픽업:</span><span>{item.pickup_location || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">목적지:</span><span>{item.destination || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">승객:</span><span>{item.passenger_count}명</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-red-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+
+                                    {r.re_type === 'tour' && tourDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                      <div className="bg-white rounded-lg p-3 border">
+                                        <div className="text-sm font-semibold text-gray-700 mb-2">🎫 투어 정보</div>
+                                        {tourDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
+                                          <div key={idx} className="text-xs space-y-1">
+                                            <div className="flex justify-between"><span className="text-gray-600">픽업:</span><span>{item.pickup_location || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">하차:</span><span>{item.dropoff_location || '-'}</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">정원:</span><span>{item.tour_capacity}명</span></div>
+                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-orange-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              )}
                             </div>
                           );
                         })}
