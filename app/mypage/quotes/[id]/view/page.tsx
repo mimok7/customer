@@ -506,6 +506,38 @@ export default function QuoteDetailPage() {
     if (!quote?.id || submitting) return;
     setSubmitting(true);
     try {
+      // 0. 사전 행 존재 및 권한 점검
+      const { data: existingRow, error: preError } = await supabase
+        .from('quote')
+        .select('id,user_id,status,submitted_at')
+        .eq('id', quote.id)
+        .maybeSingle();
+
+      if (preError) {
+        console.warn('⚠️ 사전 조회 실패:', preError);
+      }
+      if (!existingRow) {
+        alert('견적 행을 찾을 수 없습니다. (삭제되었거나 권한 제한)');
+        setSubmitting(false);
+        return;
+      }
+      const authUser = user; // 이미 checkAuth로 설정됨
+      if (existingRow.user_id && authUser?.id && existingRow.user_id !== authUser.id) {
+        // RLS에서 owner 조건 가능성 안내
+        console.warn('⚠️ 제출자와 견적 소유자 불일치:', { owner: existingRow.user_id, me: authUser.id });
+      }
+
+      // 1. RLS 탐지용 무해 업데이트(변경 없음) - 실패 시 정책 문제 가능성
+      const { error: rlsProbeError } = await supabase
+        .from('quote')
+        .update({ updated_at: new Date().toISOString() })
+        .eq('id', quote.id)
+        .select('id')
+        .maybeSingle();
+      if (rlsProbeError) {
+        console.warn('🚫 RLS/제약 탐지 업데이트 실패:', rlsProbeError);
+      }
+
       const payload = { status: 'submitted', submitted_at: new Date().toISOString(), updated_at: new Date().toISOString() } as any;
 
       // 1차: id 기준 업데이트
@@ -540,7 +572,14 @@ export default function QuoteDetailPage() {
             hint: (error as any)?.hint
           });
         } catch { }
-        alert(`견적 제출 중 오류가 발생했습니다.\n${(error as any)?.message || ''}`);
+        const msg = (error as any)?.message || '';
+        let extraHint = '';
+        if (msg.match(/violates row-level security|permission denied/i)) {
+          extraHint = '\n⚠️ 권한(RLS) 문제 가능성: 견적 소유자 또는 관리자/매니저 계정으로 다시 시도하세요.';
+        } else if (msg.match(/invalid input value|enum|constraint|status/i)) {
+          extraHint = '\n⚠️ status 값 또는 제약 조건 위반 가능성: status="submitted" 허용 여부 확인.';
+        }
+        alert(`견적 제출 중 오류가 발생했습니다.\n${msg}${extraHint}`);
         return;
       }
 
