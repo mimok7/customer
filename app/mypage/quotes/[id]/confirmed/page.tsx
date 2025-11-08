@@ -442,7 +442,7 @@ export default function ConfirmedQuoteDetailPage() {
                                 </tr>
                                 <tr className="bg-gray-50">
                                   <td className="px-2 py-1 font-medium border-blue-100 border">인원수</td>
-                                  <td className="px-2 py-1 border-blue-100 border">{room.roomInfo?.adult_count}명</td>
+                                  <td className="px-2 py-1 border-blue-100 border">{room.roomInfo?.person_count ?? '-'}명</td>
                                 </tr>
 
                                 <tr className="bg-gray-50">

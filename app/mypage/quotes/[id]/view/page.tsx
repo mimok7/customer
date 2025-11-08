@@ -345,8 +345,8 @@ export default function QuoteDetailPage() {
                 .select('*')
                 .eq('room_code', roomData.room_code);
 
-              // 수량 업데이트 - 인원수를 quantity로 설정
-              const actualQuantity = roomData.adult_count || 1;
+              // 수량 업데이트 - 인원수를 quantity로 설정 (DB 컬럼 person_count 사용)
+              const actualQuantity = roomData.person_count || 1;
 
               detailed.rooms.push({
                 ...item,
@@ -631,7 +631,7 @@ export default function QuoteDetailPage() {
                               </tr>
                               <tr className="bg-gray-50">
                                 <td className="px-2 py-1 font-medium border-blue-100 border">인원수</td>
-                                <td className="px-2 py-1 border-blue-100 border">{room.roomInfo?.adult_count}명</td>
+                                <td className="px-2 py-1 border-blue-100 border">{room.roomInfo?.person_count ?? '-'}명</td>
                               </tr>
 
                               <tr className="bg-gray-50">
