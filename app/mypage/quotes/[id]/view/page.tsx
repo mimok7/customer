@@ -506,15 +506,41 @@ export default function QuoteDetailPage() {
     if (!quote?.id || submitting) return;
     setSubmitting(true);
     try {
-      const { data, error } = await supabase
+      const payload = { status: 'submitted', submitted_at: new Date().toISOString(), updated_at: new Date().toISOString() } as any;
+
+      // 1차: id 기준 업데이트
+      let { data, error } = await supabase
         .from('quote')
-        .update({ status: 'submitted', submitted_at: new Date().toISOString() })
+        .update(payload)
         .eq('id', quote.id)
         .select('id')
         .single();
+
+      // 2차 폴백: quote_id 또는 id 중 일치하는 것으로 시도 (실DB 호환)
       if (error) {
-        console.error('❌ 견적 제출 업데이트 실패:', error);
-        alert(`견적 제출 중 오류가 발생했습니다.\n${error.message || ''}`);
+        console.warn('⚠️ 1차 업데이트 실패, quote_id 호환 모드로 재시도:', error);
+        const orFilter = `id.eq.${quote.id},quote_id.eq.${quote.id}`;
+        const resp = await supabase
+          .from('quote')
+          .update(payload)
+          .or(orFilter)
+          .select('id')
+          .single();
+        data = resp.data as any;
+        error = resp.error as any;
+      }
+
+      if (error) {
+        // 에러 상세 로깅
+        try {
+          console.error('❌ 견적 제출 업데이트 실패 상세:', {
+            code: (error as any)?.code,
+            message: (error as any)?.message,
+            details: (error as any)?.details,
+            hint: (error as any)?.hint
+          });
+        } catch { }
+        alert(`견적 제출 중 오류가 발생했습니다.\n${(error as any)?.message || ''}`);
         return;
       }
 
