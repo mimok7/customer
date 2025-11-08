@@ -45,6 +45,7 @@ export default function QuoteDetailPage() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [quote, setQuote] = useState<QuoteDetail | null>(null);
+  const [submitting, setSubmitting] = useState(false);
   const [detailedServices, setDetailedServices] = useState<any>({});
 
   useEffect(() => {
@@ -502,14 +503,18 @@ export default function QuoteDetailPage() {
   };
 
   const handleSubmitQuote = async () => {
-    if (!quote?.id) return;
+    if (!quote?.id || submitting) return;
+    setSubmitting(true);
     try {
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('quote')
         .update({ status: 'submitted', submitted_at: new Date().toISOString() })
-        .eq('id', quote.id);
+        .eq('id', quote.id)
+        .select('id')
+        .single();
       if (error) {
-        alert('견적 제출 중 오류가 발생했습니다.');
+        console.error('❌ 견적 제출 업데이트 실패:', error);
+        alert(`견적 제출 중 오류가 발생했습니다.\n${error.message || ''}`);
         return;
       }
 
@@ -529,8 +534,11 @@ export default function QuoteDetailPage() {
 
       alert('견적이 성공적으로 제출되었습니다!');
       router.push('/mypage/quotes');
-    } catch (err) {
-      alert('견적 제출 중 오류가 발생했습니다.');
+    } catch (err: any) {
+      console.error('❌ 견적 제출 예외:', err);
+      alert(`견적 제출 중 오류가 발생했습니다.\n${err?.message || ''}`);
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -863,7 +871,8 @@ export default function QuoteDetailPage() {
             <div className="flex justify-center items-center gap-4 mt-10">
               <button
                 onClick={handleSubmitQuote}
-                className="bg-green-300 text-black px-4 py-2 rounded text-xs hover:bg-green-400 transition-colors font-bold shadow-sm"
+                className="bg-green-300 text-black px-4 py-2 rounded text-xs hover:bg-green-400 transition-colors font-bold shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={submitting}
               >
                 📝 견적 제출
               </button>
