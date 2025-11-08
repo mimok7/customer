@@ -136,39 +136,28 @@ export default function QuoteDetailPage() {
 
       console.log('👤 사용자 정보:', userData);
 
-      // quote_item을 통해 서비스 데이터 조회 (올바른 스키마 구조)
+      // quote_item을 통한 서비스 데이터 조회 (quote_room 제거)
       const serviceQueries = await Promise.allSettled([
-        // 객실 정보 (quote_room 테이블이 없을 수 있으므로 안전하게)
-        supabase
-          .from('quote_room')
-          .select(`*`)
-          .eq('quote_id', quoteId),
-
-        // quote_item을 통한 각 서비스별 데이터 조회 (조인 없이 먼저 시도)
         supabase
           .from('quote_item')
           .select('*')
           .eq('quote_id', quoteId)
           .eq('service_type', 'rentcar'),
-
         supabase
           .from('quote_item')
           .select('*')
           .eq('quote_id', quoteId)
           .eq('service_type', 'cruise'),
-
         supabase
           .from('quote_item')
           .select('*')
           .eq('quote_id', quoteId)
           .eq('service_type', 'airport'),
-
         supabase
           .from('quote_item')
           .select('*')
           .eq('quote_id', quoteId)
           .eq('service_type', 'hotel'),
-
         supabase
           .from('quote_item')
           .select('*')
@@ -176,9 +165,9 @@ export default function QuoteDetailPage() {
           .eq('service_type', 'tour')
       ]);
 
-      console.log('🔍 각 테이블별 조회 상태:');
+      console.log('🔍 각 서비스별 quote_item 조회 상태:');
       serviceQueries.forEach((result, index) => {
-        const tableNames = ['quote_room', 'rentcar(quote_item)', 'cruise(quote_item)', 'airport(quote_item)', 'hotel(quote_item)', 'tour(quote_item)'];
+        const tableNames = ['rentcar(quote_item)', 'cruise(quote_item)', 'airport(quote_item)', 'hotel(quote_item)', 'tour(quote_item)'];
         console.log(`  ${tableNames[index]}: ${result.status}`);
         if (result.status === 'rejected') {
           console.log(`    에러:`, result.reason);
@@ -187,13 +176,13 @@ export default function QuoteDetailPage() {
 
       // 결과 처리 및 상세 로깅
 
-      // serviceQueries 인덱스 매핑
-      // [0]=quote_room, [1]=rentcar(items), [2]=cruise(items), [3]=airport(items), [4]=hotel(items), [5]=tour(items)
-      const rentcarItems = serviceQueries[1].status === 'fulfilled' ? (serviceQueries[1].value.data || []) : [];
-      const cruiseItems = serviceQueries[2].status === 'fulfilled' ? (serviceQueries[2].value.data || []) : [];
-      const airportItems = serviceQueries[3].status === 'fulfilled' ? (serviceQueries[3].value.data || []) : [];
-      const hotelItems = serviceQueries[4].status === 'fulfilled' ? (serviceQueries[4].value.data || []) : [];
-      const tourItems = serviceQueries[5].status === 'fulfilled' ? (serviceQueries[5].value.data || []) : [];
+      // serviceQueries 인덱스 매핑 (quote_room 제거 후 재배치)
+      // [0]=rentcar(items), [1]=cruise(items), [2]=airport(items), [3]=hotel(items), [4]=tour(items)
+      const rentcarItems = serviceQueries[0].status === 'fulfilled' ? (serviceQueries[0].value.data || []) : [];
+      const cruiseItems = serviceQueries[1].status === 'fulfilled' ? (serviceQueries[1].value.data || []) : [];
+      const airportItems = serviceQueries[2].status === 'fulfilled' ? (serviceQueries[2].value.data || []) : [];
+      const hotelItems = serviceQueries[3].status === 'fulfilled' ? (serviceQueries[3].value.data || []) : [];
+      const tourItems = serviceQueries[4].status === 'fulfilled' ? (serviceQueries[4].value.data || []) : [];
 
       // quote_item 데이터를 그대로 사용 (조인 없이)
       const carData = rentcarItems.map((item: any) => ({
