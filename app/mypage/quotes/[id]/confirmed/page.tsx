@@ -445,10 +445,7 @@ export default function ConfirmedQuoteDetailPage() {
                                   <td className="px-2 py-1 border-blue-100 border">{room.roomInfo?.person_count ?? '-'}명</td>
                                 </tr>
 
-                                <tr className="bg-gray-50">
-                                  <td className="px-2 py-1 font-medium border-blue-100 border">추가수</td>
-                                  <td className="px-2 py-1 border-blue-100 border">{room.roomInfo?.extra_count || 0}명</td>
-                                </tr>
+                                {/* 추가수 행 제거됨 */}
                               </Fragment>
                             ))}
                           </tbody>
