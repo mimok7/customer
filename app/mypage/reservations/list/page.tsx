@@ -248,7 +248,7 @@ export default function MyReservationsListPage() {
                 .select('cruise, room_type, schedule')
                 .eq('room_code', cruiseData.room_price_code)
                 .maybeSingle();
-              
+
               if (roomPrice) {
                 cruiseInfoMap[cr.re_id] = {
                   cruise_name: roomPrice.cruise,
@@ -620,7 +620,7 @@ export default function MyReservationsListPage() {
                           const hasCompletedPayment = paymentInfo?.hasCompleted || false;
                           const isExpanded = expandedReservations.has(r.re_id);
                           const cruiseInfo = cruiseInfoByReservation[r.re_id];
-                          
+
                           return (
                             <div key={r.re_id} className="border rounded">
                               {/* 예약 요약 */}
@@ -652,11 +652,11 @@ export default function MyReservationsListPage() {
                                 </div>
                                 <div className="flex items-center gap-2">
                                   {amount > 0 && <span className="text-sm font-semibold text-orange-600">{amount.toLocaleString()}동</span>}
-                                  <button 
+                                  <button
                                     onClick={(e) => {
                                       e.stopPropagation();
                                       router.push(`/mypage/reservations/${r.re_id}/view`);
-                                    }} 
+                                    }}
                                     className="px-3 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600"
                                   >
                                     상세
@@ -681,121 +681,416 @@ export default function MyReservationsListPage() {
                                 <div className="border-t bg-gray-50 p-4">
                                   {/* 크루즈 정보 */}
                                   {r.re_type === 'cruise' && cruiseInfo && (
-                                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 mb-4 border border-blue-200">
-                                      <h4 className="text-sm font-bold text-gray-800 mb-3 flex items-center gap-2">
-                                        🚢 크루즈 정보
-                                      </h4>
-                                      <div className="grid grid-cols-2 gap-3 text-sm">
-                                        <div>
-                                          <div className="text-xs text-gray-600 mb-1">크루즈명</div>
-                                          <div className="font-bold text-blue-600">{cruiseInfo.cruise_name || '-'}</div>
-                                        </div>
-                                        <div>
-                                          <div className="text-xs text-gray-600 mb-1">객실명</div>
-                                          <div className="font-bold text-indigo-600">{cruiseInfo.room_type || '-'}</div>
-                                        </div>
-                                        <div>
-                                          <div className="text-xs text-gray-600 mb-1">🗓️ 승선일</div>
-                                          <div className="font-medium text-gray-800">
-                                            {cruiseInfo.checkin ? new Date(cruiseInfo.checkin).toLocaleDateString('ko-KR', {
-                                              year: 'numeric', month: 'long', day: 'numeric', weekday: 'short'
-                                            }) : '-'}
-                                          </div>
-                                        </div>
-                                        <div>
-                                          <div className="text-xs text-gray-600 mb-1">👥 총 탑승 인원</div>
-                                          <div className="font-medium text-gray-800">{cruiseInfo.guest_count ? `${cruiseInfo.guest_count}명` : '-'}</div>
-                                        </div>
+                                    <div className="bg-white shadow-sm rounded-lg p-4 mb-4">
+                                      <h3 className="text-base font-medium text-gray-600 mb-3">🚢 크루즈 정보</h3>
+                                      <table className="min-w-full text-sm text-gray-600 border border-blue-100">
+                                        <tbody>
+                                          <tr className="bg-gray-25">
+                                            <td className="px-2 py-1 font-medium border-blue-100 border w-32">크루즈명</td>
+                                            <td className="px-2 py-1 border-blue-100 border">{cruiseInfo.cruise_name || '-'}</td>
+                                          </tr>
+                                          <tr>
+                                            <td className="px-2 py-1 font-medium border-blue-100 border">객실명</td>
+                                            <td className="px-2 py-1 border-blue-100 border">{cruiseInfo.room_type || '-'}</td>
+                                          </tr>
+                                          <tr>
+                                            <td className="px-2 py-1 font-medium border-blue-100 border">스케줄</td>
+                                            <td className="px-2 py-1 border-blue-100 border">{cruiseInfo.schedule || '-'}</td>
+                                          </tr>
+                                          <tr className="bg-gray-50">
+                                            <td className="px-2 py-1 font-medium border-blue-100 border">승선일</td>
+                                            <td className="px-2 py-1 border-blue-100 border">
+                                              {cruiseInfo.checkin ? new Date(cruiseInfo.checkin).toLocaleDateString('ko-KR', {
+                                                year: 'numeric', month: 'long', day: 'numeric', weekday: 'short'
+                                              }) : '-'}
+                                            </td>
+                                          </tr>
+                                          <tr className="bg-gray-50">
+                                            <td className="px-2 py-1 font-medium border-blue-100 border">총 탑승 인원</td>
+                                            <td className="px-2 py-1 border-blue-100 border">{cruiseInfo.guest_count ? `${cruiseInfo.guest_count}명` : '-'}</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  )}
+
+                                  {/* 객실 상세 정보 */}
+                                  {r.re_type === 'cruise' && cruiseDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                    <div className="bg-white shadow-sm rounded-lg p-4 mb-4">
+                                      <h3 className="text-base font-medium text-gray-600 mb-3">🛏 객실 정보 (상세)</h3>
+                                      <div className="space-y-3">
+                                        {cruiseDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => {
+                                          const roomPriceCode = item.room_price_code;
+                                          const priceInfo = roomPricesByCode[roomPriceCode] || [];
+                                          return (
+                                            <div key={idx} className="border border-gray-100 rounded-lg p-3">
+                                              <table className="min-w-full text-sm text-gray-600 border border-blue-100">
+                                                <tbody>
+                                                  {priceInfo.map((price: any, pIdx: number) => (
+                                                    <React.Fragment key={pIdx}>
+                                                      <tr className="bg-gray-25">
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border w-32">일정</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.schedule || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">크루즈</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.cruise || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">객실 타입</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.room_type || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">카테고리</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.room_category || '-'}</td>
+                                                      </tr>
+                                                      <tr className="bg-gray-50">
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">인원수</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{item.guest_count}명</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">객실 요금</td>
+                                                        <td className="px-2 py-1 border-blue-100 border font-semibold text-blue-600">
+                                                          {Number(item.room_total_price || 0).toLocaleString()}동
+                                                        </td>
+                                                      </tr>
+                                                      {item.request_note && (
+                                                        <tr>
+                                                          <td className="px-2 py-1 font-medium border-blue-100 border">요청사항</td>
+                                                          <td className="px-2 py-1 border-blue-100 border">{item.request_note}</td>
+                                                        </tr>
+                                                      )}
+                                                    </React.Fragment>
+                                                  ))}
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          );
+                                        })}
                                       </div>
                                     </div>
                                   )}
 
-                                  {/* 서비스 상세 정보 */}
-                                  <div className="space-y-3">
-                                    {r.re_type === 'cruise' && cruiseDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
-                                      <div className="bg-white rounded-lg p-3 border">
-                                        <div className="text-sm font-semibold text-gray-700 mb-2">객실 정보</div>
-                                        {cruiseDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
-                                          <div key={idx} className="text-xs space-y-1">
-                                            <div className="flex justify-between"><span className="text-gray-600">탑승 인원:</span><span>{item.guest_count}명</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">객실 요금:</span><span className="font-semibold text-blue-600">{Number(item.room_total_price || 0).toLocaleString()}동</span></div>
-                                            {item.request_note && <div className="text-gray-600 mt-2 pt-2 border-t">요청사항: {item.request_note}</div>}
-                                          </div>
-                                        ))}
+                                  {/* 차량 상세 정보 */}
+                                  {r.re_type === 'cruise' && cruiseCarDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                    <div className="bg-white shadow-sm rounded-lg p-4 mb-4">
+                                      <h3 className="text-base font-medium text-gray-600 mb-3">🚗 차량 정보 (상세)</h3>
+                                      <div className="space-y-3">
+                                        {cruiseCarDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => {
+                                          const carPriceCode = item.car_price_code;
+                                          const priceInfo = carPricesByCode[carPriceCode] || [];
+                                          return (
+                                            <div key={idx} className="border border-gray-100 rounded-lg p-3">
+                                              <table className="min-w-full text-sm text-gray-600 border border-blue-100">
+                                                <tbody>
+                                                  {priceInfo.map((price: any, pIdx: number) => (
+                                                    <React.Fragment key={pIdx}>
+                                                      <tr className="bg-gray-25">
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border w-32">일정</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.schedule || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">크루즈</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.cruise || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">차량 타입</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.car_type || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">카테고리</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.car_category || '-'}</td>
+                                                      </tr>
+                                                    </React.Fragment>
+                                                  ))}
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">픽업 장소</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.pickup_location || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">하차 장소</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.dropoff_location || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">승객 수</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.passenger_count}명</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">차량 요금</td>
+                                                    <td className="px-2 py-1 border-blue-100 border font-semibold text-green-600">
+                                                      {Number(item.car_total_price || 0).toLocaleString()}동
+                                                    </td>
+                                                  </tr>
+                                                  {item.request_note && (
+                                                    <tr>
+                                                      <td className="px-2 py-1 font-medium border-blue-100 border">요청사항</td>
+                                                      <td className="px-2 py-1 border-blue-100 border">{item.request_note}</td>
+                                                    </tr>
+                                                  )}
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          );
+                                        })}
                                       </div>
-                                    )}
+                                    </div>
+                                  )}
 
-                                    {r.re_type === 'cruise' && cruiseCarDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
-                                      <div className="bg-white rounded-lg p-3 border">
-                                        <div className="text-sm font-semibold text-gray-700 mb-2">🚗 연결 차량 정보</div>
-                                        {cruiseCarDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
-                                          <div key={idx} className="text-xs space-y-1">
-                                            <div className="flex justify-between"><span className="text-gray-600">픽업:</span><span>{item.pickup_location || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">하차:</span><span>{item.dropoff_location || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">승객:</span><span>{item.passenger_count}명</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">차량 요금:</span><span className="font-semibold text-green-600">{Number(item.car_total_price || 0).toLocaleString()}동</span></div>
-                                          </div>
-                                        ))}
+                                  {/* 공항 서비스 상세 정보 */}
+                                  {r.re_type === 'airport' && airportDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                    <div className="bg-white shadow-sm rounded-lg p-4 mb-4">
+                                      <h3 className="text-base font-medium text-gray-600 mb-3">✈️ 공항 서비스 (상세)</h3>
+                                      <div className="space-y-3">
+                                        {airportDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => {
+                                          const airportPriceCode = item.airport_price_code;
+                                          const priceInfo = airportPricesByCode[airportPriceCode] || [];
+                                          return (
+                                            <div key={idx} className="border border-gray-100 rounded-lg p-3">
+                                              <table className="min-w-full text-sm text-gray-600 border border-blue-100">
+                                                <tbody>
+                                                  {priceInfo.map((price: any, pIdx: number) => (
+                                                    <React.Fragment key={pIdx}>
+                                                      <tr className="bg-gray-25">
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border w-32">카테고리</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.airport_category || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">경로</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.airport_route || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">차량 타입</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.airport_car_type || '-'}</td>
+                                                      </tr>
+                                                    </React.Fragment>
+                                                  ))}
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">공항</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.ra_airport_location || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">항공편</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.ra_flight_number || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">일시</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">
+                                                      {item.ra_datetime ? new Date(item.ra_datetime).toLocaleString('ko-KR') : '-'}
+                                                    </td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">승객 수</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.ra_passenger_count}명</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">총액</td>
+                                                    <td className="px-2 py-1 border-blue-100 border font-semibold text-blue-600">
+                                                      {Number(item.total_price || 0).toLocaleString()}동
+                                                    </td>
+                                                  </tr>
+                                                  {item.request_note && (
+                                                    <tr>
+                                                      <td className="px-2 py-1 font-medium border-blue-100 border">요청사항</td>
+                                                      <td className="px-2 py-1 border-blue-100 border">{item.request_note}</td>
+                                                    </tr>
+                                                  )}
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          );
+                                        })}
                                       </div>
-                                    )}
+                                    </div>
+                                  )}
 
-                                    {r.re_type === 'airport' && airportDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
-                                      <div className="bg-white rounded-lg p-3 border">
-                                        <div className="text-sm font-semibold text-gray-700 mb-2">✈️ 공항 서비스 정보</div>
-                                        {airportDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
-                                          <div key={idx} className="text-xs space-y-1">
-                                            <div className="flex justify-between"><span className="text-gray-600">공항:</span><span>{item.ra_airport_location || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">항공편:</span><span>{item.ra_flight_number || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">일시:</span><span>{item.ra_datetime ? new Date(item.ra_datetime).toLocaleString('ko-KR') : '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">승객:</span><span>{item.ra_passenger_count}명</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-blue-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
-                                          </div>
-                                        ))}
+                                  {/* 호텔 상세 정보 */}
+                                  {r.re_type === 'hotel' && hotelDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                    <div className="bg-white shadow-sm rounded-lg p-4 mb-4">
+                                      <h3 className="text-base font-medium text-gray-600 mb-3">🏨 호텔 정보 (상세)</h3>
+                                      <div className="space-y-3">
+                                        {hotelDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => {
+                                          const hotelPriceCode = item.hotel_price_code;
+                                          const priceInfo = hotelPricesByCode[hotelPriceCode] || [];
+                                          return (
+                                            <div key={idx} className="border border-gray-100 rounded-lg p-3">
+                                              <table className="min-w-full text-sm text-gray-600 border border-blue-100">
+                                                <tbody>
+                                                  {priceInfo.map((price: any, pIdx: number) => (
+                                                    <React.Fragment key={pIdx}>
+                                                      <tr className="bg-gray-25">
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border w-32">호텔명</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.hotel_name || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">객실명</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.room_name || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">객실 타입</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.room_type || '-'}</td>
+                                                      </tr>
+                                                    </React.Fragment>
+                                                  ))}
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">체크인</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">
+                                                      {item.checkin_date ? new Date(item.checkin_date).toLocaleDateString('ko-KR') : '-'}
+                                                    </td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">객실 수</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.room_count}개</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">투숙 인원</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.guest_count}명</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">총액</td>
+                                                    <td className="px-2 py-1 border-blue-100 border font-semibold text-purple-600">
+                                                      {Number(item.total_price || 0).toLocaleString()}동
+                                                    </td>
+                                                  </tr>
+                                                  {item.request_note && (
+                                                    <tr>
+                                                      <td className="px-2 py-1 font-medium border-blue-100 border">요청사항</td>
+                                                      <td className="px-2 py-1 border-blue-100 border">{item.request_note}</td>
+                                                    </tr>
+                                                  )}
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          );
+                                        })}
                                       </div>
-                                    )}
+                                    </div>
+                                  )}
 
-                                    {r.re_type === 'hotel' && hotelDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
-                                      <div className="bg-white rounded-lg p-3 border">
-                                        <div className="text-sm font-semibold text-gray-700 mb-2">🏨 호텔 정보</div>
-                                        {hotelDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
-                                          <div key={idx} className="text-xs space-y-1">
-                                            <div className="flex justify-between"><span className="text-gray-600">체크인:</span><span>{item.checkin_date ? new Date(item.checkin_date).toLocaleDateString('ko-KR') : '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">객실 수:</span><span>{item.room_count}개</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">투숙 인원:</span><span>{item.guest_count}명</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-purple-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
-                                          </div>
-                                        ))}
+                                  {/* 렌터카 상세 정보 */}
+                                  {r.re_type === 'rentcar' && rentcarDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                    <div className="bg-white shadow-sm rounded-lg p-4 mb-4">
+                                      <h3 className="text-base font-medium text-gray-600 mb-3">🚙 렌터카 정보 (상세)</h3>
+                                      <div className="space-y-3">
+                                        {rentcarDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => {
+                                          const rentPriceCode = item.rentcar_price_code;
+                                          const priceInfo = rentPricesByCode[rentPriceCode] || [];
+                                          return (
+                                            <div key={idx} className="border border-gray-100 rounded-lg p-3">
+                                              <table className="min-w-full text-sm text-gray-600 border border-blue-100">
+                                                <tbody>
+                                                  {priceInfo.map((price: any, pIdx: number) => (
+                                                    <React.Fragment key={pIdx}>
+                                                      <tr className="bg-gray-25">
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border w-32">렌트 타입</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.rent_type || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">카테고리</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.rent_category || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">경로</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.rent_route || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">차량 타입</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.rent_car_type || '-'}</td>
+                                                      </tr>
+                                                    </React.Fragment>
+                                                  ))}
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">픽업 장소</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.pickup_location || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">목적지</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.destination || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">승객 수</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.passenger_count}명</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">총액</td>
+                                                    <td className="px-2 py-1 border-blue-100 border font-semibold text-red-600">
+                                                      {Number(item.total_price || 0).toLocaleString()}동
+                                                    </td>
+                                                  </tr>
+                                                  {item.request_note && (
+                                                    <tr>
+                                                      <td className="px-2 py-1 font-medium border-blue-100 border">요청사항</td>
+                                                      <td className="px-2 py-1 border-blue-100 border">{item.request_note}</td>
+                                                    </tr>
+                                                  )}
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          );
+                                        })}
                                       </div>
-                                    )}
+                                    </div>
+                                  )}
 
-                                    {r.re_type === 'rentcar' && rentcarDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
-                                      <div className="bg-white rounded-lg p-3 border">
-                                        <div className="text-sm font-semibold text-gray-700 mb-2">🚗 렌터카 정보</div>
-                                        {rentcarDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
-                                          <div key={idx} className="text-xs space-y-1">
-                                            <div className="flex justify-between"><span className="text-gray-600">픽업:</span><span>{item.pickup_location || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">목적지:</span><span>{item.destination || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">승객:</span><span>{item.passenger_count}명</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-red-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
-                                          </div>
-                                        ))}
+                                  {/* 투어 상세 정보 */}
+                                  {r.re_type === 'tour' && tourDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
+                                    <div className="bg-white shadow-sm rounded-lg p-4 mb-4">
+                                      <h3 className="text-base font-medium text-gray-600 mb-3">🎫 투어 정보 (상세)</h3>
+                                      <div className="space-y-3">
+                                        {tourDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => {
+                                          const tourPriceCode = item.tour_price_code;
+                                          const priceInfo = tourPricesByCode[tourPriceCode] || [];
+                                          return (
+                                            <div key={idx} className="border border-gray-100 rounded-lg p-3">
+                                              <table className="min-w-full text-sm text-gray-600 border border-blue-100">
+                                                <tbody>
+                                                  {priceInfo.map((price: any, pIdx: number) => (
+                                                    <React.Fragment key={pIdx}>
+                                                      <tr className="bg-gray-25">
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border w-32">투어명</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.tour_name || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">투어 타입</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.tour_type || '-'}</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td className="px-2 py-1 font-medium border-blue-100 border">이동수단</td>
+                                                        <td className="px-2 py-1 border-blue-100 border">{price.tour_vehicle || '-'}</td>
+                                                      </tr>
+                                                    </React.Fragment>
+                                                  ))}
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">픽업 장소</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.pickup_location || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">하차 장소</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.dropoff_location || '-'}</td>
+                                                  </tr>
+                                                  <tr className="bg-gray-50">
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">정원</td>
+                                                    <td className="px-2 py-1 border-blue-100 border">{item.tour_capacity}명</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td className="px-2 py-1 font-medium border-blue-100 border">총액</td>
+                                                    <td className="px-2 py-1 border-blue-100 border font-semibold text-orange-600">
+                                                      {Number(item.total_price || 0).toLocaleString()}동
+                                                    </td>
+                                                  </tr>
+                                                  {item.request_note && (
+                                                    <tr>
+                                                      <td className="px-2 py-1 font-medium border-blue-100 border">요청사항</td>
+                                                      <td className="px-2 py-1 border-blue-100 border">{item.request_note}</td>
+                                                    </tr>
+                                                  )}
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          );
+                                        })}
                                       </div>
-                                    )}
-
-                                    {r.re_type === 'tour' && tourDetails.filter(c => c.reservation_id === r.re_id).length > 0 && (
-                                      <div className="bg-white rounded-lg p-3 border">
-                                        <div className="text-sm font-semibold text-gray-700 mb-2">🎫 투어 정보</div>
-                                        {tourDetails.filter(c => c.reservation_id === r.re_id).map((item, idx) => (
-                                          <div key={idx} className="text-xs space-y-1">
-                                            <div className="flex justify-between"><span className="text-gray-600">픽업:</span><span>{item.pickup_location || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">하차:</span><span>{item.dropoff_location || '-'}</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">정원:</span><span>{item.tour_capacity}명</span></div>
-                                            <div className="flex justify-between"><span className="text-gray-600">총액:</span><span className="font-semibold text-orange-600">{Number(item.total_price || 0).toLocaleString()}동</span></div>
-                                          </div>
-                                        ))}
-                                      </div>
-                                    )}
-                                  </div>
+                                    </div>
+                                  )}
                                 </div>
                               )}
                             </div>
