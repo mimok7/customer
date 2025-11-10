@@ -577,9 +577,7 @@ function DirectBookingCruiseContent() {
             const key = room.room_code;
             if (roomMap.has(key)) {
                 const existing = roomMap.get(key);
-                existing.adult_count += room.adult_count || 0;
-                existing.child_count += room.child_count || 0;
-                existing.extra_count += room.extra_count || 0;
+                existing.person_count += room.person_count || 0;
                 existing.totalPrice += room.quoteItem?.total_price || 0;
                 existing.roomCount += 1;
                 existing.allQuoteItems.push(room.quoteItem);
@@ -656,7 +654,7 @@ function DirectBookingCruiseContent() {
                     reservation_id: newReservation.re_id,
                     room_price_code: roomData.room_code,
                     checkin: quoteForm.checkin,
-                    guest_count: (roomData.adult_count || 0) + (roomData.child_count || 0) + (roomData.extra_count || 0),
+                    guest_count: roomData.person_count || 0,
                     unit_price: roomData.priceInfo?.price || 0,
                     room_total_price: roomData.quoteItem?.total_price || 0,
                     request_note: reservationForm.room_request_note || null

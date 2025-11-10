@@ -538,29 +538,15 @@ export default function QuoteDetailPage() {
         console.warn('🚫 RLS/제약 탐지 업데이트 실패:', rlsProbeError);
       }
 
-      const payload = { status: 'submitted', submitted_at: new Date().toISOString(), updated_at: new Date().toISOString() } as any;
+      const payload = { status: 'submitted', submitted_at: new Date().toISOString(), updated_at: new Date().toISOString() };
 
-      // 1차: id 기준 업데이트
-      let { data, error } = await supabase
+      // id 기준 업데이트 (quote_id 컬럼 없으므로 단일 방식만 사용)
+      const { data, error } = await supabase
         .from('quote')
         .update(payload)
         .eq('id', quote.id)
         .select('id')
         .single();
-
-      // 2차 폴백: quote_id 또는 id 중 일치하는 것으로 시도 (실DB 호환)
-      if (error) {
-        console.warn('⚠️ 1차 업데이트 실패, quote_id 호환 모드로 재시도:', error);
-        const orFilter = `id.eq.${quote.id},quote_id.eq.${quote.id}`;
-        const resp = await supabase
-          .from('quote')
-          .update(payload)
-          .or(orFilter)
-          .select('id')
-          .single();
-        data = resp.data as any;
-        error = resp.error as any;
-      }
 
       if (error) {
         // 에러 상세 로깅
