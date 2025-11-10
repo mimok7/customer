@@ -68,10 +68,11 @@ export default function SignupPage() {
         alert('⚠️ 프로필 저장에 문제가 있습니다.\n로그인 후 프로필을 업데이트해주세요.\n\n오류: ' + (result.error?.message || '알 수 없는 오류'));
       } else {
         console.log('✅ Users 테이블 프로필 저장 성공');
-        alert('✅ 회원가입이 완료되었습니다!\n' + (authData.user.email_confirmed_at ? '로그인하세요.' : '이메일 인증 후 로그인하세요.'));
+        alert('✅ 회원가입이 완료되었습니다!\n내 정보 페이지에서 추가 정보를 입력해주세요.');
       }
 
-      router.push('/login');
+      // 회원가입 성공 후 바로 내 정보 페이지로 이동
+      router.push('/mypage/profile');
     } catch (error: any) {
       console.error('❌ 회원가입 실패:', error);
 

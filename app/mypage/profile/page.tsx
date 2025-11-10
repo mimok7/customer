@@ -120,6 +120,13 @@ export default function ProfilePage() {
     return (
         <PageWrapper title="👤 내 정보">
             <div className="space-y-6">
+                {/* 회원가입 후 안내 메시지 */}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p className="text-sm text-blue-700">
+                        💡 <strong>환영합니다!</strong> 아래 정보를 입력하시면 더 편리하게 서비스를 이용하실 수 있습니다.
+                    </p>
+                </div>
+
                 <SectionBox title="기본 정보">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
