@@ -509,6 +509,9 @@ export default function QuoteDetailPage() {
   const handleSubmitQuote = async () => {
     if (!quote?.id || submitting) return;
     setSubmitting(true);
+
+    let submitSuccess = false;
+
     try {
       // 0. 사전 행 존재 및 권한 점검
       const { data: existingRow, error: preError } = await supabase
@@ -570,30 +573,40 @@ export default function QuoteDetailPage() {
           extraHint = '\n⚠️ status 값 또는 제약 조건 위반 가능성: status="submitted" 허용 여부 확인.';
         }
         alert(`견적 제출 중 오류가 발생했습니다.\n${msg}${extraHint}`);
+        setSubmitting(false);
         return;
       }
 
-      // 알림 생성 - 견적 승인 요청
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (user) {
-          await supabase.rpc('create_quote_approval_notification', {
-            p_quote_id: quote.id,
-            p_user_id: user.id
-          });
-        }
-      } catch (notificationError) {
-        console.error('알림 생성 실패:', notificationError);
-        // 알림 생성 실패해도 견적 제출은 성공으로 처리
-      }
-
+      // 견적 제출 성공!
+      submitSuccess = true;
       alert('견적이 성공적으로 제출되었습니다!');
-      router.push('/mypage/quotes');
+
     } catch (err: any) {
       console.error('❌ 견적 제출 예외:', err);
       alert(`견적 제출 중 오류가 발생했습니다.\n${err?.message || ''}`);
-    } finally {
       setSubmitting(false);
+      return;
+    }
+
+    // 견적 제출이 성공한 경우에만 알림 시도 (비동기, 실패해도 무관)
+    if (submitSuccess) {
+      // 알림 생성은 별도 비동기로 처리 (실패해도 견적 제출 성공 유지)
+      setTimeout(async () => {
+        try {
+          const { data: { user: authUser } } = await supabase.auth.getUser();
+          if (authUser) {
+            await supabase.rpc('create_quote_approval_notification', {
+              p_quote_id: quote.id,
+              p_user_id: authUser.id
+            });
+          }
+        } catch (notificationError: any) {
+          console.warn('⚠️ 알림 생성 실패 (무시됨):', notificationError?.message || notificationError);
+        }
+      }, 100);
+
+      setSubmitting(false);
+      router.push('/mypage/quotes');
     }
   };
 
