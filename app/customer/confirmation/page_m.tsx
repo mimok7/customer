@@ -518,8 +518,7 @@ export default function ManagerConfirmationGeneratePage() {
                 .select('payment_status, amount')
                 .eq('reservation_id', reservation.re_id)
                 .order('created_at', { ascending: false })
-                .limit(1)
-                .single();
+                .maybeSingle();
             if (payment) {
                 paymentStatus = payment.payment_status;
                 totalPrice = payment.amount;

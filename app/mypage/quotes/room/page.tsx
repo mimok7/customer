@@ -53,10 +53,10 @@ export default function QuoteFormPage() {
     cruise_code: '',
     payment_code: '',
     room_code: '',
-  person_count: 0,
+    person_count: 0,
     infant_count: 0,
-  extra_adult_count: 0,
-  extra_child_count: 0,
+    extra_adult_count: 0,
+    extra_child_count: 0,
     vehicle_category_code: '',
     vehicle_code: '',
     discount_rate: 0
@@ -66,14 +66,12 @@ export default function QuoteFormPage() {
     supabase.auth.getUser().then(async ({ data: { user } }) => {
       if (!user) router.push('/login');
       else {
-        setUser(user);
         const { data: lastQuote } = await supabase
           .from('quote')
           .select('*')
           .eq('user_id', user.id)
           .order('created_at', { ascending: false })
-          .limit(1)
-          .single();
+          .maybeSingle();
 
         if (lastQuote) {
           setForm({ ...form, ...lastQuote });
@@ -261,10 +259,10 @@ export default function QuoteFormPage() {
         {rooms.map(r => <option key={r.code} value={r.code}>{r.name}</option>)}
       </select>
 
-  {renderCountSelector('인원수', 'person_count')}
+      {renderCountSelector('인원수', 'person_count')}
       {renderCountSelector('유아 인동', 'infant_count')}
-  {renderCountSelector('엑스트라 성인', 'extra_adult_count')}
-  {renderCountSelector('엑스트라 아동', 'extra_child_count')}
+      {renderCountSelector('엑스트라 성인', 'extra_adult_count')}
+      {renderCountSelector('엑스트라 아동', 'extra_child_count')}
 
       <label>🚐 차량 구분</label>
       <div className="flex gap-2 flex-wrap">

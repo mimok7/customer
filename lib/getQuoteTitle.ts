@@ -31,14 +31,14 @@ export async function fetchQuoteTitle(opts: { quote_id?: string; id?: string }):
 
         console.log('🔍 견적 타이틀 조회 시작:', { quote_id, id });
 
-        let query = supabase.from('quote').select('title, quote_id, id').limit(1);
+        let query = supabase.from('quote').select('title, quote_id, id');
         if (quote_id) {
             query = query.eq('quote_id', quote_id);
         } else if (id) {
             query = query.eq('id', id);
         }
 
-        const { data, error } = await query.single();
+        const { data, error } = await query.maybeSingle();
 
         if (error) {
             console.warn('⚠️ 견적 타이틀 조회 실패:', error);

@@ -382,8 +382,7 @@ function CruiseReservationContent() {
                     .from('car_price')
                     .select('*')
                     .eq('car_code', carData.car_code)
-                    .limit(1)
-                    .single();
+                    .maybeSingle();
 
                 if (carPriceData) {
                     setCarPriceInfo(carPriceData);

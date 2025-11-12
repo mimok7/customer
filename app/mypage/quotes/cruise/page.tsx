@@ -271,12 +271,11 @@ function CruiseQuoteNewContent() {
         .eq('room_category', roomCategory)
         .lte('start_date', form.checkin)
         .gte('end_date', form.checkin)
-        .limit(1)
-        .single();
+        .maybeSingle();
 
       if (error) throw error;
-      console.log('room_code 조회됨:', data.room_code);
-      return data.room_code;
+      console.log('room_code 조회됨:', data?.room_code);
+      return data?.room_code || '';
     } catch (error) {
       console.error('room_code 조회 실패:', error);
       return '';
@@ -293,12 +292,11 @@ function CruiseQuoteNewContent() {
         .eq('cruise', form.cruise_code)
         .eq('car_type', carType)
         .eq('car_category', carCategory)
-        .limit(1)
-        .single();
+        .maybeSingle();
 
       if (error) throw error;
-      console.log('car_code 조회됨:', data.car_code);
-      return data.car_code;
+      console.log('car_code 조회됨:', data?.car_code);
+      return data?.car_code || '';
     } catch (error) {
       console.error('car_code 조회 실패:', error);
       return '';

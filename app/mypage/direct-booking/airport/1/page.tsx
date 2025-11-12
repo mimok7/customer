@@ -293,8 +293,7 @@ function AirportPriceContent() {
                 .eq('airport_category', category)
                 .eq('airport_route', route)
                 .eq('airport_car_type', carType)
-                .limit(1)
-                .single();
+                .maybeSingle();
 
             if (error) throw error;
             return data?.airport_code || '';
@@ -311,8 +310,7 @@ function AirportPriceContent() {
                 .from('airport_price')
                 .select('price')
                 .eq('airport_code', airportCode)
-                .limit(1)
-                .single();
+                .maybeSingle();
 
             if (error) throw error;
             return data?.price || 0;

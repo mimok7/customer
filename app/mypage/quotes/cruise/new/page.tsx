@@ -38,18 +38,18 @@ function CruiseQuoteNewContent() {
   const [roomCategoryOptions, setRoomCategoryOptions] = useState<string[]>([]);
   const [carCategoryOptions, setCarCategoryOptions] = useState<string[]>([]);
   const [carTypeOptions, setCarTypeOptions] = useState<string[]>([]);
-  
+
   // 일정 옵션 (하드코딩)
   const scheduleOptions = ['1박2일', '2박3일', '당일'];
-  
+
   // 특별 요청사항 상태
   const [formData, setFormData] = useState({
     special_requests: ''
   });
-  
+
   // 로딩 상태
   const [loading, setLoading] = useState(false);
-  
+
   // 견적 정보 상태
   const [quote, setQuote] = useState<any>(null);
 
@@ -112,7 +112,7 @@ function CruiseQuoteNewContent() {
         .single();
 
       if (error) throw error;
-      
+
       setQuote(data);
       console.log('Quote loaded:', data);
     } catch (error) {
@@ -267,12 +267,11 @@ function CruiseQuoteNewContent() {
         .eq('room_category', roomCategory)
         .lte('start_date', form.checkin)
         .gte('end_date', form.checkin)
-        .limit(1)
-        .single();
+        .maybeSingle();
 
       if (error) throw error;
-      console.log('room_code 조회됨:', data.room_code);
-      return data.room_code;
+      console.log('room_code 조회됨:', data?.room_code);
+      return data?.room_code || '';
     } catch (error) {
       console.error('room_code 조회 실패:', error);
       return '';
@@ -289,12 +288,11 @@ function CruiseQuoteNewContent() {
         .eq('cruise', form.cruise_code)
         .eq('car_type', carType)
         .eq('car_category', carCategory)
-        .limit(1)
-        .single();
+        .maybeSingle();
 
       if (error) throw error;
-      console.log('car_code 조회됨:', data.car_code);
-      return data.car_code;
+      console.log('car_code 조회됨:', data?.car_code);
+      return data?.car_code || '';
     } catch (error) {
       console.error('car_code 조회 실패:', error);
       return '';
@@ -461,7 +459,7 @@ function CruiseQuoteNewContent() {
               ← 뒤로
             </button>
           </div>
-          
+
           {/* 견적 정보 */}
           <div className="bg-white/70 backdrop-blur rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-800 mb-2">현재 견적 정보</h3>
@@ -478,321 +476,318 @@ function CruiseQuoteNewContent() {
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">크루즈 여행 정보 입력</h2>
-            
+
             {/* 크루즈 안내 카드 */}
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 mb-6">
               <h3 className="text-white text-lg font-semibold mb-2">🚢 크루즈 예약 안내</h3>
               <p className="text-white/90 text-sm">
-                원하시는 크루즈 여행 일정과 객실, 차량을 선택하여 견적을 요청하세요.<br/>
+                원하시는 크루즈 여행 일정과 객실, 차량을 선택하여 견적을 요청하세요.<br />
                 날짜와 일정을 먼저 선택하시면 단계별로 옵션이 제공됩니다.
               </p>
             </div>
 
-          {/* 기본 정보 */}
-          <div className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">📅 체크인 날짜</label>
-              <input 
-                type="date" 
-                value={form.checkin} 
-                onChange={e => setForm({ ...form, checkin: e.target.value })} 
-                className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">🗓 일정 선택</label>
-              <div className="grid grid-cols-3 gap-2">
-                {scheduleOptions.map((option) => (
-                  <button 
-                    key={option} 
-                    type="button"
-                    onClick={() => setForm({ ...form, schedule: option })} 
-                    className={`border p-3 rounded-lg transition-colors ${
-                      form.schedule === option ? 'bg-blue-500 text-white' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
-                    }`}
-                  >
-                    {option}
-                  </button>
-                ))}
+            {/* 기본 정보 */}
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">📅 체크인 날짜</label>
+                <input
+                  type="date"
+                  value={form.checkin}
+                  onChange={e => setForm({ ...form, checkin: e.target.value })}
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  required
+                />
               </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">🚢 크루즈 선택</label>
-              <select 
-                value={form.cruise_code} 
-                onChange={e => setForm({ ...form, cruise_code: e.target.value })} 
-                className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                required
-              >
-                <option value="">크루즈를 선택하세요</option>
-                {cruiseOptions.map(cruise => (
-                  <option key={cruise} value={cruise}>{cruise}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">💳 결제 방식</label>
-              <div className="grid grid-cols-2 gap-2">
-                {paymentOptions.map(payment => (
-                  <button
-                    key={payment}
-                    type="button"
-                    onClick={() => setForm({ ...form, payment_code: payment })}
-                    className={`border p-3 rounded-lg transition-colors ${
-                      form.payment_code === payment ? 'bg-blue-500 text-white' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
-                    }`}
-                  >
-                    {payment}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* 객실 선택 영역 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-800">🛏 객실 선택</h3>
-              {form.rooms.map((room, roomIdx) => (
-                <div key={roomIdx} className="border border-blue-200 rounded-lg p-4 bg-blue-50">
-                  <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-medium text-gray-900">객실 그룹 {roomIdx + 1}</h4>
-                    {form.rooms.length > 1 && (
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setForm(prev => ({
-                            ...prev,
-                            rooms: prev.rooms.filter((_, i) => i !== roomIdx)
-                          }));
-                        }}
-                        className="text-red-600 hover:text-red-800 text-sm"
-                      >
-                        삭제
-                      </button>
-                    )}
-                  </div>
-
-                  {/* 객실 타입 선택 */}
-                  <div className="mb-4">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">🛏 객실 타입</label>
-                    <select 
-                      value={room.room_type} 
-                      onChange={e => {
-                        const newRooms = [...form.rooms];
-                        newRooms[roomIdx].room_type = e.target.value;
-                        // 객실 타입이 변경되면 카테고리 초기화
-                        newRooms[roomIdx].categories = [{ room_category: '', person_count: 0, room_code: '' }];
-                        setForm({ ...form, rooms: newRooms });
-                        
-                        // 선택된 룸타입에 대한 카테고리 옵션 로드
-                        if (e.target.value) {
-                          loadRoomCategoryOptions(e.target.value);
-                        }
-                      }}
-                      className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      required
-                    >
-                      <option value="">객실 타입을 선택하세요</option>
-                      {roomTypeOptions.map(roomType => (
-                        <option key={roomType} value={roomType}>{roomType}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* 카테고리별 객실 선택 */}
-                  {room.categories.map((category, catIdx) => {
-                    // 이미 선택된 카테고리들 제외
-                    const usedCategories = room.categories
-                      .filter((_, i) => i !== catIdx)
-                      .map(cat => cat.room_category)
-                      .filter(Boolean);
-                    const availableCategories = roomCategoryOptions.filter(cat => !usedCategories.includes(cat));
-
-                    return (
-                      <div key={catIdx} className="border border-gray-200 rounded-lg p-3 mb-3 bg-white">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-sm font-medium text-gray-700">카테고리 {catIdx + 1}</span>
-                          {room.categories.length > 1 && (
-                            <button
-                              type="button"
-                              onClick={() => removeCategory(roomIdx, catIdx)}
-                              className="text-red-600 hover:text-red-800 text-xs"
-                            >
-                              삭제
-                            </button>
-                          )}
-                        </div>
-                        
-                        <div className="grid grid-cols-2 gap-3">
-                          <div>
-                            <label className="block text-xs font-medium text-gray-600 mb-1">객실 카테고리</label>
-                            <select
-                              value={category.room_category}
-                              onChange={async (e) => {
-                                const roomCategory = e.target.value;
-                                const roomCode = await getRoomCode(room.room_type, roomCategory);
-                                const newRooms = [...form.rooms];
-                                newRooms[roomIdx].categories[catIdx].room_category = roomCategory;
-                                newRooms[roomIdx].categories[catIdx].room_code = roomCode;
-                                setForm({ ...form, rooms: newRooms });
-                              }}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white text-sm"
-                            >
-                              <option value="">카테고리 선택</option>
-                              {availableCategories.map(cat => (
-                                <option key={cat} value={cat}>{cat}</option>
-                              ))}
-                            </select>
-                          </div>
-                          
-                          <div>
-                            <label className="block text-xs font-medium text-gray-600 mb-1">인원수</label>
-                            <input
-                              type="number"
-                              min="0"
-                              value={category.person_count}
-                              onChange={(e) => {
-                                const newRooms = [...form.rooms];
-                                newRooms[roomIdx].categories[catIdx].person_count = parseInt(e.target.value) || 0;
-                                setForm({ ...form, rooms: newRooms });
-                                
-                                // 인원수가 입력되고 카테고리가 선택되어 있으면 새 카테고리 추가
-                                if (parseInt(e.target.value) > 0 && category.room_category && catIdx === room.categories.length - 1) {
-                                  addNewCategory(roomIdx);
-                                }
-                              }}
-                              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              ))}
-              
-              {form.rooms.length < 3 && (
-                <button
-                  type="button"
-                  onClick={addNewRoom}
-                  className="w-full border-2 border-dashed border-blue-300 rounded-lg p-4 text-blue-600 hover:border-blue-400 hover:text-blue-700 transition-colors"
-                >
-                  + 객실 추가 (최대 3개)
-                </button>
-              )}
-            </div>
-
-            {/* 차량 선택 영역 */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-800">🚗 차량 선택</h3>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">차량구분</label>
-                <div className="flex gap-2">
-                  {carCategoryOptions.map(category => (
+                <label className="block text-sm font-medium text-gray-700 mb-2">🗓 일정 선택</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {scheduleOptions.map((option) => (
                     <button
-                      key={category}
+                      key={option}
                       type="button"
-                      onClick={() => setSelectedCarCategory(category)}
-                      className={`px-4 py-2 border rounded-lg transition-colors ${
-                        selectedCarCategory === category
-                          ? 'bg-green-500 text-white border-green-500'
-                          : 'bg-gray-50 border-gray-300 hover:bg-gray-100 text-gray-700'
-                      }`}
+                      onClick={() => setForm({ ...form, schedule: option })}
+                      className={`border p-3 rounded-lg transition-colors ${form.schedule === option ? 'bg-blue-500 text-white' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+                        }`}
                     >
-                      {category}
+                      {option}
                     </button>
                   ))}
                 </div>
               </div>
 
-              {vehicleForm.map((vehicle, vehicleIndex) => (
-                <div key={vehicleIndex} className="border border-green-200 rounded-lg p-4 bg-green-50">
-                  <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-medium text-gray-900">차량 {vehicleIndex + 1}</h4>
-                    {vehicleForm.length > 1 && (
-                      <button
-                        type="button"
-                        onClick={() => handleRemoveVehicle(vehicleIndex)}
-                        className="text-red-600 hover:text-red-800 text-sm"
-                      >
-                        삭제
-                      </button>
-                    )}
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-600 mb-1">차량구분</label>
-                      <input
-                        type="text"
-                        value={selectedCarCategory}
-                        readOnly
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700"
-                        placeholder="위에서 차량구분을 선택하세요"
-                      />
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">🚢 크루즈 선택</label>
+                <select
+                  value={form.cruise_code}
+                  onChange={e => setForm({ ...form, cruise_code: e.target.value })}
+                  className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  required
+                >
+                  <option value="">크루즈를 선택하세요</option>
+                  {cruiseOptions.map(cruise => (
+                    <option key={cruise} value={cruise}>{cruise}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">💳 결제 방식</label>
+                <div className="grid grid-cols-2 gap-2">
+                  {paymentOptions.map(payment => (
+                    <button
+                      key={payment}
+                      type="button"
+                      onClick={() => setForm({ ...form, payment_code: payment })}
+                      className={`border p-3 rounded-lg transition-colors ${form.payment_code === payment ? 'bg-blue-500 text-white' : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+                        }`}
+                    >
+                      {payment}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 객실 선택 영역 */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-800">🛏 객실 선택</h3>
+                {form.rooms.map((room, roomIdx) => (
+                  <div key={roomIdx} className="border border-blue-200 rounded-lg p-4 bg-blue-50">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-medium text-gray-900">객실 그룹 {roomIdx + 1}</h4>
+                      {form.rooms.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setForm(prev => ({
+                              ...prev,
+                              rooms: prev.rooms.filter((_, i) => i !== roomIdx)
+                            }));
+                          }}
+                          className="text-red-600 hover:text-red-800 text-sm"
+                        >
+                          삭제
+                        </button>
+                      )}
                     </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-600 mb-1">차량타입</label>
+
+                    {/* 객실 타입 선택 */}
+                    <div className="mb-4">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">🛏 객실 타입</label>
                       <select
-                        value={vehicle.car_type}
-                        onChange={async (e) => {
-                          const carType = e.target.value;
-                          const carCode = await getCarCode(carType, selectedCarCategory);
-                          handleVehicleChange(vehicleIndex, 'car_type', carType);
-                          handleVehicleChange(vehicleIndex, 'car_category', selectedCarCategory);
-                          handleVehicleChange(vehicleIndex, 'car_code', carCode);
+                        value={room.room_type}
+                        onChange={e => {
+                          const newRooms = [...form.rooms];
+                          newRooms[roomIdx].room_type = e.target.value;
+                          // 객실 타입이 변경되면 카테고리 초기화
+                          newRooms[roomIdx].categories = [{ room_category: '', person_count: 0, room_code: '' }];
+                          setForm({ ...form, rooms: newRooms });
+
+                          // 선택된 룸타입에 대한 카테고리 옵션 로드
+                          if (e.target.value) {
+                            loadRoomCategoryOptions(e.target.value);
+                          }
                         }}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 bg-white"
+                        className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        required
                       >
-                        <option value="">차량타입 선택</option>
-                        {carTypeOptions.map(carType => (
-                          <option key={carType} value={carType}>{carType}</option>
+                        <option value="">객실 타입을 선택하세요</option>
+                        {roomTypeOptions.map(roomType => (
+                          <option key={roomType} value={roomType}>{roomType}</option>
                         ))}
                       </select>
                     </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-600 mb-1">차량수</label>
-                      <input
-                        type="number"
-                        min="1"
-                        value={vehicle.count}
-                        onChange={(e) => handleVehicleChange(vehicleIndex, 'count', parseInt(e.target.value) || 1)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500"
-                      />
-                    </div>
+
+                    {/* 카테고리별 객실 선택 */}
+                    {room.categories.map((category, catIdx) => {
+                      // 이미 선택된 카테고리들 제외
+                      const usedCategories = room.categories
+                        .filter((_, i) => i !== catIdx)
+                        .map(cat => cat.room_category)
+                        .filter(Boolean);
+                      const availableCategories = roomCategoryOptions.filter(cat => !usedCategories.includes(cat));
+
+                      return (
+                        <div key={catIdx} className="border border-gray-200 rounded-lg p-3 mb-3 bg-white">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-700">카테고리 {catIdx + 1}</span>
+                            {room.categories.length > 1 && (
+                              <button
+                                type="button"
+                                onClick={() => removeCategory(roomIdx, catIdx)}
+                                className="text-red-600 hover:text-red-800 text-xs"
+                              >
+                                삭제
+                              </button>
+                            )}
+                          </div>
+
+                          <div className="grid grid-cols-2 gap-3">
+                            <div>
+                              <label className="block text-xs font-medium text-gray-600 mb-1">객실 카테고리</label>
+                              <select
+                                value={category.room_category}
+                                onChange={async (e) => {
+                                  const roomCategory = e.target.value;
+                                  const roomCode = await getRoomCode(room.room_type, roomCategory);
+                                  const newRooms = [...form.rooms];
+                                  newRooms[roomIdx].categories[catIdx].room_category = roomCategory;
+                                  newRooms[roomIdx].categories[catIdx].room_code = roomCode;
+                                  setForm({ ...form, rooms: newRooms });
+                                }}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white text-sm"
+                              >
+                                <option value="">카테고리 선택</option>
+                                {availableCategories.map(cat => (
+                                  <option key={cat} value={cat}>{cat}</option>
+                                ))}
+                              </select>
+                            </div>
+
+                            <div>
+                              <label className="block text-xs font-medium text-gray-600 mb-1">인원수</label>
+                              <input
+                                type="number"
+                                min="0"
+                                value={category.person_count}
+                                onChange={(e) => {
+                                  const newRooms = [...form.rooms];
+                                  newRooms[roomIdx].categories[catIdx].person_count = parseInt(e.target.value) || 0;
+                                  setForm({ ...form, rooms: newRooms });
+
+                                  // 인원수가 입력되고 카테고리가 선택되어 있으면 새 카테고리 추가
+                                  if (parseInt(e.target.value) > 0 && category.room_category && catIdx === room.categories.length - 1) {
+                                    addNewCategory(roomIdx);
+                                  }
+                                }}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+
+                {form.rooms.length < 3 && (
+                  <button
+                    type="button"
+                    onClick={addNewRoom}
+                    className="w-full border-2 border-dashed border-blue-300 rounded-lg p-4 text-blue-600 hover:border-blue-400 hover:text-blue-700 transition-colors"
+                  >
+                    + 객실 추가 (최대 3개)
+                  </button>
+                )}
+              </div>
+
+              {/* 차량 선택 영역 */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-800">🚗 차량 선택</h3>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">차량구분</label>
+                  <div className="flex gap-2">
+                    {carCategoryOptions.map(category => (
+                      <button
+                        key={category}
+                        type="button"
+                        onClick={() => setSelectedCarCategory(category)}
+                        className={`px-4 py-2 border rounded-lg transition-colors ${selectedCarCategory === category
+                            ? 'bg-green-500 text-white border-green-500'
+                            : 'bg-gray-50 border-gray-300 hover:bg-gray-100 text-gray-700'
+                          }`}
+                      >
+                        {category}
+                      </button>
+                    ))}
                   </div>
                 </div>
-              ))}
-              
-              {vehicleForm.length < 3 && (
-                <button
-                  type="button"
-                  onClick={handleAddVehicle}
-                  className="w-full border-2 border-dashed border-green-300 rounded-lg p-4 text-green-600 hover:border-green-400 hover:text-green-700 transition-colors"
-                >
-                  + 차량 추가 (최대 3개)
-                </button>
-              )}
-            </div>
 
-            {/* 특별 요청사항 */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">특별 요청사항</label>
-              <textarea
-                value={formData.special_requests}
-                onChange={(e) => setFormData({...formData, special_requests: e.target.value})}
-                rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                placeholder="특별한 요청사항이 있으시면 입력해주세요..."
-              />
+                {vehicleForm.map((vehicle, vehicleIndex) => (
+                  <div key={vehicleIndex} className="border border-green-200 rounded-lg p-4 bg-green-50">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-medium text-gray-900">차량 {vehicleIndex + 1}</h4>
+                      {vehicleForm.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={() => handleRemoveVehicle(vehicleIndex)}
+                          className="text-red-600 hover:text-red-800 text-sm"
+                        >
+                          삭제
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-600 mb-1">차량구분</label>
+                        <input
+                          type="text"
+                          value={selectedCarCategory}
+                          readOnly
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700"
+                          placeholder="위에서 차량구분을 선택하세요"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-600 mb-1">차량타입</label>
+                        <select
+                          value={vehicle.car_type}
+                          onChange={async (e) => {
+                            const carType = e.target.value;
+                            const carCode = await getCarCode(carType, selectedCarCategory);
+                            handleVehicleChange(vehicleIndex, 'car_type', carType);
+                            handleVehicleChange(vehicleIndex, 'car_category', selectedCarCategory);
+                            handleVehicleChange(vehicleIndex, 'car_code', carCode);
+                          }}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 bg-white"
+                        >
+                          <option value="">차량타입 선택</option>
+                          {carTypeOptions.map(carType => (
+                            <option key={carType} value={carType}>{carType}</option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-600 mb-1">차량수</label>
+                        <input
+                          type="number"
+                          min="1"
+                          value={vehicle.count}
+                          onChange={(e) => handleVehicleChange(vehicleIndex, 'count', parseInt(e.target.value) || 1)}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
+                {vehicleForm.length < 3 && (
+                  <button
+                    type="button"
+                    onClick={handleAddVehicle}
+                    className="w-full border-2 border-dashed border-green-300 rounded-lg p-4 text-green-600 hover:border-green-400 hover:text-green-700 transition-colors"
+                  >
+                    + 차량 추가 (최대 3개)
+                  </button>
+                )}
+              </div>
+
+              {/* 특별 요청사항 */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">특별 요청사항</label>
+                <textarea
+                  value={formData.special_requests}
+                  onChange={(e) => setFormData({ ...formData, special_requests: e.target.value })}
+                  rows={3}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  placeholder="특별한 요청사항이 있으시면 입력해주세요..."
+                />
+              </div>
             </div>
-          </div>
 
             {/* 제출 버튼 */}
             <div className="flex justify-end space-x-4">
