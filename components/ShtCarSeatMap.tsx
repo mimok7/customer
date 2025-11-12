@@ -10,6 +10,7 @@ interface SeatReservation {
     seat_number: string;
     sht_category: string;
     usage_date: string;
+    pickup_datetime?: string;
 }
 
 interface ShtCarSeatMapProps {
@@ -18,6 +19,7 @@ interface ShtCarSeatMapProps {
     selectedDate?: Date;
     usageDate?: string;
     vehicleNumber?: string;
+    onSeatSelect?: (seatInfo: { vehicle: string; seat: string; category: string }) => void;
 }
 
 export default function ShtCarSeatMap({
@@ -25,15 +27,20 @@ export default function ShtCarSeatMap({
     onClose,
     selectedDate,
     usageDate,
-    vehicleNumber
+    vehicleNumber,
+    onSeatSelect
 }: ShtCarSeatMapProps) {
-    const [selectedSeat, setSelectedSeat] = useState<string | null>(null);
+    const [selectedSeats, setSelectedSeats] = useState<string[]>([]); // 복수 선택 가능
     const [loading, setLoading] = useState(false);
     const [reservations, setReservations] = useState<SeatReservation[]>([]);
-    const [vehicles, setVehicles] = useState<string[]>([]);
-    const [currentVehicle, setCurrentVehicle] = useState(vehicleNumber || '');
-    const [currentDate, setCurrentDate] = useState(usageDate || selectedDate?.toISOString().split('T')[0] || new Date().toISOString().split('T')[0]);
-    const [category, setCategory] = useState<'all' | 'pickup' | 'dropoff'>('all');
+    const [currentVehicle, setCurrentVehicle] = useState('차량1'); // 기본 차량1
+    const [currentDate, setCurrentDate] = useState(() => {
+        if (usageDate) return usageDate;
+        if (selectedDate) return selectedDate.toISOString().split('T')[0];
+        return new Date().toISOString().split('T')[0];
+    });
+    const [category, setCategory] = useState<'pickup' | 'dropoff'>('pickup'); // 기본 픽업
+    const [allData, setAllData] = useState<SeatReservation[]>([]);
 
     // 좌석 배치 정의
     const seatLayout = {
@@ -71,51 +78,90 @@ export default function ShtCarSeatMap({
 
     // 차량 목록 및 예약 정보 로드
     useEffect(() => {
-        if (isOpen && currentDate) {
-            loadData();
+        if (isOpen) {
+            loadAllData();
         }
-    }, [isOpen, currentDate, currentVehicle, category]);
+    }, [isOpen]);
 
-    const loadData = async () => {
+    // 날짜/차량/카테고리 변경시 필터링
+    useEffect(() => {
+        if (allData.length > 0) {
+            filterData();
+        }
+    }, [currentDate, currentVehicle, category, allData]);
+
+    const loadAllData = async () => {
         setLoading(true);
         try {
-            // 예약 정보 조회
+            console.log('🔍 전체 데이터 로드 시작');
+
+            // 모든 예약 정보 조회
             const { data, error } = await supabase
                 .from('reservation_car_sht')
-                .select('id, vehicle_number, seat_number, sht_category, usage_date')
-                .gte('usage_date', `${currentDate}T00:00:00`)
-                .lte('usage_date', `${currentDate}T23:59:59`);
+                .select('id, vehicle_number, seat_number, sht_category, usage_date, pickup_datetime')
+                .not('vehicle_number', 'is', null)
+                .order('usage_date', { ascending: true });
 
-            if (error) throw error;
-
-            // 차량 목록 추출
-            const vehicleSet = new Set<string>();
-            (data || []).forEach(r => {
-                if (r.vehicle_number) vehicleSet.add(r.vehicle_number);
-            });
-            const vehicleList = Array.from(vehicleSet).sort();
-            setVehicles(vehicleList);
-
-            // 첫 차량 자동 선택
-            if (!currentVehicle && vehicleList.length > 0) {
-                setCurrentVehicle(vehicleList[0]);
+            if (error) {
+                console.error('❌ Supabase 조회 오류:', error);
+                throw error;
             }
 
-            // 현재 차량 및 카테고리에 맞는 예약만 필터링
-            const filtered = (data || []).filter(r => {
-                const matchVehicle = !currentVehicle || r.vehicle_number === currentVehicle;
-                const matchCategory = category === 'all' ||
-                    (category === 'pickup' && r.sht_category?.toLowerCase() === 'pickup') ||
-                    (category === 'dropoff' && (r.sht_category?.toLowerCase() === 'dropoff' || r.sht_category?.toLowerCase() === 'drop-off'));
-                return matchVehicle && matchCategory;
-            });
-
-            setReservations(filtered as SeatReservation[]);
+            console.log('✅ 전체 데이터 로드 완료:', data?.length || 0, '건');
+            setAllData(data as SeatReservation[] || []);
         } catch (error) {
-            console.error('데이터 로드 오류:', error);
+            console.error('❌ 데이터 로드 오류:', error);
         } finally {
             setLoading(false);
         }
+    };
+
+    const filterData = () => {
+        console.log('🔍 필터링 시작:', { currentDate, currentVehicle, category });
+
+        // 날짜별로 필터링
+        let dateFiltered = allData;
+        if (currentDate) {
+            dateFiltered = allData.filter(r => {
+                // usage_date 확인 (timestamp)
+                if (r.usage_date) {
+                    const usageDate = new Date(r.usage_date).toISOString().split('T')[0];
+                    if (usageDate === currentDate) return true;
+                }
+                // pickup_datetime 확인 (date)
+                if (r.pickup_datetime) {
+                    const pickupDate = typeof r.pickup_datetime === 'string'
+                        ? r.pickup_datetime.split('T')[0]
+                        : new Date(r.pickup_datetime).toISOString().split('T')[0];
+                    if (pickupDate === currentDate) return true;
+                }
+                return false;
+            });
+        }
+
+        console.log('📅 날짜 필터링 후:', dateFiltered.length, '건');
+
+        // 차량 목록 추출
+        const vehicleSet = new Set<string>();
+        dateFiltered.forEach(r => {
+            if (r.vehicle_number) vehicleSet.add(r.vehicle_number);
+        });
+        const vehicleList = Array.from(vehicleSet).sort();
+        setVehicles(vehicleList);
+
+        console.log('🚗 차량 목록:', vehicleList);
+
+        // 차량 및 카테고리 필터링
+        const filtered = dateFiltered.filter(r => {
+            const matchVehicle = !currentVehicle || r.vehicle_number === currentVehicle;
+            const matchCategory = category === 'all' ||
+                (category === 'pickup' && r.sht_category?.toLowerCase() === 'pickup') ||
+                (category === 'dropoff' && (r.sht_category?.toLowerCase() === 'dropoff' || r.sht_category?.toLowerCase() === 'drop-off'));
+            return matchVehicle && matchCategory;
+        });
+
+        console.log('🎯 최종 필터링 결과:', filtered.length, '건');
+        setReservations(filtered);
     };
 
     const getSeatStatus = (seatId: string) => {
@@ -178,9 +224,22 @@ export default function ShtCarSeatMap({
 
                 {/* 필터 */}
                 <div className="p-4 bg-gray-50 border-b">
+                    {/* 데이터 통계 */}
+                    {allData.length > 0 && (
+                        <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                            <p className="text-sm text-blue-800">
+                                📊 전체 예약: <strong>{allData.length}건</strong>
+                                {currentDate && ` | 선택 날짜: ${currentDate}`}
+                                {vehicles.length > 0 && ` | 차량: ${vehicles.length}대`}
+                            </p>
+                        </div>
+                    )}
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">날짜</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                날짜 {vehicles.length === 0 && currentDate && <span className="text-red-500">(해당 날짜에 예약 없음)</span>}
+                            </label>
                             <input
                                 type="date"
                                 value={currentDate}
@@ -189,20 +248,25 @@ export default function ShtCarSeatMap({
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">차량번호</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                차량번호 {vehicles.length > 0 && <span className="text-green-600">({vehicles.length}대)</span>}
+                            </label>
                             <select
                                 value={currentVehicle}
                                 onChange={(e) => setCurrentVehicle(e.target.value)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                disabled={vehicles.length === 0}
                             >
-                                <option value="">차량 선택</option>
+                                <option value="">전체 차량 ({vehicles.length}대)</option>
                                 {vehicles.map(v => (
                                     <option key={v} value={v}>{v}</option>
                                 ))}
                             </select>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">카테고리</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                카테고리 {reservations.length > 0 && <span className="text-blue-600">({reservations.length}건)</span>}
+                            </label>
                             <select
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value as 'all' | 'pickup' | 'dropoff')}
@@ -221,9 +285,29 @@ export default function ShtCarSeatMap({
                     {loading ? (
                         <div className="flex items-center justify-center py-12">
                             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+                            <p className="ml-4 text-gray-600">데이터 로딩 중...</p>
+                        </div>
+                    ) : allData.length === 0 ? (
+                        <div className="text-center py-12">
+                            <p className="text-gray-500 mb-2">📭 예약 데이터가 없습니다.</p>
+                            <p className="text-sm text-gray-400">reservation_car_sht 테이블에 데이터를 확인해주세요.</p>
+                        </div>
+                    ) : vehicles.length === 0 ? (
+                        <div className="text-center py-12">
+                            <p className="text-gray-500 mb-2">� 선택한 날짜 ({currentDate})에 예약된 차량이 없습니다.</p>
+                            <p className="text-sm text-gray-400">다른 날짜를 선택해보세요.</p>
+                            <p className="text-xs text-blue-500 mt-2">💡 전체 예약: {allData.length}건</p>
                         </div>
                     ) : (
                         <div className="relative">
+                            {/* 예약 정보 표시 */}
+                            <div className="mb-4 text-sm text-gray-600 text-center bg-yellow-50 p-3 rounded-lg">
+                                <p className="font-semibold">📊 {currentDate} / {currentVehicle || `전체 차량 (${vehicles.length}대)`}</p>
+                                <p className="text-xs mt-1">
+                                    총 <strong className="text-blue-600">{reservations.length}건</strong>의 예약
+                                    {category !== 'all' && ` (${category === 'pickup' ? '픽업' : '드롭오프'})`}
+                                </p>
+                            </div>
                             <svg viewBox="0 0 280 440" className="w-full max-w-md mx-auto">
                                 {/* 차량 외곽 */}
                                 <rect

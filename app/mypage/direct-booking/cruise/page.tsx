@@ -1188,14 +1188,13 @@ function DirectBookingCruiseContent() {
                                 </div>
                             </div>
 
-                            {/* 객실 가격 정보 */}
+                            {/* 객실 정보 */}
                             {roomPriceInfo.length > 0 && (
                                 <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                                    <h4 className="text-sm font-medium text-blue-800 mb-3">🏨 객실 가격 정보</h4>
+                                    <h4 className="text-sm font-medium text-blue-800 mb-3">🏨 객실 정보</h4>
                                     {roomPriceInfo.map((priceInfo, index) => {
                                         const roomData = roomsData.find(room => room.room_code === priceInfo.room_code);
-                                        const totalGuests = (roomData?.adult_count || 0) + (roomData?.child_count || 0) + (roomData?.extra_count || 0);
-                                        const totalPrice = (priceInfo.price || 0) * totalGuests;
+                                        const totalGuests = roomData?.person_count || 0;
                                         return (
                                             <div key={index} className="bg-white p-3 rounded border mb-2">
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1 text-sm">
@@ -1205,8 +1204,6 @@ function DirectBookingCruiseContent() {
                                                     <span className="text-gray-600">결제: <span className="font-medium text-gray-800">{priceInfo.payment || '-'}</span></span>
                                                     <span className="text-gray-600">카테고리: <span className="font-medium text-gray-800">{priceInfo.room_category || '-'}</span></span>
                                                     <span className="text-gray-600">인원수: <span className="font-medium text-gray-800">{totalGuests}명</span></span>
-                                                    <span className="text-gray-600">가격: <span className="font-medium text-blue-600">{priceInfo.price ? `${priceInfo.price.toLocaleString()}동` : '-'}</span></span>
-                                                    <span className="text-gray-600">합계: <span className="font-medium text-red-600">{totalPrice.toLocaleString()}동</span></span>
                                                 </div>
                                             </div>
                                         );
@@ -1215,16 +1212,16 @@ function DirectBookingCruiseContent() {
                             )}
 
                             {/* 차량 가격 정보 */}
+                            {/* 차량 정보 */}
                             {carPriceInfo && (
                                 <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
-                                    <h4 className="text-sm font-medium text-green-800 mb-3">🚗 차량 가격 정보</h4>
+                                    <h4 className="text-sm font-medium text-green-800 mb-3">🚗 차량 정보</h4>
                                     <div className="bg-white p-3 rounded border">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1 text-sm">
                                             <span className="text-gray-600">일정: <span className="font-medium text-gray-800">{carPriceInfo.schedule || '-'}</span></span>
                                             <span className="text-gray-600">크루즈: <span className="font-medium text-gray-800">{carPriceInfo.cruise || '-'}</span></span>
                                             <span className="text-gray-600">차량 타입: <span className="font-medium text-gray-800">{carPriceInfo.car_type || '-'}</span></span>
                                             <span className="text-gray-600">카테고리: <span className="font-medium text-gray-800">{carPriceInfo.car_category || '-'}</span></span>
-                                            <span className="text-gray-600">가격: <span className="font-medium text-green-600">{carPriceInfo.price ? `${carPriceInfo.price.toLocaleString()}동` : '-'}</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -1232,20 +1229,6 @@ function DirectBookingCruiseContent() {
 
                             {/* 예약 세부 정보 입력 */}
                             <div className="space-y-6">
-                                <div>
-                                    <h3 className="text-lg font-semibold text-gray-800 mb-4">🏨 객실 관련 요청사항</h3>
-                                    <textarea
-                                        value={reservationForm.room_request_note}
-                                        onChange={(e) => setReservationForm({ ...reservationForm, room_request_note: e.target.value })}
-                                        placeholder="예) 높은 층 객실 희망, 조용한 객실 선호, 바다 전망 객실 요청, 특별한 침구류 요청 등"
-                                        rows={3}
-                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
-                                    />
-                                    <p className="mt-1 text-xs text-gray-500">
-                                        * 객실 배치, 뷰, 편의시설 등 크루즈 객실 관련 요청사항을 입력해 주세요.
-                                    </p>
-                                </div>
-
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-800 mb-4">🚗 차량 관련 정보</h3>
                                     {/* 스하차량 버튼 - 차량 정보 섹션 상단에 추가 */}
@@ -1260,15 +1243,6 @@ function DirectBookingCruiseContent() {
                                         </button>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">픽업 일시</label>
-                                            <input
-                                                type="datetime-local"
-                                                value={reservationForm.pickup_datetime}
-                                                onChange={(e) => setReservationForm({ ...reservationForm, pickup_datetime: e.target.value })}
-                                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                                            />
-                                        </div>
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">픽업 장소</label>
                                             <input
@@ -1289,20 +1263,6 @@ function DirectBookingCruiseContent() {
                                                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                                             />
                                         </div>
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-2">🚗 차량 관련 요청사항</label>
-                                        <textarea
-                                            value={reservationForm.car_request_note}
-                                            onChange={(e) => setReservationForm({ ...reservationForm, car_request_note: e.target.value })}
-                                            placeholder="예) 대형 차량 선호, 시간 조정 가능 여부, 특별한 픽업/드롭오프 장소, 짐 보관 요청 등"
-                                            rows={3}
-                                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 resize-vertical"
-                                        />
-                                        <p className="mt-1 text-xs text-gray-500">
-                                            * 차량 타입, 픽업/드롭오프 관련, 운전 서비스 등 차량 관련 요청사항을 입력해 주세요.
-                                        </p>
                                     </div>
                                 </div>
                             </div>

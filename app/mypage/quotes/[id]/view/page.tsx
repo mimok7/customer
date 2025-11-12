@@ -534,20 +534,15 @@ export default function QuoteDetailPage() {
         console.warn('⚠️ 제출자와 견적 소유자 불일치:', { owner: existingRow.user_id, me: authUser.id });
       }
 
-      // 1. RLS 탐지용 무해 업데이트(변경 없음) - 실패 시 정책 문제 가능성
-      const { error: rlsProbeError } = await supabase
-        .from('quote')
-        .update({ updated_at: new Date().toISOString() })
-        .eq('id', quote.id)
-        .select('id')
-        .maybeSingle();
-      if (rlsProbeError) {
-        console.warn('🚫 RLS/제약 탐지 업데이트 실패:', rlsProbeError);
-      }
+      // 견적 제출 payload - status와 submitted_at만 업데이트
+      const payload = {
+        status: 'submitted',
+        submitted_at: new Date().toISOString()
+      };
 
-      const payload = { status: 'submitted', submitted_at: new Date().toISOString(), updated_at: new Date().toISOString() };
+      console.log('📤 견적 제출 시도:', { quoteId: quote.id, payload });
 
-      // id 기준 업데이트 (quote_id 컬럼 없으므로 단일 방식만 사용)
+      // id 기준 업데이트 - 최소한의 컬럼만 업데이트하여 트리거 오류 최소화
       const { data, error } = await supabase
         .from('quote')
         .update(payload)
@@ -555,23 +550,32 @@ export default function QuoteDetailPage() {
         .select('id')
         .single();
 
+      console.log('📥 견적 제출 응답:', { data, error });
+
       if (error) {
         // 에러 상세 로깅
-        try {
-          console.error('❌ 견적 제출 업데이트 실패 상세:', {
-            code: (error as any)?.code,
-            message: (error as any)?.message,
-            details: (error as any)?.details,
-            hint: (error as any)?.hint
-          });
-        } catch { }
+        console.error('❌ 견적 제출 업데이트 실패 상세:', {
+          code: (error as any)?.code,
+          message: (error as any)?.message,
+          details: (error as any)?.details,
+          hint: (error as any)?.hint,
+          fullError: error
+        });
+
         const msg = (error as any)?.message || '';
         let extraHint = '';
-        if (msg.match(/violates row-level security|permission denied/i)) {
+
+        // quote_id 컬럼 오류 특별 처리
+        if (msg.includes('quote_id') || msg.includes('column')) {
+          extraHint = '\n⚠️ 데이터베이스 구조 문제: quote_id 컬럼이 존재하지 않습니다.\n관리자에게 문의하세요.';
+          // 개발자용 추가 정보
+          console.error('💡 해결 방법: 데이터베이스 트리거/함수에서 quote_id 참조를 id로 변경 필요');
+        } else if (msg.match(/violates row-level security|permission denied/i)) {
           extraHint = '\n⚠️ 권한(RLS) 문제 가능성: 견적 소유자 또는 관리자/매니저 계정으로 다시 시도하세요.';
         } else if (msg.match(/invalid input value|enum|constraint|status/i)) {
           extraHint = '\n⚠️ status 값 또는 제약 조건 위반 가능성: status="submitted" 허용 여부 확인.';
         }
+
         alert(`견적 제출 중 오류가 발생했습니다.\n${msg}${extraHint}`);
         setSubmitting(false);
         return;
@@ -590,7 +594,9 @@ export default function QuoteDetailPage() {
 
     // 견적 제출이 성공한 경우에만 알림 시도 (비동기, 실패해도 무관)
     if (submitSuccess) {
-      // 알림 생성은 별도 비동기로 처리 (실패해도 견적 제출 성공 유지)
+      // TODO: RPC 함수가 quote_id 컬럼을 참조하므로 현재 비활성화
+      // DB 함수를 수정하여 id 컬럼을 사용하도록 변경 후 다시 활성화 필요
+      /*
       setTimeout(async () => {
         try {
           const { data: { user: authUser } } = await supabase.auth.getUser();
@@ -604,6 +610,7 @@ export default function QuoteDetailPage() {
           console.warn('⚠️ 알림 생성 실패 (무시됨):', notificationError?.message || notificationError);
         }
       }, 100);
+      */
 
       setSubmitting(false);
       router.push('/mypage/quotes');
