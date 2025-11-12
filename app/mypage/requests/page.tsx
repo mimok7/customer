@@ -49,6 +49,10 @@ export default function CustomerRequestsPage() {
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState<'list' | 'create' | 'notifications'>('notifications');
 
+    const handleGoHome = () => {
+        router.push('/mypage');
+    };
+
     // 요청사항 목록
     const [requests, setRequests] = useState<CustomerRequest[]>([]);
     // 알림 목록 (payment_notifications 기반)
@@ -796,7 +800,13 @@ export default function CustomerRequestsPage() {
                                 </div>
                             </div>
 
-                            <div className="flex justify-end mt-6">
+                            <div className="flex justify-between mt-6">
+                                <button
+                                    onClick={handleGoHome}
+                                    className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                                >
+                                    🏠 홈으로
+                                </button>
                                 <button
                                     onClick={() => setShowDetailModal(false)}
                                     className="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors"

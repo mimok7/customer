@@ -42,6 +42,10 @@ export default function QuoteDetailPage() {
       : (params as any)?.id
   ) as string;
 
+  const handleGoHome = () => {
+    router.push('/mypage');
+  };
+
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [quote, setQuote] = useState<QuoteDetail | null>(null);
@@ -919,35 +923,44 @@ export default function QuoteDetailPage() {
             {/* (중복 제거) 단순 렌트카 정보 섹션 삭제됨 - 상세 섹션만 유지 */}
 
             {/* 액션 버튼 - 페이지 하단 */}
-            <div className="flex justify-center items-center gap-4 mt-10">
+            <div className="flex justify-between items-center mt-10">
               <button
-                onClick={handleSubmitQuote}
-                className="bg-green-300 text-black px-4 py-2 rounded text-xs hover:bg-green-400 transition-colors font-bold shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={submitting}
+                onClick={handleGoHome}
+                className="border border-gray-300 text-gray-700 px-4 py-2 rounded text-xs hover:bg-gray-50 transition-colors"
               >
-                📝 견적 제출
+                🏠 홈으로
               </button>
 
-              {quote?.payment_status === 'paid' && (
+              <div className="flex gap-4">
                 <button
-                  onClick={() => {
-                    const confirmationUrl = `/customer/confirmation?quote_id=${quote.id}&token=customer`;
-                    window.open(confirmationUrl, '_blank');
-                  }}
-                  className="bg-blue-500 text-white px-4 py-2 rounded text-xs hover:bg-blue-600 transition-colors font-bold shadow-sm"
+                  onClick={handleSubmitQuote}
+                  className="bg-green-300 text-black px-4 py-2 rounded text-xs hover:bg-green-400 transition-colors font-bold shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={submitting}
                 >
-                  📄 예약확인서 보기
+                  📝 견적 제출
                 </button>
-              )}
 
-              {quote?.payment_status !== 'paid' && (quote?.total_price || 0) > 0 && (
-                <button
-                  onClick={() => router.push('/mypage/payments')}
-                  className="bg-yellow-500 text-white px-4 py-2 rounded text-xs hover:bg-yellow-600 transition-colors font-bold shadow-sm"
-                >
-                  💳 결제하기
-                </button>
-              )}
+                {quote?.payment_status === 'paid' && (
+                  <button
+                    onClick={() => {
+                      const confirmationUrl = `/customer/confirmation?quote_id=${quote.id}&token=customer`;
+                      window.open(confirmationUrl, '_blank');
+                    }}
+                    className="bg-blue-500 text-white px-4 py-2 rounded text-xs hover:bg-blue-600 transition-colors font-bold shadow-sm"
+                  >
+                    📄 예약확인서 보기
+                  </button>
+                )}
+
+                {quote?.payment_status !== 'paid' && (quote?.total_price || 0) > 0 && (
+                  <button
+                    onClick={() => router.push('/mypage/payments')}
+                    className="bg-yellow-500 text-white px-4 py-2 rounded text-xs hover:bg-yellow-600 transition-colors font-bold shadow-sm"
+                  >
+                    💳 결제하기
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>

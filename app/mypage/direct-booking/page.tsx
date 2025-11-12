@@ -12,6 +12,10 @@ function DirectBookingContent() {
     const searchParams = useSearchParams();
     const completedService = searchParams.get('completed');
 
+    const handleGoHome = () => {
+        router.push('/mypage');
+    };
+
     const [user, setUser] = useState<any>(null);
     const [userProfile, setUserProfile] = useState<any>(null);
     const [completedServices, setCompletedServices] = useState<string[]>([]);
@@ -551,16 +555,24 @@ function DirectBookingContent() {
                     {canCreateNewBooking && (
                         <>
                             <div className="sticky top-0 z-20 bg-white border-b border-gray-200 py-4 mb-6">
-                                <div className="flex gap-4 text-sm">
-                                    <Link href="/mypage/quotes/new" className="text-blue-600 hover:text-blue-800 transition-colors">
-                                        📝 견적 신청하기
-                                    </Link>
-                                    <Link href="/mypage/quotes" className="text-blue-600 hover:text-blue-800 transition-colors">
-                                        📋 견적 목록 보기
-                                    </Link>
-                                    <Link href="/mypage/reservations" className="text-blue-600 hover:text-blue-800 transition-colors">
-                                        📅 예약 관리하기
-                                    </Link>
+                                <div className="flex justify-between items-center">
+                                    <div className="flex gap-4 text-sm">
+                                        <Link href="/mypage/quotes/new" className="text-blue-600 hover:text-blue-800 transition-colors">
+                                            📝 견적 신청하기
+                                        </Link>
+                                        <Link href="/mypage/quotes" className="text-blue-600 hover:text-blue-800 transition-colors">
+                                            📋 견적 목록 보기
+                                        </Link>
+                                        <Link href="/mypage/reservations" className="text-blue-600 hover:text-blue-800 transition-colors">
+                                            📅 예약 관리하기
+                                        </Link>
+                                    </div>
+                                    <button
+                                        onClick={handleGoHome}
+                                        className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+                                    >
+                                        🏠 홈으로
+                                    </button>
                                 </div>
                             </div>
                         </>

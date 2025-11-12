@@ -27,6 +27,10 @@ export default function ProfilePage() {
     const [saving, setSaving] = useState(false);
     const [profile, setProfile] = useState<UserProfile | null>(null);
 
+    const handleGoHome = () => {
+        router.push('/mypage');
+    };
+
     useEffect(() => {
         init();
     }, []);
@@ -213,7 +217,14 @@ export default function ProfilePage() {
                     </div>
                 </SectionBox>
 
-                <div className="flex justify-end">
+                <div className="flex justify-between items-center gap-3">
+                    <button
+                        type="button"
+                        onClick={handleGoHome}
+                        className="px-6 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50"
+                    >
+                        🏠 홈으로
+                    </button>
                     <button
                         type="button"
                         onClick={handleSave}
