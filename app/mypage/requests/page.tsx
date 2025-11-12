@@ -458,7 +458,18 @@ export default function CustomerRequestsPage() {
     };
 
     return (
-        <PageWrapper title="� 알림 및 요청사항">
+        <PageWrapper title="📢 알림 및 요청사항">
+            {/* 홈 버튼 - 페이지 상단 */}
+            <div className="flex justify-start mb-4">
+                <button
+                    type="button"
+                    onClick={handleGoHome}
+                    className="px-4 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                    🏠 홈으로
+                </button>
+            </div>
+
             {/* 탭 네비게이션 */}
             <div className="mb-6">
                 <div className="flex gap-4 border-b border-gray-200">
@@ -800,13 +811,7 @@ export default function CustomerRequestsPage() {
                                 </div>
                             </div>
 
-                            <div className="flex justify-between mt-6">
-                                <button
-                                    onClick={handleGoHome}
-                                    className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                    🏠 홈으로
-                                </button>
+                            <div className="flex justify-end mt-6">
                                 <button
                                     onClick={() => setShowDetailModal(false)}
                                     className="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors"

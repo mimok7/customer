@@ -124,6 +124,17 @@ export default function ProfilePage() {
     return (
         <PageWrapper title="👤 내 정보">
             <div className="space-y-6">
+                {/* 홈 버튼 - 페이지 상단 */}
+                <div className="flex justify-start">
+                    <button
+                        type="button"
+                        onClick={handleGoHome}
+                        className="px-4 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+                    >
+                        🏠 홈으로
+                    </button>
+                </div>
+
                 {/* 회원가입 후 안내 메시지 */}
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="text-sm text-blue-700">
@@ -217,14 +228,7 @@ export default function ProfilePage() {
                     </div>
                 </SectionBox>
 
-                <div className="flex justify-between items-center gap-3">
-                    <button
-                        type="button"
-                        onClick={handleGoHome}
-                        className="px-6 py-2 rounded border border-gray-300 text-gray-700 hover:bg-gray-50"
-                    >
-                        🏠 홈으로
-                    </button>
+                <div className="flex justify-end">
                     <button
                         type="button"
                         onClick={handleSave}
